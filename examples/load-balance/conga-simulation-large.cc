@@ -17,6 +17,7 @@
 #include "ns3/tcp-resequence-buffer.h"
 #include "ns3/ipv4-drill-routing-helper.h"
 #include "ns3/ipv4-letflow-routing-helper.h"
+#include "ns3/ipv4-tianwu-routing-helper.h"
 
 #include <vector>
 #include <map>
@@ -61,7 +62,8 @@ enum RunMode {
     ECMP,
     Clove,
     DRILL,
-    LetFlow
+    LetFlow,
+    TianWu
 };
 
 std::stringstream tlbBibleFilename;
@@ -249,7 +251,7 @@ int main (int argc, char *argv[])
     double START_TIME = 0.0;
     double END_TIME = 0.25;
 
-    double FLOW_LAUNCH_END_TIME = 0.1;
+    double FLOW_LAUNCH_END_TIME = 0.05;
 
     uint32_t linkLatency = 10;
 
@@ -306,6 +308,7 @@ int main (int argc, char *argv[])
 
     uint32_t congaFlowletTimeout = 500;
     uint32_t letFlowFlowletTimeout = 500;
+    uint32_t tianWuFlowletTimeout = 500;
 
     bool enableRandomDrop = false;
     double randomDropRate = 0.005; // 0.5%
@@ -330,7 +333,7 @@ int main (int argc, char *argv[])
     cmd.AddValue ("StartTime", "Start time of the simulation", START_TIME);
     cmd.AddValue ("EndTime", "End time of the simulation", END_TIME);
     cmd.AddValue ("FlowLaunchEndTime", "End time of the flow launch period", FLOW_LAUNCH_END_TIME);
-    cmd.AddValue ("runMode", "Running mode of this simulation: Conga, Conga-flow, Presto, Weighted-Presto, DRB, FlowBender, ECMP, Clove, DRILL, LetFlow", runModeStr);
+    cmd.AddValue ("runMode", "Running mode of this simulation: Conga, Conga-flow, Presto, Weighted-Presto, DRB, FlowBender, ECMP, Clove, DRILL, LetFlow, TianWu", runModeStr);
     cmd.AddValue ("randomSeed", "Random seed, 0 for random generated", randomSeed);
     cmd.AddValue ("cdfFileName", "File name for flow distribution", cdfFileName);
     cmd.AddValue ("load", "Load of the network, 0.0 - 1.0", load);
@@ -388,6 +391,7 @@ int main (int argc, char *argv[])
 
     cmd.AddValue ("congaFlowletTimeout", "Flowlet timeout in Conga", congaFlowletTimeout);
     cmd.AddValue ("letFlowFlowletTimeout", "Flowlet timeout in LetFlow", letFlowFlowletTimeout);
+    cmd.AddValue ("tianWuFlowletTimeout", "Flowlet timeout in TianWu", tianWuFlowletTimeout);
 
     cmd.AddValue ("enableRandomDrop", "Whether the Spine-0 to other leaves has the random drop problem", enableRandomDrop);
     cmd.AddValue ("randomDropRate", "The random drop rate when the random drop is enabled", randomDropRate);
@@ -486,6 +490,10 @@ int main (int argc, char *argv[])
     else if (runModeStr.compare ("LetFlow") == 0)
     {
         runMode = LetFlow;
+    }
+    else if (runModeStr.compare ("TianWu") == 0)
+    {
+        runMode = TianWu;
     }
     else
     {
@@ -606,6 +614,7 @@ int main (int argc, char *argv[])
     Ipv4DrbRoutingHelper drbRoutingHelper;
     Ipv4DrillRoutingHelper drillRoutingHelper;
     Ipv4LetFlowRoutingHelper letFlowRoutingHelper;
+    Ipv4TianWuRoutingHelper tianWuRoutingHelper;
 
     if (runMode == CONGA || runMode == CONGA_FLOW || runMode == CONGA_ECMP)
     {
@@ -682,6 +691,15 @@ int main (int argc, char *argv[])
         internet.Install (servers);
 
         internet.SetRoutingHelper (letFlowRoutingHelper);
+        internet.Install (spines);
+        internet.Install (leaves);
+    }
+    else if (runMode == TianWu)
+    {
+        internet.SetRoutingHelper (staticRoutingHelper);
+        internet.Install (servers);
+
+        internet.SetRoutingHelper (tianWuRoutingHelper);
         internet.Install (spines);
         internet.Install (leaves);
     }
@@ -823,6 +841,22 @@ int main (int argc, char *argv[])
                                        netDeviceContainer.Get (0)->GetIfIndex ());
                 letFlowLeaf->SetFlowletTimeout (MicroSeconds (letFlowFlowletTimeout));
             }
+            if (runMode == TianWu)
+            {
+                // All servers just forward the packet to leaf switch
+		        staticRoutingHelper.GetStaticRouting (servers.Get (serverIndex)->GetObject<Ipv4> ())->
+			                AddNetworkRouteTo (Ipv4Address ("0.0.0.0"),
+					                           Ipv4Mask ("0.0.0.0"),
+                                               netDeviceContainer.Get (1)->GetIfIndex ());
+
+                Ptr<Ipv4TianWuRouting> tianWuLeaf = tianWuRoutingHelper.GetTianWuRouting (leaves.Get (i)->GetObject<Ipv4> ());
+
+                // TianWu leaf switches forward the packet to the correct servers
+                tianWuLeaf->AddRoute (interfaceContainer.GetAddress (1),
+				                       Ipv4Mask("255.255.255.255"),
+                                       netDeviceContainer.Get (0)->GetIfIndex ());
+                tianWuLeaf->SetFlowletTimeout (MicroSeconds (tianWuFlowletTimeout));
+            }
 
             if (runMode == TLB)
             {
@@ -957,10 +991,10 @@ int main (int argc, char *argv[])
 
             if (runMode == TLB || runMode == DRB || runMode == PRESTO || runMode == WEIGHTED_PRESTO || runMode == Clove)
             {
-                std::pair<int, int> leafToSpine = std::make_pair<int, int> (i, j);
+                std::pair<int, int> leafToSpine = std::make_pair (i, j);
                 leafToSpinePath[leafToSpine] = netDeviceContainer.Get (0)->GetIfIndex ();
 
-                std::pair<int, int> spineToLeaf = std::make_pair<int, int> (j, i);
+                std::pair<int, int> spineToLeaf = std::make_pair (j, i);
                 spineToLeafPath[spineToLeaf] = netDeviceContainer.Get (1)->GetIfIndex ();
             }
 
@@ -1050,6 +1084,27 @@ int main (int argc, char *argv[])
 				                        Ipv4Mask("255.255.255.0"),
                                         netDeviceContainer.Get (1)->GetIfIndex ());
                 letFlowSpine->SetFlowletTimeout (MicroSeconds (letFlowFlowletTimeout));
+	        }
+            if (runMode == TianWu)
+            {
+                // For each TianWu leaf switch, routing entry to route the packet to OTHER leaves should be added
+                for (int k = 0; k < LEAF_COUNT; k++)
+		        {
+		            if (k != i)
+		            {
+                        tianWuRoutingHelper.GetTianWuRouting (leaves.Get (i)->GetObject<Ipv4> ())->
+				                                                AddRoute (leafNetworks[k],
+				  	                                            Ipv4Mask("255.255.255.0"),
+                                  	                            netDeviceContainer.Get (0)->GetIfIndex ());
+                    }
+                }
+
+                // For each TianWu spine switch, routing entry to THIS leaf switch should be added
+                Ptr<Ipv4TianWuRouting> tianWuSpine = tianWuRoutingHelper.GetTianWuRouting (spines.Get (j)->GetObject<Ipv4> ());
+                tianWuSpine->AddRoute (leafNetworks[i],
+				                        Ipv4Mask("255.255.255.0"),
+                                        netDeviceContainer.Get (1)->GetIfIndex ());
+                tianWuSpine->SetFlowletTimeout (MicroSeconds (tianWuFlowletTimeout));
 	        }
         }
         }
@@ -1355,6 +1410,11 @@ int main (int argc, char *argv[])
     {
         flowMonitorFilename << "letflow-simulation-" << letFlowFlowletTimeout << "-";
         linkMonitorFilename << "letflow-simulation-" << letFlowFlowletTimeout << "-";
+    }
+    else if (runMode == TianWu)
+    {
+        flowMonitorFilename << "tianwu-simulation-" << tianWuFlowletTimeout << "-";
+        linkMonitorFilename << "tianwu-simulation-" << tianWuFlowletTimeout << "-";
     }
 
     flowMonitorFilename << randomSeed << "-";

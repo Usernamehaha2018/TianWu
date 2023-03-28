@@ -18,7 +18,7 @@ NS_LOG_COMPONENT_DEFINE("Ipv4LetFlowRouting");
 NS_OBJECT_ENSURE_REGISTERED (Ipv4LetFlowRouting);
 
 Ipv4LetFlowRouting::Ipv4LetFlowRouting ():
-    m_flowletTimeout (MicroSeconds(50)), // The default value of flowlet timeout is small for experimental purpose
+    m_flowletTimeout (MicroSeconds(500)), // The default value of flowlet timeout is small for experimental purpose
     m_ipv4 (0)
 {
   NS_LOG_FUNCTION (this);
