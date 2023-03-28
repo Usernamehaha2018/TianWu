@@ -1,82 +1,73 @@
-import os
+from re import M
 import xml.etree.ElementTree as ET
-import math
 import matplotlib.pyplot as plt
 import numpy as np
 from xml.dom import minidom
-import matplotlib
-
-
-import numpy as np
-import matplotlib.pyplot as plt
-import re
 import seaborn as sns
-import os
-import requests
 import pandas as pdq
-import math
-import pylab
 from matplotlib.lines import Line2D
 import matplotlib.colors as mcolors
 import mpl_scatter_density
 
 from matplotlib.pyplot import MultipleLocator
+import matplotlib
 
-ecmp = []
-lf = []
-xe = []
-xf = []
-    # y = []
-def read_xml(xml_file, e):
-    """
-    读取xml文件，找到角度并存储进列表
-    :param xml_file:xml文件的路径
-    :return:
-    """
-    
-    
+modes = ["tianwu", "letflow","ecmp", "drill", "clove" ]
+bottoms_20 = {}
+tops_20 = {}
+loads = [0.4,0.5,0.6,0.7,0.8]
+# loads = [0.6,0.7,0.8]
+workloads = ["ml", "datamining"]
+fcts = {}
+
+
+def read_xml(xml_file, mode):
     tree = minidom.parse(xml_file)
     objs = tree.getElementsByTagName('Flow')
-    for ix, obj in enumerate(objs):
+    for _, obj in enumerate(objs):
         t1 = obj.getAttribute('timeFirstTxPacket')
         t2 = obj.getAttribute('timeLastTxPacket')
         b = obj.getAttribute('txBytes')
         if t1 and t2 and b:
-            if e:
-                ecmp.append(int(t2[1:-4]) - int(t1[1:-4]))
-                xe.append(int(b))
-            else:
-                lf.append(int(t2[1:-4]) - int(t1[1:-4]))
-                xf.append(int(b))
-        
+            fcts[mode].append(int(t2[1:-4]) - int(t1[1:-4]))
+
 if __name__ == '__main__':
-    read_xml("0-1-large-load-4X4-0.8-Tcp-tianwu-simulation-500-3-b600.xml", 1) 
-    read_xml("0-1-large-load-4X4-0.8-Tcp-letflow-simulation-500-3-b600.xml", 0)
-    ecmp.sort()
-    lf.sort()
-    print(sum(ecmp)/len(ecmp))
-    print(sum(lf)/len(lf))
-    print(len(ecmp), len(lf))
-    print(ecmp[int(0.999*len(ecmp))])
-    print(lf[int(0.999*len(lf))])
-    print(ecmp[-10:], lf[-10:])
+    for mode in modes:
+        print(mode, ":")
+        bottoms_20[mode] = []
+        tops_20[mode] = []
+        for load in loads:
+            fcts[mode] = []
+            read_xml("0-1-large-load-4X4-"+str(load)+"-Tcp-"+mode+"-simulation-4-b600.xml", mode) 
+            fcts[mode].sort()
+            print(sum(fcts[mode])/len(fcts[mode]))
+            print(fcts[mode][int(0.999*len(fcts[mode]))])
+            # print(fcts[mode][-10:])
+            bottom_20 = int(0.2*len(fcts[mode]))
+            bottoms_20[mode].append(sum(fcts[mode][-bottom_20:])/bottom_20)
+            tops_20[mode].append(sum(fcts[mode][:bottom_20])/bottom_20)
+    print(bottoms_20,tops_20)
+
 
     
-    # x = [40,50,60,70,80]
-    # x_major_locator=MultipleLocator(4)
+    x = [40,50,60,70,80]
+    x_major_locator=MultipleLocator(4)
     # print(y3)
-    # sns.set_style("whitegrid")
-    # matplotlib.rcParams.update({'font.size': 20, "font.weight": "bold"}) 
-    # plt.xticks(None, weight='bold')
-
-    # plt.xlim((40, 80))
+    sns.set_style("whitegrid")
+    matplotlib.rcParams.update({'font.size': 20, "font.weight": "bold"}) 
+    plt.xticks(None, weight='bold')
+    plt.xlim((40, 80))
     
-    # my_x_ticks = np.arange(40, 81, 10)
+    my_x_ticks = np.arange(40, 81, 10)
     # my_y_ticks = np.arange(-2, 2, 0.3)
     # plt.xticks(my_x_ticks,weight='bold')
     
     # my_y_ticks = np.arange(10000000, 40000000, 10000000)
     # plt.yticks(my_y_ticks)
+    shapes = ["ro-", "g*-", "k^-", "ys-", "bp-"]
+    for i, mode in enumerate(modes):
+        plt.plot(x, tops_20[mode], shapes[i], label=mode, linewidth=2.5, markersize=8)
+        
     # plt.plot(x, y99, 'ro-', label='ECMP', linewidth=2.5, markersize=8)
     # plt.plot(x, y991, 'g*-', label='LetFlow', linewidth=2.5, markersize=8)
     # plt.plot(x, y992, 'b^-', label='DRILL', linewidth=2.5, markersize=8)
@@ -101,10 +92,10 @@ if __name__ == '__main__':
 
     # plt.xlabel('link offered load %', weight="bold")
     # plt.ylabel('FCT(ns)', weight="bold")
-    # plt.legend(loc='upper left' )
-    # plt.tight_layout()
+    plt.legend(loc='upper left' )
+    plt.tight_layout()
     # plt.tight_layout()
     # plt.show()
-    # plt.savefig("fc.png")
+    plt.savefig("fc2.png")
     
     

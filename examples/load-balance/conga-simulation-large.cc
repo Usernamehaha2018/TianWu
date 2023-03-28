@@ -249,9 +249,9 @@ int main (int argc, char *argv[])
 
     // The simulation starting and ending time
     double START_TIME = 0.0;
-    double END_TIME = 0.25;
+    double END_TIME = 0.5;
 
-    double FLOW_LAUNCH_END_TIME = 0.05;
+    double FLOW_LAUNCH_END_TIME = 0.25;
 
     uint32_t linkLatency = 10;
 
@@ -1398,8 +1398,10 @@ int main (int argc, char *argv[])
     }
     else if (runMode == Clove)
     {
-        flowMonitorFilename << "clove-" << cloveRunMode << "-" << cloveFlowletTimeout << "-" << cloveHalfRTT << "-" << cloveDisToUncongestedPath << "-";
-        linkMonitorFilename << "clove-" << cloveRunMode << "-" << cloveFlowletTimeout << "-" << cloveHalfRTT << "-" << cloveDisToUncongestedPath << "-";
+        // flowMonitorFilename << "clove-" << cloveRunMode << "-" << cloveFlowletTimeout << "-" << cloveHalfRTT << "-" << cloveDisToUncongestedPath << "-";
+        // linkMonitorFilename << "clove-" << cloveRunMode << "-" << cloveFlowletTimeout << "-" << cloveHalfRTT << "-" << cloveDisToUncongestedPath << "-";
+        flowMonitorFilename << "clove-simulation-";
+        linkMonitorFilename << "clove-simulation-";
     }
     else if (runMode == DRILL)
     {
@@ -1408,13 +1410,17 @@ int main (int argc, char *argv[])
     }
     else if (runMode == LetFlow)
     {
-        flowMonitorFilename << "letflow-simulation-" << letFlowFlowletTimeout << "-";
-        linkMonitorFilename << "letflow-simulation-" << letFlowFlowletTimeout << "-";
+        // flowMonitorFilename << "letflow-simulation-" << letFlowFlowletTimeout << "-";
+        // linkMonitorFilename << "letflow-simulation-" << letFlowFlowletTimeout << "-";
+        flowMonitorFilename << "letflow-simulation-";
+        linkMonitorFilename << "letflow-simulation-";
     }
     else if (runMode == TianWu)
     {
-        flowMonitorFilename << "tianwu-simulation-" << tianWuFlowletTimeout << "-";
-        linkMonitorFilename << "tianwu-simulation-" << tianWuFlowletTimeout << "-";
+        // flowMonitorFilename << "tianwu-simulation-" << tianWuFlowletTimeout << "-";
+        // linkMonitorFilename << "tianwu-simulation-" << tianWuFlowletTimeout << "-";
+        flowMonitorFilename << "tianwu-simulation-";
+        linkMonitorFilename << "tianwu-simulation-";
     }
 
     flowMonitorFilename << randomSeed << "-";
@@ -1422,6 +1428,8 @@ int main (int argc, char *argv[])
     tlbBibleFilename << randomSeed << "-";
     tlbBibleFilename2 << randomSeed << "-";
     rbTraceFilename << randomSeed << "-";
+
+
 
     if (asymCapacity)
     {
