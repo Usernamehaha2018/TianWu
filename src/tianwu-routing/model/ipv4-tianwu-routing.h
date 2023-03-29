@@ -33,6 +33,8 @@ public:
   ~Ipv4TianWuRouting ();
 
   static TypeId GetTypeId (void);
+  static int tianwuid;
+  int t_id;
 
   void AddRoute (Ipv4Address network, Ipv4Mask networkMask, uint32_t port);
 
@@ -47,6 +49,8 @@ public:
   virtual void NotifyRemoveAddress (uint32_t interface, Ipv4InterfaceAddress address);
   virtual void SetIpv4 (Ptr<Ipv4> ipv4);
   virtual void PrintRoutingTable (Ptr<OutputStreamWrapper> stream) const;
+
+  uint32_t CalculateQueueLength (uint32_t interface);
 
   virtual void DoDispose (void);
 

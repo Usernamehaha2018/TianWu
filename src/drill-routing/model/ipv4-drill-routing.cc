@@ -87,6 +87,7 @@ Ipv4DrillRouting::CalculateQueueLength (uint32_t interface)
 
   if (netDevice->IsPointToPoint ())
   {
+    // std::cout<<"p2p\n";
     Ptr<PointToPointNetDevice> p2pNetDevice = DynamicCast<PointToPointNetDevice> (netDevice);
     if (p2pNetDevice)
     {

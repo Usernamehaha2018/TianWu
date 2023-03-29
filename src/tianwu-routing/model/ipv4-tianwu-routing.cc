@@ -1,13 +1,16 @@
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 
 #include "ipv4-tianwu-routing.h"
-
+#include "ns3/node.h"
+#include "ns3/flow-id-tag.h"
 #include "ns3/log.h"
 #include "ns3/simulator.h"
 #include "ns3/net-device.h"
 #include "ns3/channel.h"
 #include "ns3/node.h"
-#include "ns3/flow-id-tag.h"
+#include "ns3/ipv4-l3-protocol.h"
+#include "ns3/traffic-control-layer.h"
+#include "ns3/point-to-point-net-device.h"
 
 #include <algorithm>
 
@@ -17,11 +20,14 @@ namespace ns3
   NS_LOG_COMPONENT_DEFINE("Ipv4TianWuRouting");
 
   NS_OBJECT_ENSURE_REGISTERED(Ipv4TianWuRouting);
+  int Ipv4TianWuRouting::tianwuid = 0;
 
   Ipv4TianWuRouting::Ipv4TianWuRouting() : m_flowletTimeout(MicroSeconds(500)), // The default value of flowlet timeout is small for experimental purpose
                                            m_ipv4(0)
   {
     Simulator::Schedule(8*m_flowletTimeout, &Ipv4TianWuRouting::CalculateUtilized, this);
+    t_id = tianwuid;
+    tianwuid += 1;
     NS_LOG_FUNCTION(this);
   }
 
@@ -37,6 +43,7 @@ namespace ns3
                             .SetParent<Object>()
                             .SetGroupName("Internet")
                             .AddConstructor<Ipv4TianWuRouting>();
+    
 
     return tid;
   }
@@ -100,15 +107,20 @@ namespace ns3
         {
           m_highUtilizedPortSet.push_back(iter->first);
         }
-      if((m_flowletTimeout.GetMicroSeconds() *10 *0.2*10000000000)/(8*1000000) > iter->second )
+      if((m_flowletTimeout.GetMicroSeconds() *10 *0.3*10000000000)/(8*1000000) > iter->second )
         {
           m_underUtilizedPortSet.push_back(iter->first);
         }
         iter->second = 0;
         iter++;
     }
+    // if(t_id == 6){
+    // if(Simulator::Now().GetSeconds() > 0.07){
+    // std::cout << t_id << " At " << Simulator::Now().GetSeconds() <<" upate uti\n";
     // for(auto u: m_underUtilizedPortSet){
     // std::cout<<u<<std::endl;}
+    // }
+    // }
     Simulator::Schedule(10*m_flowletTimeout, &Ipv4TianWuRouting::CalculateUtilized, this);
   }
 
@@ -118,6 +130,47 @@ namespace ns3
     NS_LOG_ERROR(this << " TianWu routing is not support for local routing output");
     return 0;
   }
+
+
+
+uint32_t
+  Ipv4TianWuRouting::CalculateQueueLength (uint32_t interface)
+{
+  Ptr<Ipv4L3Protocol> ipv4L3Protocol = DynamicCast<Ipv4L3Protocol> (m_ipv4);
+  if (!ipv4L3Protocol)
+  {
+    NS_LOG_ERROR (this << " Drill routing cannot work other than Ipv4L3Protocol");
+    return 0;
+  }
+
+  uint32_t totalLength = 0;
+
+  const Ptr<NetDevice> netDevice = m_ipv4->GetNetDevice (interface);
+
+  if (netDevice->IsPointToPoint ())
+  {
+    Ptr<PointToPointNetDevice> p2pNetDevice = DynamicCast<PointToPointNetDevice> (netDevice);
+    if (p2pNetDevice)
+    {
+      totalLength += p2pNetDevice->GetQueue ()->GetNBytes ();
+    }
+  }
+
+  Ptr<TrafficControlLayer> tc = ipv4L3Protocol->GetNode ()->GetObject<TrafficControlLayer> ();
+
+  if (!tc)
+  {
+    return totalLength;
+  }
+
+  Ptr<QueueDisc> queueDisc = tc->GetRootQueueDiscOnDevice (netDevice);
+  if (queueDisc)
+  {
+    totalLength += queueDisc->GetNBytes ();
+  }
+  return totalLength;
+}
+
 
   bool
   Ipv4TianWuRouting::RouteInput(Ptr<const Packet> p, const Ipv4Header &header, Ptr<const NetDevice> idev,
@@ -180,8 +233,10 @@ namespace ns3
     if (flowletItr != m_flowletTable.end())
     {
 
+
       TianWuFlowlet flowlet = flowletItr->second;
-      if (now - flowlet.activeTime <= m_flowletTimeout && flowlet.lastSeen < 8)
+      
+      if (now - flowlet.activeTime <= m_flowletTimeout && flowlet.lastSeen < 5)
       {
 
         if (now - flowlet.lastSeenTime > m_flowletTimeout / 2)
@@ -211,7 +266,7 @@ namespace ns3
 
         return true;
       }
-      else if (now - flowlet.activeTime <= m_flowletTimeout)
+      else if (now - flowlet.activeTime <= m_flowletTimeout && CalculateQueueLength(flowlet.port)<512)
       {
         auto j = std::find(m_highUtilizedPortSet.begin(), m_highUtilizedPortSet.end(), flowlet.port);
         if (j != m_highUtilizedPortSet.end())
@@ -223,7 +278,8 @@ namespace ns3
             if (i != m_underUtilizedPortSet.end())
             {
               
-              std::cout<<"At "<< Simulator::Now().GetSeconds()<< "s tian wu find port "<< entry.port<<std::endl;
+              // std::cout<<t_id<<"At "<< Simulator::Now().GetSeconds()<< "s tian wu find port "<< entry.port<<std::endl;
+              // std::cout << CalculateQueueLength(entry.port)<<std::endl;
               selectedPort = entry.port;
               m_underUtilizedPortSet.erase(i);
               flowlet.lastSeen = 0;
@@ -246,6 +302,7 @@ namespace ns3
 
           // this means no available under utilized port
         }
+        // std::cout <<"No available port "<<t_id<<" "<<flowlet.lastSeen<<std::endl;
         flowlet.activeTime = now;
         selectedPort = flowlet.port;
         Ptr<Ipv4Route> route = Ipv4TianWuRouting::ConstructIpv4Route(selectedPort, destAddress);
@@ -276,7 +333,12 @@ namespace ns3
     ucb(route, packet, header);
 
     m_flowletTable[flowId] = flowlet;
-
+        if (m_portTransmit.find(selectedPort) == m_portTransmit.end())
+        {
+          m_portTransmit[selectedPort] = p->GetSize();
+        }
+        else
+          m_portTransmit[selectedPort] += p->GetSize();
     return true;
   }
 

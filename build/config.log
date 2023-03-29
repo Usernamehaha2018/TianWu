@@ -1,4 +1,4 @@
-# project ns (3-dev) configured on Tue Mar 28 07:28:23 2023 by
+# project ns (3-dev) configured on Wed Mar 29 08:35:22 2023 by
 # waf 1.8.19 (abi 98, python 20711f0 on linux2)
 # using ./waf configure --build-profile=optimized --enable-examples --disable-tests
 #
@@ -534,18 +534,18 @@ Checking for compilation flag -march=native support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_24e76c2e856abe3e87b9c34f403df989/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_0e51f7a09cea89ca6da0efcee6f0742f/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_24e76c2e856abe3e87b9c34f403df989/testbuild/test.cpp.1.o']
+['g++-5', '-w', '-std=c++11', '-march=native', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_0e51f7a09cea89ca6da0efcee6f0742f/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------
 Checking for compilation flag -Wl,--soname=foo support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_24e76c2e856abe3e87b9c34f403df989/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_0e51f7a09cea89ca6da0efcee6f0742f/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_24e76c2e856abe3e87b9c34f403df989/testbuild/test.cpp.1.o']
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_0e51f7a09cea89ca6da0efcee6f0742f/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------
 Checking for program 'python'
@@ -648,12 +648,12 @@ int main(int argc, char **argv)
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_5d4a01401c7f5a03ce35de2871a8ca1c/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_fcdb84ccd2d986762c5b2b1ea1880a84/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-fno-strict-aliasing', '-fdebug-prefix-map=/build/python2.7-nq92VM/python2.7-2.7.17=.', '-fstack-protector-strong', '-fwrapv', '-I/usr/include/python2.7', '-I/usr/include/x86_64-linux-gnu/python2.7', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-D_FORTIFY_SOURCE=2', '-DNDEBUG', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_5d4a01401c7f5a03ce35de2871a8ca1c/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_5d4a01401c7f5a03ce35de2871a8ca1c/testbuild/testprog[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-fno-strict-aliasing', '-fdebug-prefix-map=/build/python2.7-nq92VM/python2.7-2.7.17=.', '-fstack-protector-strong', '-fwrapv', '-I/usr/include/python2.7', '-I/usr/include/x86_64-linux-gnu/python2.7', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-D_FORTIFY_SOURCE=2', '-DNDEBUG', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_fcdb84ccd2d986762c5b2b1ea1880a84/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_fcdb84ccd2d986762c5b2b1ea1880a84/testbuild/testprog[0m
 
-['g++-5', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_5d4a01401c7f5a03ce35de2871a8ca1c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-L/usr/lib', '-lpython2.7', '-lpthread', '-ldl', '-lutil', '-lm']
+['g++-5', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_fcdb84ccd2d986762c5b2b1ea1880a84/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-L/usr/lib', '-lpython2.7', '-lpthread', '-ldl', '-lutil', '-lm']
 yes
 ------------------------------------------------------------------
 Asking python-config for pyext '--cflags --libs --ldflags' flags
@@ -685,30 +685,30 @@ int main(int argc, char **argv)
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_c53c22899fe054b94c70b93f236bcbe4/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_5dfb198fa083d01e81cd6c8b6e80bcb0/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-fPIC', '-fno-strict-aliasing', '-fdebug-prefix-map=/build/python2.7-nq92VM/python2.7-2.7.17=.', '-fstack-protector-strong', '-fwrapv', '-I/usr/include/python2.7', '-I/usr/include/x86_64-linux-gnu/python2.7', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-D_FORTIFY_SOURCE=2', '-DNDEBUG', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_c53c22899fe054b94c70b93f236bcbe4/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_c53c22899fe054b94c70b93f236bcbe4/testbuild/testprog.so[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-fPIC', '-fno-strict-aliasing', '-fdebug-prefix-map=/build/python2.7-nq92VM/python2.7-2.7.17=.', '-fstack-protector-strong', '-fwrapv', '-I/usr/include/python2.7', '-I/usr/include/x86_64-linux-gnu/python2.7', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-D_FORTIFY_SOURCE=2', '-DNDEBUG', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_5dfb198fa083d01e81cd6c8b6e80bcb0/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_5dfb198fa083d01e81cd6c8b6e80bcb0/testbuild/testprog.so[0m
 
-['g++-5', '-shared', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_c53c22899fe054b94c70b93f236bcbe4/testbuild/testprog.so', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-L/usr/lib', '-lpython2.7', '-lpthread', '-ldl', '-lutil', '-lm']
+['g++-5', '-shared', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_5dfb198fa083d01e81cd6c8b6e80bcb0/testbuild/testprog.so', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-L/usr/lib', '-lpython2.7', '-lpthread', '-ldl', '-lutil', '-lm']
 yes
 ------------------------------------------------------------------
 Checking for compilation flag -fvisibility=hidden support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_24e76c2e856abe3e87b9c34f403df989/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_0e51f7a09cea89ca6da0efcee6f0742f/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-fvisibility=hidden', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_24e76c2e856abe3e87b9c34f403df989/testbuild/test.cpp.1.o']
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-fvisibility=hidden', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_0e51f7a09cea89ca6da0efcee6f0742f/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------------------
 Checking for compilation flag -Wno-array-bounds support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_24e76c2e856abe3e87b9c34f403df989/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_0e51f7a09cea89ca6da0efcee6f0742f/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-Wno-array-bounds', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_24e76c2e856abe3e87b9c34f403df989/testbuild/test.cpp.1.o']
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-Wno-array-bounds', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_0e51f7a09cea89ca6da0efcee6f0742f/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------------------
 Checking for pybindgen location
@@ -760,9 +760,9 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_bfd7eecb71c19c5aec243ab66f775b42/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_85b6666b47318885690312e9ed8aea2f/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_bfd7eecb71c19c5aec243ab66f775b42/testbuild/test.cpp.1.o']
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_85b6666b47318885690312e9ed8aea2f/testbuild/test.cpp.1.o']
 err: ../test.cpp: In function ‘int main(int, char**)’:
 ../test.cpp:5:7: error: ‘uint128_t’ was not declared in this scope
   if ((uint128_t *) 0) return 0;
@@ -784,8 +784,8 @@ from /home/mywang/ns3-load-balance/src/core: Test does not build: Traceback (mos
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 140607404279376: cxx test.cpp -> test.cpp.1.o}
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_bfd7eecb71c19c5aec243ab66f775b42/testbuild/test.cpp.1.o']
+	{task 140426929569872: cxx test.cpp -> test.cpp.1.o}
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_85b6666b47318885690312e9ed8aea2f/testbuild/test.cpp.1.o']
 
 not found
 from /home/mywang/ns3-load-balance/src/core: The configuration failed
@@ -802,12 +802,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_d454b2c9a498b1ffbfd2eb22360119ff/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_0292529a8a39083d048573e4183635a9/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_d454b2c9a498b1ffbfd2eb22360119ff/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_d454b2c9a498b1ffbfd2eb22360119ff/testbuild/testprog[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_0292529a8a39083d048573e4183635a9/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_0292529a8a39083d048573e4183635a9/testbuild/testprog[0m
 
-['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_d454b2c9a498b1ffbfd2eb22360119ff/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_0292529a8a39083d048573e4183635a9/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking high precision implementation
@@ -823,12 +823,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_d13920a677301403d9289bdb05cf9046/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_9d3a5f63a926b88a48674fefffd111bc/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_d13920a677301403d9289bdb05cf9046/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_d13920a677301403d9289bdb05cf9046/testbuild/testprog[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_9d3a5f63a926b88a48674fefffd111bc/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_9d3a5f63a926b88a48674fefffd111bc/testbuild/testprog[0m
 
-['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_d13920a677301403d9289bdb05cf9046/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_9d3a5f63a926b88a48674fefffd111bc/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header inttypes.h
@@ -841,12 +841,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_b763e25cd6fda7d77d79acd3d8d90b91/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_aeb3f6b4752225b177b7a86b438a9990/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_b763e25cd6fda7d77d79acd3d8d90b91/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_b763e25cd6fda7d77d79acd3d8d90b91/testbuild/testprog[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_aeb3f6b4752225b177b7a86b438a9990/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_aeb3f6b4752225b177b7a86b438a9990/testbuild/testprog[0m
 
-['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_b763e25cd6fda7d77d79acd3d8d90b91/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_aeb3f6b4752225b177b7a86b438a9990/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header sys/inttypes.h
@@ -859,9 +859,9 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_eb471767ea9c09f09f2cec29ca155971/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_abe53e37c34936e2e6168e556126664d/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_eb471767ea9c09f09f2cec29ca155971/testbuild/test.cpp.1.o']
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_abe53e37c34936e2e6168e556126664d/testbuild/test.cpp.1.o']
 err: ../test.cpp:1:26: fatal error: sys/inttypes.h: No such file or directory
 compilation terminated.
 
@@ -872,8 +872,8 @@ from /home/mywang/ns3-load-balance/src/core: Test does not build: Traceback (mos
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 140607403705168: cxx test.cpp -> test.cpp.1.o}
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_eb471767ea9c09f09f2cec29ca155971/testbuild/test.cpp.1.o']
+	{task 140426928997200: cxx test.cpp -> test.cpp.1.o}
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_abe53e37c34936e2e6168e556126664d/testbuild/test.cpp.1.o']
 
 not found
 from /home/mywang/ns3-load-balance/src/core: The configuration failed
@@ -888,12 +888,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_5c6225fdd16fd7d028ba807e9ebaf452/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_1f8191f6e45ba26bb9a57d9635c3825c/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_5c6225fdd16fd7d028ba807e9ebaf452/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_5c6225fdd16fd7d028ba807e9ebaf452/testbuild/testprog[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_1f8191f6e45ba26bb9a57d9635c3825c/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_1f8191f6e45ba26bb9a57d9635c3825c/testbuild/testprog[0m
 
-['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_5c6225fdd16fd7d028ba807e9ebaf452/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_1f8191f6e45ba26bb9a57d9635c3825c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header sys/stat.h
@@ -906,12 +906,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_7e054671283c8ac64616b86d51e71b5c/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_69efc2dde82294079c7d01e22c0dabe7/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_7e054671283c8ac64616b86d51e71b5c/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_7e054671283c8ac64616b86d51e71b5c/testbuild/testprog[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_69efc2dde82294079c7d01e22c0dabe7/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_69efc2dde82294079c7d01e22c0dabe7/testbuild/testprog[0m
 
-['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_7e054671283c8ac64616b86d51e71b5c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_69efc2dde82294079c7d01e22c0dabe7/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header dirent.h
@@ -924,12 +924,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_a8bab591846d38c91032ad211faa929a/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_6a981485c42fd8bd1a02d15d1187b5b3/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_a8bab591846d38c91032ad211faa929a/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_a8bab591846d38c91032ad211faa929a/testbuild/testprog[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_6a981485c42fd8bd1a02d15d1187b5b3/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_6a981485c42fd8bd1a02d15d1187b5b3/testbuild/testprog[0m
 
-['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_a8bab591846d38c91032ad211faa929a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_6a981485c42fd8bd1a02d15d1187b5b3/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header stdlib.h
@@ -942,12 +942,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_22ee8c2774af01b757fe223b54acc05a/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_a43a8c43a2db6d03fe57c39a348947b7/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_22ee8c2774af01b757fe223b54acc05a/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_22ee8c2774af01b757fe223b54acc05a/testbuild/testprog[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_a43a8c43a2db6d03fe57c39a348947b7/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_a43a8c43a2db6d03fe57c39a348947b7/testbuild/testprog[0m
 
-['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_22ee8c2774af01b757fe223b54acc05a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_a43a8c43a2db6d03fe57c39a348947b7/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header signal.h
@@ -960,12 +960,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_ec2ab399d0b3ec4ea7b0007d1365c38b/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_6333886485c65e334c45e3759381fd29/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_ec2ab399d0b3ec4ea7b0007d1365c38b/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_ec2ab399d0b3ec4ea7b0007d1365c38b/testbuild/testprog[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_6333886485c65e334c45e3759381fd29/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_6333886485c65e334c45e3759381fd29/testbuild/testprog[0m
 
-['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_ec2ab399d0b3ec4ea7b0007d1365c38b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_6333886485c65e334c45e3759381fd29/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header pthread.h
@@ -980,12 +980,12 @@ int main ()
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_adabe40e6662310e691fa4f2cae57ebf/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_d6b0c96291384354165eef3ab64deaa8/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-pthread', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_adabe40e6662310e691fa4f2cae57ebf/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_adabe40e6662310e691fa4f2cae57ebf/testbuild/testprog[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-pthread', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_d6b0c96291384354165eef3ab64deaa8/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_d6b0c96291384354165eef3ab64deaa8/testbuild/testprog[0m
 
-['g++-5', '-pthread', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_adabe40e6662310e691fa4f2cae57ebf/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['g++-5', '-pthread', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_d6b0c96291384354165eef3ab64deaa8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header stdint.h
@@ -998,12 +998,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_d13920a677301403d9289bdb05cf9046/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_9d3a5f63a926b88a48674fefffd111bc/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_d13920a677301403d9289bdb05cf9046/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_d13920a677301403d9289bdb05cf9046/testbuild/testprog[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_9d3a5f63a926b88a48674fefffd111bc/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_9d3a5f63a926b88a48674fefffd111bc/testbuild/testprog[0m
 
-['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_d13920a677301403d9289bdb05cf9046/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_9d3a5f63a926b88a48674fefffd111bc/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header inttypes.h
@@ -1016,12 +1016,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_b763e25cd6fda7d77d79acd3d8d90b91/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_aeb3f6b4752225b177b7a86b438a9990/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_b763e25cd6fda7d77d79acd3d8d90b91/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_b763e25cd6fda7d77d79acd3d8d90b91/testbuild/testprog[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_aeb3f6b4752225b177b7a86b438a9990/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_aeb3f6b4752225b177b7a86b438a9990/testbuild/testprog[0m
 
-['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_b763e25cd6fda7d77d79acd3d8d90b91/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_aeb3f6b4752225b177b7a86b438a9990/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header sys/inttypes.h
@@ -1034,9 +1034,9 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_eb471767ea9c09f09f2cec29ca155971/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_abe53e37c34936e2e6168e556126664d/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_eb471767ea9c09f09f2cec29ca155971/testbuild/test.cpp.1.o']
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_abe53e37c34936e2e6168e556126664d/testbuild/test.cpp.1.o']
 err: ../test.cpp:1:26: fatal error: sys/inttypes.h: No such file or directory
 compilation terminated.
 
@@ -1047,8 +1047,8 @@ from /home/mywang/ns3-load-balance/src/core: Test does not build: Traceback (mos
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 140607403745872: cxx test.cpp -> test.cpp.1.o}
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_eb471767ea9c09f09f2cec29ca155971/testbuild/test.cpp.1.o']
+	{task 140426929039248: cxx test.cpp -> test.cpp.1.o}
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_abe53e37c34936e2e6168e556126664d/testbuild/test.cpp.1.o']
 
 not found
 from /home/mywang/ns3-load-balance/src/core: The configuration failed
@@ -1062,12 +1062,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_c40e33023a6e6adfb8ab8e040f146055/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_39aaf5d91031d6402a04d61aa75938fb/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-pthread', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_c40e33023a6e6adfb8ab8e040f146055/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_c40e33023a6e6adfb8ab8e040f146055/testbuild/testprog[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-pthread', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_39aaf5d91031d6402a04d61aa75938fb/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_39aaf5d91031d6402a04d61aa75938fb/testbuild/testprog[0m
 
-['g++-5', '-pthread', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_c40e33023a6e6adfb8ab8e040f146055/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
+['g++-5', '-pthread', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_39aaf5d91031d6402a04d61aa75938fb/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
 yes
 ------------------------------------------------------------------
 Checking for header sys/ioctl.h
@@ -1080,12 +1080,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_29d950e36411b87a2aab88e242fd6897/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_f8e5dd153ae6262aa00db683ef386acc/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_29d950e36411b87a2aab88e242fd6897/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_29d950e36411b87a2aab88e242fd6897/testbuild/testprog[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_f8e5dd153ae6262aa00db683ef386acc/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_f8e5dd153ae6262aa00db683ef386acc/testbuild/testprog[0m
 
-['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_29d950e36411b87a2aab88e242fd6897/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_f8e5dd153ae6262aa00db683ef386acc/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header net/if.h
@@ -1098,12 +1098,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_1d17dbb8788bdf427daea259bd1900b6/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_b0ef22bf6745028a04e466258011cd0b/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_1d17dbb8788bdf427daea259bd1900b6/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_1d17dbb8788bdf427daea259bd1900b6/testbuild/testprog[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_b0ef22bf6745028a04e466258011cd0b/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_b0ef22bf6745028a04e466258011cd0b/testbuild/testprog[0m
 
-['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_1d17dbb8788bdf427daea259bd1900b6/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_b0ef22bf6745028a04e466258011cd0b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header net/ethernet.h
@@ -1116,12 +1116,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_39ac5ed2424328d73a75680e8a95b39f/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_93c4418998998b8fb2b04b0c6a57b4cd/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_39ac5ed2424328d73a75680e8a95b39f/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_39ac5ed2424328d73a75680e8a95b39f/testbuild/testprog[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_93c4418998998b8fb2b04b0c6a57b4cd/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_93c4418998998b8fb2b04b0c6a57b4cd/testbuild/testprog[0m
 
-['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_39ac5ed2424328d73a75680e8a95b39f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_93c4418998998b8fb2b04b0c6a57b4cd/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header linux/if_tun.h
@@ -1134,12 +1134,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_587a5448928c1968fda2dd444249eb39/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_3da33278dc80aef6b9fb8c5cd48d3988/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_587a5448928c1968fda2dd444249eb39/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_587a5448928c1968fda2dd444249eb39/testbuild/testprog[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_3da33278dc80aef6b9fb8c5cd48d3988/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_3da33278dc80aef6b9fb8c5cd48d3988/testbuild/testprog[0m
 
-['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_587a5448928c1968fda2dd444249eb39/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_3da33278dc80aef6b9fb8c5cd48d3988/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header netpacket/packet.h
@@ -1152,12 +1152,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_1a29fc58c009a2aedd4d27d8a4672987/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_d373c82247eef5bee34fe0490eecfef8/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_1a29fc58c009a2aedd4d27d8a4672987/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_1a29fc58c009a2aedd4d27d8a4672987/testbuild/testprog[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_d373c82247eef5bee34fe0490eecfef8/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_d373c82247eef5bee34fe0490eecfef8/testbuild/testprog[0m
 
-['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_1a29fc58c009a2aedd4d27d8a4672987/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_d373c82247eef5bee34fe0490eecfef8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for NSC location
@@ -1183,12 +1183,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_587a5448928c1968fda2dd444249eb39/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_3da33278dc80aef6b9fb8c5cd48d3988/test.cpp[0m
 
-['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_587a5448928c1968fda2dd444249eb39/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_587a5448928c1968fda2dd444249eb39/testbuild/testprog[0m
+['g++-5', '-w', '-std=c++11', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_3da33278dc80aef6b9fb8c5cd48d3988/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_3da33278dc80aef6b9fb8c5cd48d3988/testbuild/testprog[0m
 
-['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_587a5448928c1968fda2dd444249eb39/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['g++-5', 'test.cpp.1.o', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_3da33278dc80aef6b9fb8c5cd48d3988/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for program 'sudo'
@@ -1219,27 +1219,27 @@ Checking for compilation flag -Wno-error=deprecated-d... support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_9183c0df854b80d27c84314ae930e47b/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_d30d13c88fdf84ae60665477695c2d31/test.c[0m
 
-['gcc-5', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_9183c0df854b80d27c84314ae930e47b/testbuild/test.c.1.o']
+['gcc-5', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_d30d13c88fdf84ae60665477695c2d31/testbuild/test.c.1.o']
 ok
 ------------------------------------------------------------------
 Checking for compilation flag -fstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_9183c0df854b80d27c84314ae930e47b/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_d30d13c88fdf84ae60665477695c2d31/test.c[0m
 
-['gcc-5', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_9183c0df854b80d27c84314ae930e47b/testbuild/test.c.1.o']
+['gcc-5', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_d30d13c88fdf84ae60665477695c2d31/testbuild/test.c.1.o']
 ok
 ------------------------------------------------------------------
 Checking for compilation flag -Wstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_9183c0df854b80d27c84314ae930e47b/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_d30d13c88fdf84ae60665477695c2d31/test.c[0m
 
-['gcc-5', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_9183c0df854b80d27c84314ae930e47b/testbuild/test.c.1.o']
+['gcc-5', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/mywang/ns3-load-balance/build/.conf_check_d30d13c88fdf84ae60665477695c2d31/testbuild/test.c.1.o']
 ok
 ------------------------------------------------------------------
 Checking for program 'doxygen'

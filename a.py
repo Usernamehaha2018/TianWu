@@ -15,7 +15,7 @@ import matplotlib
 modes = ["tianwu", "letflow","ecmp", "drill", "clove" ]
 bottoms_20 = {}
 tops_20 = {}
-loads = [0.4,0.5,0.6,0.7,0.8]
+loads = [0.8]
 # loads = [0.6,0.7,0.8]
 workloads = ["ml", "datamining"]
 fcts = {}
@@ -38,7 +38,7 @@ if __name__ == '__main__':
         tops_20[mode] = []
         for load in loads:
             fcts[mode] = []
-            read_xml("0-1-large-load-4X4-"+str(load)+"-Tcp-"+mode+"-simulation-4-b600.xml", mode) 
+            read_xml("0-1-large-load-4X4-"+str(load)+"-Tcp-"+mode+"-simulation-1-b600.xml", mode) 
             fcts[mode].sort()
             print(sum(fcts[mode])/len(fcts[mode]))
             print(fcts[mode][int(0.999*len(fcts[mode]))])
