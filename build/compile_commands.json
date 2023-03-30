@@ -1,8 +1,8 @@
 [
   {
     "directory": "/home/mywang/ns3-load-balance/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/fd-net-device/helper/tap-device-creator.cc -c -o /home/mywang/ns3-load-balance/build/src/fd-net-device/helper/tap-device-creator.cc.4.o", 
-    "file": "../src/fd-net-device/helper/tap-device-creator.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/load-balance/conga-simulation-large.cc -c -o /home/mywang/ns3-load-balance/build/examples/load-balance/conga-simulation-large.cc.4.o", 
+    "file": "../examples/load-balance/conga-simulation-large.cc"
   }, 
   {
     "directory": "/home/mywang/ns3-load-balance/build", 
@@ -38,5 +38,10 @@
     "directory": "/home/mywang/ns3-load-balance/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/fd-net-device/helper/creator-utils.cc -c -o /home/mywang/ns3-load-balance/build/src/fd-net-device/helper/creator-utils.cc.5.o", 
     "file": "../src/fd-net-device/helper/creator-utils.cc"
+  }, 
+  {
+    "directory": "/home/mywang/ns3-load-balance/build", 
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/fd-net-device/helper/tap-device-creator.cc -c -o /home/mywang/ns3-load-balance/build/src/fd-net-device/helper/tap-device-creator.cc.4.o", 
+    "file": "../src/fd-net-device/helper/tap-device-creator.cc"
   }
 ]

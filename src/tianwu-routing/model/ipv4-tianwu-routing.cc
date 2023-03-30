@@ -103,11 +103,11 @@ namespace ns3
     m_highUtilizedPortSet.clear();
     m_underUtilizedPortSet.clear();
     while(iter != m_portTransmit.end()) {
-      if((m_flowletTimeout.GetMicroSeconds() *10 *0.8*10000000000)/(8*1000000) < iter->second )
+      if((m_flowletTimeout.GetMicroSeconds() *20 *0.8*10000000000)/(8*1000000) < iter->second )
         {
           m_highUtilizedPortSet.push_back(iter->first);
         }
-      if((m_flowletTimeout.GetMicroSeconds() *10 *0.3*10000000000)/(8*1000000) > iter->second )
+      if((m_flowletTimeout.GetMicroSeconds() *20 *0.3*10000000000)/(8*1000000) > iter->second )
         {
           m_underUtilizedPortSet.push_back(iter->first);
         }
@@ -121,7 +121,7 @@ namespace ns3
     // std::cout<<u<<std::endl;}
     // }
     // }
-    Simulator::Schedule(10*m_flowletTimeout, &Ipv4TianWuRouting::CalculateUtilized, this);
+    Simulator::Schedule(20*m_flowletTimeout, &Ipv4TianWuRouting::CalculateUtilized, this);
   }
 
   Ptr<Ipv4Route>
@@ -266,7 +266,7 @@ uint32_t
 
         return true;
       }
-      else if (now - flowlet.activeTime <= m_flowletTimeout && CalculateQueueLength(flowlet.port)<512)
+      else if (now - flowlet.activeTime <= m_flowletTimeout && CalculateQueueLength(flowlet.port)==0)
       {
         auto j = std::find(m_highUtilizedPortSet.begin(), m_highUtilizedPortSet.end(), flowlet.port);
         if (j != m_highUtilizedPortSet.end())
