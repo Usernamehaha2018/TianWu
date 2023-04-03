@@ -46,3 +46,7 @@ massif.*
 syntax: glob
 TAGS
 waf
+aa
+bb
+/*.xml
+/*.out

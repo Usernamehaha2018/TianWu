@@ -58,10 +58,12 @@ public:
   Ptr<Ipv4Route> ConstructIpv4Route (uint32_t port, Ipv4Address destAddress);
 
   void SetFlowletTimeout (Time timeout);
+  void SetChangeAble ();
   void CalculateUtilized();
   std::vector<int> m_underUtilizedPortSet;
   std::vector<int> m_highUtilizedPortSet;
   std::map<int, uint32_t> m_portTransmit;
+  int changeAble;
 
 private:
   // Flowlet Timeout

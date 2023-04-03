@@ -1,3 +1,4 @@
+
 #include "ns3/core-module.h"
 #include "ns3/network-module.h"
 #include "ns3/internet-module.h"
@@ -18,6 +19,7 @@
 #include "ns3/ipv4-drill-routing-helper.h"
 #include "ns3/ipv4-letflow-routing-helper.h"
 #include "ns3/ipv4-tianwu-routing-helper.h"
+#include "ns3/global-value.h"
 
 #include <vector>
 #include <map>
@@ -236,9 +238,22 @@ void install_applications (int fromLeafId, NodeContainer servers, double request
 
 int main (int argc, char *argv[])
 {
+
+
+
+
+
 #if 1
     LogComponentEnable ("CongaSimulationLarge", LOG_LEVEL_INFO);
 #endif
+
+
+
+
+
+  GlobalValue uint = GlobalValue ("DupAckCnt", "help text",
+                                  UintegerValue (0),
+                                  MakeUintegerChecker<uint32_t> ());
 
     // Command line parameters parsing
     std::string id = "0";
@@ -252,7 +267,7 @@ int main (int argc, char *argv[])
     double START_TIME = 0.0;
     double END_TIME = 5;
 
-    double FLOW_LAUNCH_END_TIME = 3;
+    double FLOW_LAUNCH_END_TIME = 1;
 
     uint32_t linkLatency = 10;
 

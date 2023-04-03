@@ -1,0 +1,1461 @@
+Waf: Entering directory `/home/wadministratorw/TianWu/build'
+Waf: Leaving directory `/home/wadministratorw/TianWu/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.981s)
+ At 0.004 port 1 0.0472042
+ At 0.004 port 2 0
+ At 0.004 port 3 0
+ At 0.004 port 4 0
+ At 0.004 port 5 0
+ At 0.004 port 6 0
+ At 0.004 port 7 0
+ At 0.004 port 8 0
+ At 0.004 port 9 0.00101152
+ At 0.004 port 10 0
+ At 0.004 port 11 0
+ At 0.004 port 12 0
+
+ At 0.009 port 1 0.26028
+ At 0.009 port 2 0
+ At 0.009 port 3 0
+ At 0.009 port 4 0
+ At 0.009 port 5 0
+ At 0.009 port 6 0
+ At 0.009 port 7 0
+ At 0.009 port 8 0
+ At 0.009 port 9 0.0058624
+ At 0.009 port 10 0
+ At 0.009 port 11 0
+ At 0.009 port 12 0
+
+ At 0.014 port 1 0.307135
+ At 0.014 port 2 0.110556
+ At 0.014 port 3 0
+ At 0.014 port 4 0
+ At 0.014 port 5 0
+ At 0.014 port 6 0
+ At 0.014 port 7 0
+ At 0.014 port 8 0
+ At 0.014 port 9 0.00596224
+ At 0.014 port 10 0
+ At 0.014 port 11 0.00246048
+ At 0.014 port 12 0
+
+ At 0.019 port 1 0.297741
+ At 0.019 port 2 0.198303
+ At 0.019 port 3 0
+ At 0.019 port 4 0
+ At 0.019 port 5 0.231302
+ At 0.019 port 6 0
+ At 0.019 port 7 0
+ At 0.019 port 8 0
+ At 0.019 port 9 0
+ At 0.019 port 10 0
+ At 0.019 port 11 0.0110874
+ At 0.019 port 12 0.00517152
+
+ At 0.024 port 1 0.332224
+ At 0.024 port 2 0.281245
+ At 0.024 port 3 0
+ At 0.024 port 4 0
+ At 0.024 port 5 0.207354
+ At 0.024 port 6 0
+ At 0.024 port 7 0
+ At 0.024 port 8 0
+ At 0.024 port 9 0
+ At 0.024 port 10 0
+ At 0.024 port 11 0.012928
+ At 0.024 port 12 0.00458496
+
+ At 0.029 port 1 0.171955
+ At 0.029 port 2 0.456865
+ At 0.029 port 3 0
+ At 0.029 port 4 0.134613
+ At 0.029 port 5 0.44793
+ At 0.029 port 6 0
+ At 0.029 port 7 0
+ At 0.029 port 8 0.15512
+ At 0.029 port 9 0
+ At 0.029 port 10 0.00957696
+ At 0.029 port 11 0.00725024
+ At 0.029 port 12 0.0121117
+
+7 At 0.029 upate uti
+2
+5
+11
+tianwu change port 6 0.0290011 10
+10
+tianwu change port 4 0.0321688 9
+ At 0.034 port 1 0.0167258
+ At 0.034 port 2 0.482183
+ At 0.034 port 3 0
+ At 0.034 port 4 0.223736
+ At 0.034 port 5 0.39569
+ At 0.034 port 6 0
+ At 0.034 port 7 0
+ At 0.034 port 8 0.40474
+ At 0.034 port 9 0
+ At 0.034 port 10 0.010775
+ At 0.034 port 11 0.00929024
+ At 0.034 port 12 0.013865
+
+7 At 0.034 upate uti
+2
+8
+11
+tianwu change port 4 0.0340004 9
+10
+tianwu change port 6 0.034006 11
+ At 0.039 port 1 0.2982
+ At 0.039 port 2 0.321799
+ At 0.039 port 3 0
+ At 0.039 port 4 0.400387
+ At 0.039 port 5 0.224308
+ At 0.039 port 6 0
+ At 0.039 port 7 0
+ At 0.039 port 8 0.0977197
+ At 0.039 port 9 0
+ At 0.039 port 10 0.00718848
+ At 0.039 port 11 0.00836864
+ At 0.039 port 12 0.0129894
+
+7 At 0.039 upate uti
+4
+12
+tianwu change port 6 0.0390009 9
+11
+tianwu change port 5 0.0411727 10
+9
+tianwu change port 4 0.0438425 10
+ At 0.044 port 1 0.121548
+ At 0.044 port 2 0.35422
+ At 0.044 port 3 0
+ At 0.044 port 4 0.474971
+ At 0.044 port 5 0.377933
+ At 0.044 port 6 0
+ At 0.044 port 7 0.15398
+ At 0.044 port 8 0.200022
+ At 0.044 port 9 0
+ At 0.044 port 10 0.0104374
+ At 0.044 port 11 0.00762656
+ At 0.044 port 12 0.0185347
+
+7 At 0.044 upate uti
+4
+ At 0.049 port 1 0.0719437
+ At 0.049 port 2 0.0882112
+ At 0.049 port 3 0.226605
+ At 0.049 port 4 0.47783
+ At 0.049 port 5 0.116164
+ At 0.049 port 6 0.000656
+ At 0.049 port 7 0.510594
+ At 0.049 port 8 0.00950848
+ At 0.049 port 9 0.0393178
+ At 0.049 port 10 0.012904
+ At 0.049 port 11 0.00397312
+ At 0.049 port 12 0.0135552
+
+7 At 0.049 upate uti
+4
+7
+ At 0.054 port 1 0.0280672
+ At 0.054 port 2 0.030473
+ At 0.054 port 3 0.324663
+ At 0.054 port 4 0.336463
+ At 0.054 port 5 0.0296765
+ At 0.054 port 6 0.00717312
+ At 0.054 port 7 0.401647
+ At 0.054 port 8 0.149959
+ At 0.054 port 9 0.322918
+ At 0.054 port 10 0.0115971
+ At 0.054 port 11 0.00636672
+ At 0.054 port 12 0.0074368
+
+7 At 0.054 upate uti
+7
+ At 0.059 port 1 0.096353
+ At 0.059 port 2 0.0568218
+ At 0.059 port 3 0.321799
+ At 0.059 port 4 0.180317
+ At 0.059 port 5 0.276783
+ At 0.059 port 6 0.00383744
+ At 0.059 port 7 0.1253
+ At 0.059 port 8 0.212967
+ At 0.059 port 9 0.337232
+ At 0.059 port 10 0.180141
+ At 0.059 port 11 0.013264
+ At 0.059 port 12 0.0118682
+
+ At 0.064 port 1 0.0292307
+ At 0.064 port 2 0.012487
+ At 0.064 port 3 0.287775
+ At 0.064 port 4 0.202428
+ At 0.064 port 5 0.457801
+ At 0.064 port 6 0.0069632
+ At 0.064 port 7 0.0420755
+ At 0.064 port 8 0.0460531
+ At 0.064 port 9 0.4929
+ At 0.064 port 10 0.476
+ At 0.064 port 11 0.195508
+ At 0.064 port 12 0.240128
+
+7 At 0.064 upate uti
+5
+9
+10
+9
+tianwu change port 6 0.0650186 10
+11
+tianwu change port 4 0.0677538 9
+ At 0.069 port 1 0.0896205
+ At 0.069 port 2 0.0596317
+ At 0.069 port 3 0.247106
+ At 0.069 port 4 0.126932
+ At 0.069 port 5 0.488709
+ At 0.069 port 6 0.00579072
+ At 0.069 port 7 0.0612333
+ At 0.069 port 8 0.00927936
+ At 0.069 port 9 0.083904
+ At 0.069 port 10 0.344181
+ At 0.069 port 11 0.149744
+ At 0.069 port 12 0.478585
+
+7 At 0.069 upate uti
+5
+12
+11
+tianwu change port 6 0.0709075 9
+12
+tianwu change port 7 0.0716171 9
+12
+tianwu change port 6 0.0722852 10
+ At 0.074 port 1 0.217784
+ At 0.074 port 2 0.0913542
+ At 0.074 port 3 0.252376
+ At 0.074 port 4 0.471185
+ At 0.074 port 5 0.23742
+ At 0.074 port 6 0.004864
+ At 0.074 port 7 0.0844966
+ At 0.074 port 8 0.00847744
+ At 0.074 port 9 0.148821
+ At 0.074 port 10 0.412743
+ At 0.074 port 11 0.454703
+ At 0.074 port 12 0.447706
+
+7 At 0.074 upate uti
+4
+10
+11
+12
+12
+tianwu change port 6 0.0746383 9
+12
+tianwu change port 6 0.0749055 11
+10
+tianwu change port 7 0.0760771 9
+ At 0.079 port 1 0.156234
+ At 0.079 port 2 0.0249357
+ At 0.079 port 3 0.187993
+ At 0.079 port 4 0.441285
+ At 0.079 port 5 0.165591
+ At 0.079 port 6 0.00782368
+ At 0.079 port 7 0.0720282
+ At 0.079 port 8 0.0269216
+ At 0.079 port 9 0.185735
+ At 0.079 port 10 0.216603
+ At 0.079 port 11 0.376608
+ At 0.079 port 12 0.459748
+
+7 At 0.079 upate uti
+4
+12
+11
+tianwu change port 6 0.0799424 9
+ At 0.084 port 1 0.130785
+ At 0.084 port 2 0.0355725
+ At 0.084 port 3 0.297627
+ At 0.084 port 4 0.445409
+ At 0.084 port 5 0.100988
+ At 0.084 port 6 0.0085632
+ At 0.084 port 7 0.268364
+ At 0.084 port 8 0.0610605
+ At 0.084 port 9 0.514456
+ At 0.084 port 10 0.230236
+ At 0.084 port 11 0.0618931
+ At 0.084 port 12 0.484823
+
+7 At 0.084 upate uti
+4
+9
+12
+12
+tianwu change port 6 0.0842339 9
+10
+tianwu change port 5 0.0870126 11
+11
+tianwu change port 4 0.0872085 10
+10
+tianwu change port 5 0.0878222 12
+ At 0.089 port 1 0.117071
+ At 0.089 port 2 0.0309232
+ At 0.089 port 3 0.262342
+ At 0.089 port 4 0.31504
+ At 0.089 port 5 0.168408
+ At 0.089 port 6 0.0086736
+ At 0.089 port 7 0.32135
+ At 0.089 port 8 0.0765261
+ At 0.089 port 9 0.524204
+ At 0.089 port 10 0.164689
+ At 0.089 port 11 0.123613
+ At 0.089 port 12 0.499846
+
+7 At 0.089 upate uti
+9
+12
+9
+tianwu change port 4 0.0922068 10
+12
+tianwu change port 7 0.0929111 11
+ At 0.094 port 1 0.157753
+ At 0.094 port 2 0.161824
+ At 0.094 port 3 0.289951
+ At 0.094 port 4 0.286171
+ At 0.094 port 5 0.473146
+ At 0.094 port 6 0.0105437
+ At 0.094 port 7 0.325865
+ At 0.094 port 8 0.0856909
+ At 0.094 port 9 0.12553
+ At 0.094 port 10 0.417059
+ At 0.094 port 11 0.183156
+ At 0.094 port 12 0.403664
+
+7 At 0.094 upate uti
+5
+10
+12
+10
+tianwu change port 7 0.0943426 9
+9
+tianwu change port 5 0.095345 10
+ At 0.099 port 1 0.146365
+ At 0.099 port 2 0.0840208
+ At 0.099 port 3 0.222246
+ At 0.099 port 4 0.240805
+ At 0.099 port 5 0.422218
+ At 0.099 port 6 0.135054
+ At 0.099 port 7 0.251603
+ At 0.099 port 8 0.114451
+ At 0.099 port 9 0.163921
+ At 0.099 port 10 0.270671
+ At 0.099 port 11 0.293262
+ At 0.099 port 12 0.402817
+
+7 At 0.099 upate uti
+5
+12
+9
+tianwu change port 5 0.100411 11
+11
+tianwu change port 6 0.100843 9
+ At 0.104 port 1 0.101936
+ At 0.104 port 2 0.021607
+ At 0.104 port 3 0.112842
+ At 0.104 port 4 0.106083
+ At 0.104 port 5 0.393166
+ At 0.104 port 6 0.198787
+ At 0.104 port 7 0.425155
+ At 0.104 port 8 0.35147
+ At 0.104 port 9 0.116982
+ At 0.104 port 10 0.244419
+ At 0.104 port 11 0.23991
+ At 0.104 port 12 0.323359
+
+7 At 0.104 upate uti
+7
+11
+tianwu change port 4 0.104338 10
+10
+tianwu change port 5 0.106748 11
+ At 0.109 port 1 0.0666144
+ At 0.109 port 2 0.0385363
+ At 0.109 port 3 0.0598003
+ At 0.109 port 4 0.121892
+ At 0.109 port 5 0.331657
+ At 0.109 port 6 0.123263
+ At 0.109 port 7 0.248049
+ At 0.109 port 8 0.346423
+ At 0.109 port 9 0.270863
+ At 0.109 port 10 0.224096
+ At 0.109 port 11 0.417985
+ At 0.109 port 12 0.389236
+
+7 At 0.109 upate uti
+11
+9
+tianwu change port 4 0.109122 11
+ At 0.114 port 1 0.0813616
+ At 0.114 port 2 0.170186
+ At 0.114 port 3 0.16004
+ At 0.114 port 4 0.191201
+ At 0.114 port 5 0.287196
+ At 0.114 port 6 0.132157
+ At 0.114 port 7 0.265052
+ At 0.114 port 8 0.153557
+ At 0.114 port 9 0.435001
+ At 0.114 port 10 0.345172
+ At 0.114 port 11 0.397391
+ At 0.114 port 12 0.194732
+
+7 At 0.114 upate uti
+9
+12
+tianwu change port 5 0.114791 9
+12
+tianwu change port 5 0.115887 10
+ At 0.119 port 1 0.078727
+ At 0.119 port 2 0.0530816
+ At 0.119 port 3 0.0502918
+ At 0.119 port 4 0.354907
+ At 0.119 port 5 0.253928
+ At 0.119 port 6 0.17637
+ At 0.119 port 7 0.211167
+ At 0.119 port 8 0.066871
+ At 0.119 port 9 0.417181
+ At 0.119 port 10 0.335707
+ At 0.119 port 11 0.484239
+ At 0.119 port 12 0.36794
+
+7 At 0.119 upate uti
+9
+11
+ At 0.124 port 1 0.0592851
+ At 0.124 port 2 0.0739546
+ At 0.124 port 3 0.116966
+ At 0.124 port 4 0.275288
+ At 0.124 port 5 0.272195
+ At 0.124 port 6 0.193628
+ At 0.124 port 7 0.122022
+ At 0.124 port 8 0.0805472
+ At 0.124 port 9 0.3895
+ At 0.124 port 10 0.444042
+ At 0.124 port 11 0.4478
+ At 0.124 port 12 0.389702
+
+7 At 0.124 upate uti
+10
+11
+10
+tianwu change port 5 0.126524 9
+10
+tianwu change port 5 0.128036 11
+10
+tianwu change port 5 0.128761 12
+ At 0.129 port 1 0.0064896
+ At 0.129 port 2 0.0926266
+ At 0.129 port 3 0.0548542
+ At 0.129 port 4 0.247335
+ At 0.129 port 5 0.511014
+ At 0.129 port 6 0.215895
+ At 0.129 port 7 0.132557
+ At 0.129 port 8 0.0550573
+ At 0.129 port 9 0.415514
+ At 0.129 port 10 0.417587
+ At 0.129 port 11 0.305115
+ At 0.129 port 12 0.460438
+
+7 At 0.129 upate uti
+5
+9
+10
+12
+ At 0.134 port 1 0.00711936
+ At 0.134 port 2 0.0940315
+ At 0.134 port 3 0
+ At 0.134 port 4 0.30725
+ At 0.134 port 5 0.392584
+ At 0.134 port 6 0.0786534
+ At 0.134 port 7 0.102376
+ At 0.134 port 8 0.115889
+ At 0.134 port 9 0.33038
+ At 0.134 port 10 0.474524
+ At 0.134 port 11 0.293085
+ At 0.134 port 12 0.484227
+
+7 At 0.134 upate uti
+10
+12
+12
+tianwu change port 6 0.134117 10
+9
+tianwu change port 5 0.135101 10
+9
+tianwu change port 5 0.136063 11
+ At 0.139 port 1 0.00704
+ At 0.139 port 2 0.00948736
+ At 0.139 port 3 0
+ At 0.139 port 4 0.146722
+ At 0.139 port 5 0.305386
+ At 0.139 port 6 0.0239997
+ At 0.139 port 7 0.2263
+ At 0.139 port 8 0.353588
+ At 0.139 port 9 0.470248
+ At 0.139 port 10 0.508181
+ At 0.139 port 11 0.496708
+ At 0.139 port 12 0.458034
+
+7 At 0.139 upate uti
+9
+10
+11
+12
+ At 0.144 port 1 0.00941568
+ At 0.144 port 2 0.00338432
+ At 0.144 port 3 0
+ At 0.144 port 4 0.146866
+ At 0.144 port 5 0.316982
+ At 0.144 port 6 0.00968576
+ At 0.144 port 7 0.199817
+ At 0.144 port 8 0.285056
+ At 0.144 port 9 0.380253
+ At 0.144 port 10 0.464189
+ At 0.144 port 11 0.490392
+ At 0.144 port 12 0.523636
+
+7 At 0.144 upate uti
+10
+11
+12
+ At 0.149 port 1 0.00672
+ At 0.149 port 2 0.00207104
+ At 0.149 port 3 0
+ At 0.149 port 4 0.0712119
+ At 0.149 port 5 0.359887
+ At 0.149 port 6 0.00616896
+ At 0.149 port 7 0.117921
+ At 0.149 port 8 0.291669
+ At 0.149 port 9 0.467276
+ At 0.149 port 10 0.288404
+ At 0.149 port 11 0.307345
+ At 0.149 port 12 0.472932
+
+7 At 0.149 upate uti
+9
+12
+ At 0.154 port 1 0.239764
+ At 0.154 port 2 0.00366336
+ At 0.154 port 3 0
+ At 0.154 port 4 2.56e-06
+ At 0.154 port 5 0.320986
+ At 0.154 port 6 0.00672512
+ At 0.154 port 7 0.113113
+ At 0.154 port 8 0.390517
+ At 0.154 port 9 0.312207
+ At 0.154 port 10 0.398442
+ At 0.154 port 11 0.370139
+ At 0.154 port 12 0.393241
+
+9
+tianwu change port 6 0.157645 10
+ At 0.159 port 1 0.255836
+ At 0.159 port 2 0.00518656
+ At 0.159 port 3 0
+ At 0.159 port 4 0.0952048
+ At 0.159 port 5 0.233074
+ At 0.159 port 6 0.0110307
+ At 0.159 port 7 0.123957
+ At 0.159 port 8 0.42448
+ At 0.159 port 9 0.422171
+ At 0.159 port 10 0.47111
+ At 0.159 port 11 0.378583
+ At 0.159 port 12 0.489935
+
+7 At 0.159 upate uti
+8
+9
+10
+12
+ At 0.164 port 1 0.0600941
+ At 0.164 port 2 0.00587008
+ At 0.164 port 3 0
+ At 0.164 port 4 0.352501
+ At 0.164 port 5 0.20301
+ At 0.164 port 6 0.0112998
+ At 0.164 port 7 0.0874112
+ At 0.164 port 8 0.50844
+ At 0.164 port 9 0.420006
+ At 0.164 port 10 0.521085
+ At 0.164 port 11 0.408326
+ At 0.164 port 12 0.437798
+
+7 At 0.164 upate uti
+8
+9
+10
+11
+12
+ At 0.169 port 1 0.0156173
+ At 0.169 port 2 0.0102442
+ At 0.169 port 3 0
+ At 0.169 port 4 0.174017
+ At 0.169 port 5 0.296629
+ At 0.169 port 6 0.00882176
+ At 0.169 port 7 0.084777
+ At 0.169 port 8 0.358787
+ At 0.169 port 9 0.477212
+ At 0.169 port 10 0.44783
+ At 0.169 port 11 0.403694
+ At 0.169 port 12 0.491922
+
+7 At 0.169 upate uti
+9
+10
+11
+12
+10
+tianwu change port 4 0.169345 9
+ At 0.174 port 1 0.0985664
+ At 0.174 port 2 0.34535
+ At 0.174 port 3 0
+ At 0.174 port 4 0.0552179
+ At 0.174 port 5 0.282065
+ At 0.174 port 6 0.00792576
+ At 0.174 port 7 0.0628755
+ At 0.174 port 8 0.179752
+ At 0.174 port 9 0.520271
+ At 0.174 port 10 0.29125
+ At 0.174 port 11 0.462424
+ At 0.174 port 12 0.467278
+
+7 At 0.174 upate uti
+9
+11
+12
+ At 0.179 port 1 0.230127
+ At 0.179 port 2 0.26462
+ At 0.179 port 3 0
+ At 0.179 port 4 0.0459386
+ At 0.179 port 5 0.273009
+ At 0.179 port 6 0.00660928
+ At 0.179 port 7 0.141056
+ At 0.179 port 8 0.21143
+ At 0.179 port 9 0.371896
+ At 0.179 port 10 0.496526
+ At 0.179 port 11 0.473306
+ At 0.179 port 12 0.514024
+
+7 At 0.179 upate uti
+10
+11
+12
+12
+tianwu change port 5 0.180726 9
+11
+tianwu change port 6 0.181595 10
+ At 0.184 port 1 0.118841
+ At 0.184 port 2 0.0561824
+ At 0.184 port 3 0
+ At 0.184 port 4 0.0278381
+ At 0.184 port 5 0.382182
+ At 0.184 port 6 0.00971776
+ At 0.184 port 7 0.198001
+ At 0.184 port 8 0.316616
+ At 0.184 port 9 0.518165
+ At 0.184 port 10 0.412508
+ At 0.184 port 11 0.416387
+ At 0.184 port 12 0.398384
+
+7 At 0.184 upate uti
+9
+10
+11
+11
+tianwu change port 6 0.184806 12
+ At 0.189 port 1 0.133454
+ At 0.189 port 2 0.0170938
+ At 0.189 port 3 0
+ At 0.189 port 4 0.0231411
+ At 0.189 port 5 0.40062
+ At 0.189 port 6 0.0101581
+ At 0.189 port 7 0.185644
+ At 0.189 port 8 0.420275
+ At 0.189 port 9 0.465363
+ At 0.189 port 10 0.474927
+ At 0.189 port 11 0.340637
+ At 0.189 port 12 0.431663
+
+7 At 0.189 upate uti
+5
+8
+9
+10
+12
+ At 0.194 port 1 0.252352
+ At 0.194 port 2 0.0251155
+ At 0.194 port 3 0
+ At 0.194 port 4 0.0273798
+ At 0.194 port 5 0.381086
+ At 0.194 port 6 0.00923904
+ At 0.194 port 7 0.164764
+ At 0.194 port 8 0.487759
+ At 0.194 port 9 0.450833
+ At 0.194 port 10 0.453713
+ At 0.194 port 11 0.278751
+ At 0.194 port 12 0.246872
+
+7 At 0.194 upate uti
+8
+9
+10
+12
+tianwu change port 6 0.195073 9
+9
+tianwu change port 5 0.196427 10
+9
+tianwu change port 5 0.197559 11
+9
+tianwu change port 5 0.197925 12
+ At 0.199 port 1 0.189626
+ At 0.199 port 2 0.0125939
+ At 0.199 port 3 0.134155
+ At 0.199 port 4 0.00790464
+ At 0.199 port 5 0.332363
+ At 0.199 port 6 0.0465085
+ At 0.199 port 7 0.146079
+ At 0.199 port 8 0.462611
+ At 0.199 port 9 0.326179
+ At 0.199 port 10 0.439643
+ At 0.199 port 11 0.294854
+ At 0.199 port 12 0.146746
+
+7 At 0.199 upate uti
+8
+10
+9
+tianwu change port 4 0.199795 12
+10
+tianwu change port 7 0.200232 12
+ At 0.204 port 1 0.20394
+ At 0.204 port 2 0.0252141
+ At 0.204 port 3 0.351012
+ At 0.204 port 4 0.0423926
+ At 0.204 port 5 0.336764
+ At 0.204 port 6 0.367999
+ At 0.204 port 7 0.0671669
+ At 0.204 port 8 0.223668
+ At 0.204 port 9 0.494544
+ At 0.204 port 10 0.449417
+ At 0.204 port 11 0.0480547
+ At 0.204 port 12 0.104668
+
+7 At 0.204 upate uti
+9
+10
+11
+tianwu change port 6 0.20707 12
+9
+tianwu change port 7 0.207315 11
+9
+tianwu change port 7 0.208724 12
+ At 0.209 port 1 0.2047
+ At 0.209 port 2 0.0121818
+ At 0.209 port 3 0.0799094
+ At 0.209 port 4 0.338645
+ At 0.209 port 5 0.533561
+ At 0.209 port 6 0.214027
+ At 0.209 port 7 0.005296
+ At 0.209 port 8 0.110874
+ At 0.209 port 9 0.312726
+ At 0.209 port 10 0.44725
+ At 0.209 port 11 0.166666
+ At 0.209 port 12 0.223153
+
+7 At 0.209 upate uti
+5
+10
+10
+tianwu change port 4 0.210097 11
+11
+tianwu change port 5 0.213691 9
+ At 0.214 port 1 0.0936474
+ At 0.214 port 2 0.0213504
+ At 0.214 port 3 0.276734
+ At 0.214 port 4 0.422612
+ At 0.214 port 5 0.487344
+ At 0.214 port 6 0.335421
+ At 0.214 port 7 0.031911
+ At 0.214 port 8 0.0714189
+ At 0.214 port 9 0.127203
+ At 0.214 port 10 0.350019
+ At 0.214 port 11 0.384935
+ At 0.214 port 12 0.313992
+
+7 At 0.214 upate uti
+4
+5
+ At 0.219 port 1 0.0497722
+ At 0.219 port 2 0.00975808
+ At 0.219 port 3 0.278236
+ At 0.219 port 4 0.205864
+ At 0.219 port 5 0.256655
+ At 0.219 port 6 0.0879149
+ At 0.219 port 7 0.072375
+ At 0.219 port 8 0.162121
+ At 0.219 port 9 0.194521
+ At 0.219 port 10 0.501478
+ At 0.219 port 11 0.371514
+ At 0.219 port 12 0.228569
+
+7 At 0.219 upate uti
+10
+12
+tianwu change port 5 0.220254 10
+ At 0.224 port 1 0.349728
+ At 0.224 port 2 0.0314138
+ At 0.224 port 3 0.320284
+ At 0.224 port 4 0.113873
+ At 0.224 port 5 0.349822
+ At 0.224 port 6 0.0290003
+ At 0.224 port 7 0.0896141
+ At 0.224 port 8 0.220807
+ At 0.224 port 9 0.24242
+ At 0.224 port 10 0.302523
+ At 0.224 port 11 0.431352
+ At 0.224 port 12 0.419398
+
+7 At 0.224 upate uti
+11
+12
+12
+tianwu change port 6 0.228885 9
+ At 0.229 port 1 0.159857
+ At 0.229 port 2 0.174723
+ At 0.229 port 3 0.112469
+ At 0.229 port 4 0.135868
+ At 0.229 port 5 0.333081
+ At 0.229 port 6 0.0888064
+ At 0.229 port 7 0.138515
+ At 0.229 port 8 0.188271
+ At 0.229 port 9 0.429589
+ At 0.229 port 10 0.173326
+ At 0.229 port 11 0.36885
+ At 0.229 port 12 0.410994
+
+7 At 0.229 upate uti
+9
+12
+10
+tianwu change port 5 0.231738 11
+ At 0.234 port 1 0.0827942
+ At 0.234 port 2 0.226244
+ At 0.234 port 3 0.0220157
+ At 0.234 port 4 0.350095
+ At 0.234 port 5 0.352022
+ At 0.234 port 6 0.171126
+ At 0.234 port 7 0.0946413
+ At 0.234 port 8 0.163238
+ At 0.234 port 9 0.496391
+ At 0.234 port 10 0.194006
+ At 0.234 port 11 0.29009
+ At 0.234 port 12 0.427974
+
+7 At 0.234 upate uti
+9
+12
+12
+tianwu change port 5 0.237819 9
+ At 0.239 port 1 0.103885
+ At 0.239 port 2 0.104509
+ At 0.239 port 3 0.0251738
+ At 0.239 port 4 0.29167
+ At 0.239 port 5 0.518074
+ At 0.239 port 6 0.137386
+ At 0.239 port 7 0.10334
+ At 0.239 port 8 0.0542739
+ At 0.239 port 9 0.471955
+ At 0.239 port 10 0.283129
+ At 0.239 port 11 0.452895
+ At 0.239 port 12 0.15129
+
+7 At 0.239 upate uti
+5
+9
+11
+11
+tianwu change port 5 0.239157 9
+12
+tianwu change port 6 0.241868 10
+ At 0.244 port 1 0.0724461
+ At 0.244 port 2 0.308304
+ At 0.244 port 3 0.114492
+ At 0.244 port 4 0.224423
+ At 0.244 port 5 0.501764
+ At 0.244 port 6 0.0673379
+ At 0.244 port 7 0.0696525
+ At 0.244 port 8 0.0196147
+ At 0.244 port 9 0.258424
+ At 0.244 port 10 0.298446
+ At 0.244 port 11 0.205416
+ At 0.244 port 12 0.292849
+
+7 At 0.244 upate uti
+5
+12
+tianwu change port 6 0.24488 10
+ At 0.249 port 1 0.105961
+ At 0.249 port 2 0.110958
+ At 0.249 port 3 0.180141
+ At 0.249 port 4 0.24997
+ At 0.249 port 5 0.450795
+ At 0.249 port 6 0.344195
+ At 0.249 port 7 0.078359
+ At 0.249 port 8 0.0523971
+ At 0.249 port 9 0.201894
+ At 0.249 port 10 0.309788
+ At 0.249 port 11 0.144747
+ At 0.249 port 12 0.422621
+
+7 At 0.249 upate uti
+5
+12
+12
+tianwu change port 4 0.250179 11
+12
+tianwu change port 7 0.252541 11
+ At 0.254 port 1 0.0533997
+ At 0.254 port 2 0.0623411
+ At 0.254 port 3 0.166195
+ At 0.254 port 4 0.151063
+ At 0.254 port 5 0.471715
+ At 0.254 port 6 0.370717
+ At 0.254 port 7 0.126474
+ At 0.254 port 8 0.131759
+ At 0.254 port 9 0.42499
+ At 0.254 port 10 0.473099
+ At 0.254 port 11 0.166177
+ At 0.254 port 12 0.449697
+
+7 At 0.254 upate uti
+5
+9
+10
+12
+ At 0.259 port 1 0.194421
+ At 0.259 port 2 0.0883878
+ At 0.259 port 3 0.186355
+ At 0.259 port 4 0.313512
+ At 0.259 port 5 0.428548
+ At 0.259 port 6 0.28458
+ At 0.259 port 7 0.0450442
+ At 0.259 port 8 0.153969
+ At 0.259 port 9 0.299816
+ At 0.259 port 10 0.00674304
+ At 0.259 port 11 0.387196
+ At 0.259 port 12 0.359963
+
+7 At 0.259 upate uti
+5
+12
+tianwu change port 5 0.259527 10
+9
+tianwu change port 4 0.263201 10
+ At 0.264 port 1 0.149896
+ At 0.264 port 2 0.0823117
+ At 0.264 port 3 0.255477
+ At 0.264 port 4 0.301575
+ At 0.264 port 5 0.306605
+ At 0.264 port 6 0.159574
+ At 0.264 port 7 0
+ At 0.264 port 8 0.126131
+ At 0.264 port 9 0.131569
+ At 0.264 port 10 0.256702
+ At 0.264 port 11 0.134399
+ At 0.264 port 12 0.28446
+
+12
+tianwu change port 6 0.267352 9
+ At 0.269 port 1 0.293565
+ At 0.269 port 2 0.0257421
+ At 0.269 port 3 0.204096
+ At 0.269 port 4 0.375276
+ At 0.269 port 5 0.405402
+ At 0.269 port 6 0.166994
+ At 0.269 port 7 0
+ At 0.269 port 8 0.232333
+ At 0.269 port 9 0.197432
+ At 0.269 port 10 0.119464
+ At 0.269 port 11 0.268493
+ At 0.269 port 12 0.0960736
+
+7 At 0.269 upate uti
+5
+ At 0.274 port 1 0.194223
+ At 0.274 port 2 0.0203002
+ At 0.274 port 3 0.126961
+ At 0.274 port 4 0.414952
+ At 0.274 port 5 0.285838
+ At 0.274 port 6 0.11569
+ At 0.274 port 7 0
+ At 0.274 port 8 0.48161
+ At 0.274 port 9 0.168507
+ At 0.274 port 10 0.195788
+ At 0.274 port 11 0.362665
+ At 0.274 port 12 0.0122624
+
+7 At 0.274 upate uti
+4
+8
+12
+tianwu change port 4 0.275617 11
+ At 0.279 port 1 0.2089
+ At 0.279 port 2 0.0551213
+ At 0.279 port 3 0.158994
+ At 0.279 port 4 0.32605
+ At 0.279 port 5 0.176198
+ At 0.279 port 6 0.211041
+ At 0.279 port 7 0
+ At 0.279 port 8 0.394204
+ At 0.279 port 9 0.40959
+ At 0.279 port 10 0.144207
+ At 0.279 port 11 0.439002
+ At 0.279 port 12 0.148723
+
+7 At 0.279 upate uti
+9
+11
+9
+tianwu change port 7 0.279741 10
+9
+tianwu change port 7 0.28088 12
+ At 0.284 port 1 0.118876
+ At 0.284 port 2 0.0341517
+ At 0.284 port 3 0.487203
+ At 0.284 port 4 0.224913
+ At 0.284 port 5 0.33474
+ At 0.284 port 6 0.244862
+ At 0.284 port 7 0
+ At 0.284 port 8 0.393287
+ At 0.284 port 9 0.182413
+ At 0.284 port 10 0.168236
+ At 0.284 port 11 0.145814
+ At 0.284 port 12 0.205987
+
+7 At 0.284 upate uti
+3
+ At 0.289 port 1 0.154894
+ At 0.289 port 2 0.0809229
+ At 0.289 port 3 0.443924
+ At 0.289 port 4 0.095136
+ At 0.289 port 5 0.381914
+ At 0.289 port 6 0.196828
+ At 0.289 port 7 0
+ At 0.289 port 8 0.40348
+ At 0.289 port 9 0.21187
+ At 0.289 port 10 0.0720211
+ At 0.289 port 11 0.0296765
+ At 0.289 port 12 0.228107
+
+7 At 0.289 upate uti
+3
+8
+ At 0.294 port 1 0.26163
+ At 0.294 port 2 0.368066
+ At 0.294 port 3 0.257599
+ At 0.294 port 4 0.0618941
+ At 0.294 port 5 0.481392
+ At 0.294 port 6 0.168199
+ At 0.294 port 7 0
+ At 0.294 port 8 0.094512
+ At 0.294 port 9 0.0875821
+ At 0.294 port 10 0.271477
+ At 0.294 port 11 0.0581949
+ At 0.294 port 12 0.249784
+
+7 At 0.294 upate uti
+5
+11
+tianwu change port 5 0.296216 10
+11
+tianwu change port 5 0.296349 12
+ At 0.299 port 1 0.343375
+ At 0.299 port 2 0.3097
+ At 0.299 port 3 0.202166
+ At 0.299 port 4 0.106659
+ At 0.299 port 5 0.230636
+ At 0.299 port 6 0.16102
+ At 0.299 port 7 0
+ At 0.299 port 8 0.0376902
+ At 0.299 port 9 0.168724
+ At 0.299 port 10 0.325427
+ At 0.299 port 11 0.224694
+ At 0.299 port 12 0.417814
+
+7 At 0.299 upate uti
+12
+12
+tianwu change port 4 0.301287 10
+ At 0.304 port 1 0.335151
+ At 0.304 port 2 0.281633
+ At 0.304 port 3 0.0245581
+ At 0.304 port 4 0.225554
+ At 0.304 port 5 0.474687
+ At 0.304 port 6 0.178982
+ At 0.304 port 7 0
+ At 0.304 port 8 0.0756096
+ At 0.304 port 9 0.151923
+ At 0.304 port 10 0.0602406
+ At 0.304 port 11 0.330581
+ At 0.304 port 12 0.274739
+
+7 At 0.304 upate uti
+5
+ At 0.309 port 1 0.0668352
+ At 0.309 port 2 0.35623
+ At 0.309 port 3 0.0313766
+ At 0.309 port 4 0.303122
+ At 0.309 port 5 0.473382
+ At 0.309 port 6 0.137013
+ At 0.309 port 7 0
+ At 0.309 port 8 0.187306
+ At 0.309 port 9 0.0426016
+ At 0.309 port 10 0.12203
+ At 0.309 port 11 0.172556
+ At 0.309 port 12 0.433913
+
+7 At 0.309 upate uti
+5
+12
+12
+tianwu change port 7 0.310664 9
+ At 0.314 port 1 0.153215
+ At 0.314 port 2 0.163731
+ At 0.314 port 3 0.0227462
+ At 0.314 port 4 0.284497
+ At 0.314 port 5 0.484971
+ At 0.314 port 6 0.351187
+ At 0.314 port 7 0
+ At 0.314 port 8 0.1432
+ At 0.314 port 9 0.340408
+ At 0.314 port 10 0.28601
+ At 0.314 port 11 0.140834
+ At 0.314 port 12 0.103455
+
+7 At 0.314 upate uti
+5
+ At 0.319 port 1 0.222722
+ At 0.319 port 2 0.138503
+ At 0.319 port 3 0.0545152
+ At 0.319 port 4 0.399576
+ At 0.319 port 5 0.453948
+ At 0.319 port 6 0.197999
+ At 0.319 port 7 0
+ At 0.319 port 8 0.155572
+ At 0.319 port 9 0.183404
+ At 0.319 port 10 0.353241
+ At 0.319 port 11 0.344741
+ At 0.319 port 12 0.0971634
+
+7 At 0.319 upate uti
+5
+ At 0.324 port 1 0.228083
+ At 0.324 port 2 0.175964
+ At 0.324 port 3 0.0920902
+ At 0.324 port 4 0.383998
+ At 0.324 port 5 0.461226
+ At 0.324 port 6 0.231133
+ At 0.324 port 7 0
+ At 0.324 port 8 0.242071
+ At 0.324 port 9 0.0118147
+ At 0.324 port 10 0.12716
+ At 0.324 port 11 0.415454
+ At 0.324 port 12 0.0452138
+
+7 At 0.324 upate uti
+5
+11
+11
+tianwu change port 7 0.324721 9
+11
+tianwu change port 7 0.324993 10
+11
+tianwu change port 7 0.325057 12
+ At 0.329 port 1 0.2607
+ At 0.329 port 2 0.0750368
+ At 0.329 port 3 0.0144819
+ At 0.329 port 4 0.335937
+ At 0.329 port 5 0.392946
+ At 0.329 port 6 0.274823
+ At 0.329 port 7 0
+ At 0.329 port 8 0.481954
+ At 0.329 port 9 0.163782
+ At 0.329 port 10 0.252611
+ At 0.329 port 11 0.167488
+ At 0.329 port 12 0.284241
+
+7 At 0.329 upate uti
+8
+11
+tianwu change port 4 0.330659 10
+ At 0.334 port 1 0.211621
+ At 0.334 port 2 0.0701107
+ At 0.334 port 3 0.0544211
+ At 0.334 port 4 0.265683
+ At 0.334 port 5 0.426882
+ At 0.334 port 6 0.303306
+ At 0.334 port 7 0
+ At 0.334 port 8 0.38538
+ At 0.334 port 9 0.371274
+ At 0.334 port 10 0.465542
+ At 0.334 port 11 0.060745
+ At 0.334 port 12 0.204303
+
+7 At 0.334 upate uti
+5
+10
+10
+tianwu change port 7 0.336627 11
+ At 0.339 port 1 0.211375
+ At 0.339 port 2 0.194179
+ At 0.339 port 3 0.12684
+ At 0.339 port 4 0.245105
+ At 0.339 port 5 0.416922
+ At 0.339 port 6 0.283634
+ At 0.339 port 7 0
+ At 0.339 port 8 0.195446
+ At 0.339 port 9 0.277491
+ At 0.339 port 10 0.305532
+ At 0.339 port 11 0.221036
+ At 0.339 port 12 0.230082
+
+7 At 0.339 upate uti
+5
+ At 0.344 port 1 0.114321
+ At 0.344 port 2 0.148813
+ At 0.344 port 3 0.468828
+ At 0.344 port 4 0.172447
+ At 0.344 port 5 0.270629
+ At 0.344 port 6 0.145894
+ At 0.344 port 7 0
+ At 0.344 port 8 0.184098
+ At 0.344 port 9 0.0334438
+ At 0.344 port 10 0.140151
+ At 0.344 port 11 0.412403
+ At 0.344 port 12 0.0835245
+
+7 At 0.344 upate uti
+3
+11
+10
+tianwu change port 6 0.345292 11
+11
+tianwu change port 7 0.348596 9
+ At 0.349 port 1 0.0489974
+ At 0.349 port 2 0.125329
+ At 0.349 port 3 0.393107
+ At 0.349 port 4 0.233385
+ At 0.349 port 5 0.323288
+ At 0.349 port 6 0.144401
+ At 0.349 port 7 0
+ At 0.349 port 8 0.161071
+ At 0.349 port 9 0.0118502
+ At 0.349 port 10 0.286523
+ At 0.349 port 11 0.370269
+ At 0.349 port 12 0.391252
+
+ At 0.354 port 1 0.189742
+ At 0.354 port 2 0.387562
+ At 0.354 port 3 0.132347
+ At 0.354 port 4 0.281128
+ At 0.354 port 5 0.489744
+ At 0.354 port 6 0.13574
+ At 0.354 port 7 0
+ At 0.354 port 8 0.0847744
+ At 0.354 port 9 0.0150093
+ At 0.354 port 10 0.38795
+ At 0.354 port 11 0.353469
+ At 0.354 port 12 0.204457
+
+7 At 0.354 upate uti
+5
+ At 0.359 port 1 0.311623
+ At 0.359 port 2 0.493983
+ At 0.359 port 3 0.109152
+ At 0.359 port 4 0.128274
+ At 0.359 port 5 0.453428
+ At 0.359 port 6 0.131478
+ At 0.359 port 7 0
+ At 0.359 port 8 0.0441056
+ At 0.359 port 9 0.32015
+ At 0.359 port 10 0.126847
+ At 0.359 port 11 0.384063
+ At 0.359 port 12 0.214993
+
+7 At 0.359 upate uti
+2
+5
+12
+tianwu change port 4 0.359781 9
+ At 0.364 port 1 0.214653
+ At 0.364 port 2 0.398783
+ At 0.364 port 3 0.233986
+ At 0.364 port 4 0.0683347
+ At 0.364 port 5 0.433151
+ At 0.364 port 6 0.132441
+ At 0.364 port 7 0
+ At 0.364 port 8 0.10677
+ At 0.364 port 9 0.336503
+ At 0.364 port 10 0.344033
+ At 0.364 port 11 0.231521
+ At 0.364 port 12 0.13727
+
+7 At 0.364 upate uti
+5
+ At 0.369 port 1 0.202513
+ At 0.369 port 2 0.138754
+ At 0.369 port 3 0.385322
+ At 0.369 port 4 0.108281
+ At 0.369 port 5 0.400158
+ At 0.369 port 6 0.351626
+ At 0.369 port 7 0
+ At 0.369 port 8 0.224772
+ At 0.369 port 9 0.372237
+ At 0.369 port 10 0.15125
+ At 0.369 port 11 0.402548
+ At 0.369 port 12 0.0194154
+
+7 At 0.369 upate uti
+5
+11
+11
+tianwu change port 7 0.36998 12
+ At 0.374 port 1 0.127873
+ At 0.374 port 2 0.138216
+ At 0.374 port 3 0.31828
+ At 0.374 port 4 0.0827622
+ At 0.374 port 5 0.446211
+ At 0.374 port 6 0.190139
+ At 0.374 port 7 0
+ At 0.374 port 8 0.431089
+ At 0.374 port 9 0.414902
+ At 0.374 port 10 0.386244
+ At 0.374 port 11 0.187983
+ At 0.374 port 12 0.0870029
+
+7 At 0.374 upate uti
+5
+8
+9
+9
+tianwu change port 7 0.376941 12
+ At 0.379 port 1 0.287748
+ At 0.379 port 2 0.186353
+ At 0.379 port 3 0.174076
+ At 0.379 port 4 0.217674
+ At 0.379 port 5 0.354688
+ At 0.379 port 6 0.137589
+ At 0.379 port 7 0
+ At 0.379 port 8 0.400273
+ At 0.379 port 9 0.274497
+ At 0.379 port 10 0.293222
+ At 0.379 port 11 0.374506
+ At 0.379 port 12 0.421947
+
+7 At 0.379 upate uti
+8
+12
+ At 0.384 port 1 0.201681
+ At 0.384 port 2 0.184269
+ At 0.384 port 3 0.241108
+ At 0.384 port 4 0.249407
+ At 0.384 port 5 0.45698
+ At 0.384 port 6 0.234988
+ At 0.384 port 7 0.01444
+ At 0.384 port 8 0.128193
+ At 0.384 port 9 0.248505
+ At 0.384 port 10 0.391611
+ At 0.384 port 11 0.409174
+ At 0.384 port 12 0.126108
+
+7 At 0.384 upate uti
+5
+11
+11
+tianwu change port 7 0.384181 12
+ At 0.389 port 1 0.215082
+ At 0.389 port 2 0.193884
+ At 0.389 port 3 0.211876
+ At 0.389 port 4 0.251898
+ At 0.389 port 5 0.336769
+ At 0.389 port 6 0.13506
+ At 0.389 port 7 0.233015
+ At 0.389 port 8 0.28388
+ At 0.389 port 9 0.288243
+ At 0.389 port 10 0.282394
+ At 0.389 port 11 0.108328
+ At 0.389 port 12 0.298757
+
+11
+tianwu change port 4 0.392061 10
+12
+tianwu change port 6 0.393167 10
+ At 0.394 port 1 0.325172
+ At 0.394 port 2 0.140911
+ At 0.394 port 3 0.239545
+ At 0.394 port 4 0.0351208
+ At 0.394 port 5 0.457448
+ At 0.394 port 6 0.192665
+ At 0.394 port 7 0.134608
+ At 0.394 port 8 0.114789
+ At 0.394 port 9 0.39807
+ At 0.394 port 10 0.373932
+ At 0.394 port 11 0.420892
+ At 0.394 port 12 0.276427
+
+7 At 0.394 upate uti
+5
+11
+12
+tianwu change port 6 0.395463 10
+ At 0.399 port 1 0.42158
+ At 0.399 port 2 0.103589
+ At 0.399 port 3 0.213311
+ At 0.399 port 4 0.0486045
+ At 0.399 port 5 0.404055
+ At 0.399 port 6 0.10364
+ At 0.399 port 7 0.011456
+ At 0.399 port 8 0.167372
+ At 0.399 port 9 0.438687
+ At 0.399 port 10 0.318873
+ At 0.399 port 11 0.32696
+ At 0.399 port 12 0.453901
+
+7 At 0.399 upate uti
+1
+5
+9
+12
+11
+tianwu change port 6 0.399032 12
+ At 0.404 port 1 0.280698
+ At 0.404 port 2 0.0829606
+ At 0.404 port 3 0.0768698
+ At 0.404 port 4 0.060665
+ At 0.404 port 5 0.349289
+ At 0.404 port 6 0.117226
+ At 0.404 port 7 0.0134035
+ At 0.404 port 8 0.181463
+ At 0.404 port 9 0.516698
+ At 0.404 port 10 0.442834
+ At 0.404 port 11 0.480028
+ At 0.404 port 12 0.276713
+
+7 At 0.404 upate uti
+9
+10
+11
+9
+tianwu change port 6 0.404537 11
+11
+tianwu change port 4 0.405851 9
+11
+tianwu change port 4 0.407518 12

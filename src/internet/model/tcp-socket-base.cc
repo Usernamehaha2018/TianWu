@@ -57,7 +57,7 @@
 #include "ns3/ipv4-clove.h"
 #include "ns3/tcp-clove-tag.h"
 #include "ns3/hash.h"
-
+#include "ns3/global-value.h"
 #include <math.h>
 #include <algorithm>
 
@@ -1672,6 +1672,14 @@ TcpSocketBase::ReceivedAck (Ptr<Packet> packet, const TcpHeader& tcpHeader)
     {
       // There is a DupAck
       ++m_dupAckCount;
+     
+      UintegerValue uv;
+      GlobalValue::GetValueByName ("DupAckCnt", uv);
+
+      //  std::cout <<Simulator::Now().GetSeconds()<<" "<< uv.Get()<< "\n";
+       uv.Set(uv.Get() + 1);
+       GlobalValue::Bind("DupAckCnt", uv);
+
 
       if (m_tcb->m_congState == TcpSocketState::CA_OPEN)
         {

@@ -11,6 +11,7 @@
 #include "ns3/ipv4-l3-protocol.h"
 #include "ns3/traffic-control-layer.h"
 #include "ns3/point-to-point-net-device.h"
+#include "ns3/global-value.h"
 
 #include <algorithm>
 
@@ -96,32 +97,44 @@ namespace ns3
   {
     m_flowletTimeout = timeout;
   }
+
+  void
+  Ipv4TianWuRouting::SetChangeAble()
+  {
+    changeAble = 1;
+  }
   void
   Ipv4TianWuRouting::CalculateUtilized()
   {
+    changeAble = 0;
     auto iter = m_portTransmit.begin();
     m_highUtilizedPortSet.clear();
     m_underUtilizedPortSet.clear();
     while(iter != m_portTransmit.end()) {
-      if((m_flowletTimeout.GetMicroSeconds() *20 *0.8*10000000000)/(8*1000000) < iter->second )
+      if((m_flowletTimeout.GetMicroSeconds() *10 *0.8*10000000000)/(8*1000000) < iter->second )
         {
           m_highUtilizedPortSet.push_back(iter->first);
+          // if(iter->first>=9)std::cout <<t_id<<"\n";
         }
-      if((m_flowletTimeout.GetMicroSeconds() *20 *0.3*10000000000)/(8*1000000) > iter->second )
+      if((m_flowletTimeout.GetMicroSeconds() *10 *0.3*10000000000)/(8*1000000) > iter->second )
         {
           m_underUtilizedPortSet.push_back(iter->first);
         }
+        if(t_id == 7)std::cout<<" At " << Simulator::Now().GetSeconds() <<" port "<<iter->first<<" "<< (double)iter->second/((m_flowletTimeout.GetMicroSeconds() *20 *10000000000)/(8*1000000))<<std::endl;
         iter->second = 0;
         iter++;
+        
     }
-    // if(t_id == 6){
-    // if(Simulator::Now().GetSeconds() > 0.07){
-    // std::cout << t_id << " At " << Simulator::Now().GetSeconds() <<" upate uti\n";
-    // for(auto u: m_underUtilizedPortSet){
-    // std::cout<<u<<std::endl;}
-    // }
-    // }
-    Simulator::Schedule(20*m_flowletTimeout, &Ipv4TianWuRouting::CalculateUtilized, this);
+     if(t_id == 7)std::cout << "\n";
+    if(t_id == 7){
+    if(m_highUtilizedPortSet.size()>0){
+    std::cout << t_id << " At " << Simulator::Now().GetSeconds() <<" upate uti\n";
+    for(auto u: m_highUtilizedPortSet){
+    std::cout<<u<<std::endl;}
+    }
+    }
+    Simulator::Schedule(10*m_flowletTimeout, &Ipv4TianWuRouting::CalculateUtilized, this);
+    // Simulator::Schedule(5*m_flowletTimeout, &Ipv4TianWuRouting::SetChangeAble, this);
   }
 
   Ptr<Ipv4Route>
@@ -236,7 +249,7 @@ uint32_t
 
       TianWuFlowlet flowlet = flowletItr->second;
       
-      if (now - flowlet.activeTime <= m_flowletTimeout && flowlet.lastSeen < 5)
+      if (now - flowlet.activeTime <= m_flowletTimeout && flowlet.lastSeen < 20)
       {
 
         if (now - flowlet.lastSeenTime > m_flowletTimeout / 2)
@@ -257,16 +270,11 @@ uint32_t
 
         m_flowletTable[flowId] = flowlet;
 
-        if (m_portTransmit.find(selectedPort) == m_portTransmit.end())
-        {
-          m_portTransmit[selectedPort] = p->GetSize();
-        }
-        else
-          m_portTransmit[selectedPort] += p->GetSize();
+        m_portTransmit[selectedPort] += p->GetSize();
 
         return true;
       }
-      else if (now - flowlet.activeTime <= m_flowletTimeout && CalculateQueueLength(flowlet.port)==0)
+      else if (now - flowlet.activeTime <= m_flowletTimeout && CalculateQueueLength(flowlet.port)==0 )
       {
         auto j = std::find(m_highUtilizedPortSet.begin(), m_highUtilizedPortSet.end(), flowlet.port);
         if (j != m_highUtilizedPortSet.end())
@@ -277,9 +285,9 @@ uint32_t
             auto i = std::find(m_underUtilizedPortSet.begin(), m_underUtilizedPortSet.end(), entry.port);
             if (i != m_underUtilizedPortSet.end())
             {
+              std::cout <<*j<<"\n";
               
-              // std::cout<<t_id<<"At "<< Simulator::Now().GetSeconds()<< "s tian wu find port "<< entry.port<<std::endl;
-              // std::cout << CalculateQueueLength(entry.port)<<std::endl;
+              std::cout<<"tianwu change port "<<t_id<<" "<< Simulator::Now().GetSeconds()<< " "<< entry.port<<std::endl;
               selectedPort = entry.port;
               m_underUtilizedPortSet.erase(i);
               flowlet.lastSeen = 0;
@@ -290,12 +298,7 @@ uint32_t
               ucb(route, packet, header);
               m_flowletTable[flowId] = flowlet;
 
-              if (m_portTransmit.find(selectedPort) == m_portTransmit.end())
-              {
-                m_portTransmit[selectedPort] = p->GetSize();
-              }
-              else
-                m_portTransmit[selectedPort] += p->GetSize();
+              m_portTransmit[selectedPort] += p->GetSize();
               return true;
             }
           }
@@ -309,12 +312,7 @@ uint32_t
         ucb(route, packet, header);
         m_flowletTable[flowId] = flowlet;
 
-        if (m_portTransmit.find(selectedPort) == m_portTransmit.end())
-        {
-          m_portTransmit[selectedPort] = p->GetSize();
-        }
-        else
-          m_portTransmit[selectedPort] += p->GetSize();
+        m_portTransmit[selectedPort] += p->GetSize();
         return true;
       }
     }
@@ -333,18 +331,15 @@ uint32_t
     ucb(route, packet, header);
 
     m_flowletTable[flowId] = flowlet;
-        if (m_portTransmit.find(selectedPort) == m_portTransmit.end())
-        {
-          m_portTransmit[selectedPort] = p->GetSize();
-        }
-        else
-          m_portTransmit[selectedPort] += p->GetSize();
+     m_portTransmit[selectedPort] += p->GetSize();
     return true;
   }
 
   void
   Ipv4TianWuRouting::NotifyInterfaceUp(uint32_t interface)
+  
   {
+    m_portTransmit[interface] = 0;
   }
 
   void

@@ -7,7 +7,7 @@ import seaborn as sns
 import pandas as pdq
 from matplotlib.lines import Line2D
 import matplotlib.colors as mcolors
-import mpl_scatter_density
+# import mpl_scatter_density
 
 from matplotlib.pyplot import MultipleLocator
 import matplotlib
@@ -15,7 +15,7 @@ import matplotlib
 modes = ["tianwu", "letflow","ecmp", "drill", "clove" ]
 bottoms_20 = {}
 tops_20 = {}
-loads = [0.7]
+loads = [0.8]
 # loads = [0.6,0.7,0.8]
 workloads = ["ml", "datamining"]
 fcts = {}
