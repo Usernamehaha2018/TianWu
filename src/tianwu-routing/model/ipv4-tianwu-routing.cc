@@ -116,23 +116,26 @@ namespace ns3
           m_highUtilizedPortSet.push_back(iter->first);
           // if(iter->first>=9)std::cout <<t_id<<"\n";
         }
-      if((m_flowletTimeout.GetMicroSeconds() *10 *0.3*10000000000)/(8*1000000) > iter->second )
+      if((m_flowletTimeout.GetMicroSeconds() *10 *0.2*10000000000)/(8*1000000) > iter->second )
         {
           m_underUtilizedPortSet.push_back(iter->first);
         }
-        if(t_id == 7)std::cout<<" At " << Simulator::Now().GetSeconds() <<" port "<<iter->first<<" "<< (double)iter->second/((m_flowletTimeout.GetMicroSeconds() *20 *10000000000)/(8*1000000))<<std::endl;
+        if(t_id == 7)std::cout<<" At " << Simulator::Now().GetSeconds() <<" port "<<iter->first<<" "<< (double)iter->second/((m_flowletTimeout.GetMicroSeconds() *10 *10000000000)/(8*1000000))<<std::endl;
         iter->second = 0;
         iter++;
         
     }
-     if(t_id == 7)std::cout << "\n";
+    
     if(t_id == 7){
-    if(m_highUtilizedPortSet.size()>0){
-    std::cout << t_id << " At " << Simulator::Now().GetSeconds() <<" upate uti\n";
-    for(auto u: m_highUtilizedPortSet){
-    std::cout<<u<<std::endl;}
+      std::cout<<"\n";
+      for(auto j= m_flowPort.begin();j!=m_flowPort.end();j++){
+        std::cout<<j->first<<" ";
+        for(auto m = j->second.begin(); m!=j->second.end();m++)
+          std::cout << m->flowid<<" "<<m->network1<<" "<<m->network2<<"\n";
+      }
     }
-    }
+    m_flowPort.clear();
+    m_flowSeen.clear();
     Simulator::Schedule(10*m_flowletTimeout, &Ipv4TianWuRouting::CalculateUtilized, this);
     // Simulator::Schedule(5*m_flowletTimeout, &Ipv4TianWuRouting::SetChangeAble, this);
   }
@@ -274,8 +277,18 @@ uint32_t
 
         return true;
       }
-      else if (now - flowlet.activeTime <= m_flowletTimeout && CalculateQueueLength(flowlet.port)==0 )
+      else if (now - flowlet.activeTime <= m_flowletTimeout )
       {
+        // record flow
+        auto s = std::find(m_flowSeen.begin(), m_flowSeen.end(), flowId);
+        if(s==m_flowSeen.end()){
+          struct TianWuRouteFlow t;
+          t.flowid = flowId;
+          t.network1 = destAddress;
+          t.network2 = header.GetSource();
+          m_flowPort[flowlet.port].push_back(t);
+          m_flowSeen.push_back(flowId);
+        }
         auto j = std::find(m_highUtilizedPortSet.begin(), m_highUtilizedPortSet.end(), flowlet.port);
         if (j != m_highUtilizedPortSet.end())
         {
@@ -284,13 +297,10 @@ uint32_t
           {
             auto i = std::find(m_underUtilizedPortSet.begin(), m_underUtilizedPortSet.end(), entry.port);
             if (i != m_underUtilizedPortSet.end())
-            {
-              std::cout <<*j<<"\n";
-              
-              std::cout<<"tianwu change port "<<t_id<<" "<< Simulator::Now().GetSeconds()<< " "<< entry.port<<std::endl;
+            { 
+              if(t_id==7)std::cout<< Simulator::Now().GetSeconds()<< " "<<"tianwu change port "<<flowId<< " from " <<flowlet.port <<" to "<< entry.port<<std::endl;
               selectedPort = entry.port;
               m_underUtilizedPortSet.erase(i);
-              flowlet.lastSeen = 0;
               flowlet.lastSeenTime = now;
               flowlet.activeTime = now;
               flowlet.port = selectedPort;
@@ -315,9 +325,23 @@ uint32_t
         m_portTransmit[selectedPort] += p->GetSize();
         return true;
       }
+      else if (now - flowlet.activeTime > m_flowletTimeout && flowlet.lastSeen > 15 ){
+        flowlet.activeTime = now;
+        selectedPort = flowlet.port;
+        Ptr<Ipv4Route> route = Ipv4TianWuRouting::ConstructIpv4Route(selectedPort, destAddress);
+        ucb(route, packet, header);
+        m_flowletTable[flowId] = flowlet;
+
+        m_portTransmit[selectedPort] += p->GetSize();
+        return true;
+
+
+      }
     }
 
     // Not hit. Random Select the Port
+    if(t_id == 7&&flowletItr!=m_flowletTable.end()&&flowletItr->second.lastSeen>10)
+    {std::cout<<"timeout for " <<flowId<<"\n";}
     selectedPort = routeEntries[rand() % routeEntries.size()].port;
 
     TianWuFlowlet flowlet;

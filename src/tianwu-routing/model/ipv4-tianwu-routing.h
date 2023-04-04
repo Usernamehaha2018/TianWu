@@ -26,6 +26,13 @@ struct TianWuRouteEntry {
   uint32_t port;
 };
 
+struct TianWuRouteFlow {
+  Ipv4Address network1;
+  Ipv4Address network2;
+  Ipv4Mask networkMask;
+  uint32_t flowid;
+};
+
 class Ipv4TianWuRouting : public Ipv4RoutingProtocol
 {
 public:
@@ -62,6 +69,10 @@ public:
   void CalculateUtilized();
   std::vector<int> m_underUtilizedPortSet;
   std::vector<int> m_highUtilizedPortSet;
+
+  std::map<uint32_t, std::vector<TianWuRouteFlow>> m_flowPort;
+  std::vector<uint32_t> m_flowSeen;
+
   std::map<int, uint32_t> m_portTransmit;
   int changeAble;
 
