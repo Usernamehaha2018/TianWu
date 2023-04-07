@@ -261,13 +261,13 @@ int main (int argc, char *argv[])
     unsigned randomSeed = 0;
     std::string cdfFileName = "";
     double load = 0.0;
-    std::string transportProt = "Tcp";
+    std::string transportProt = "DcTcp";
 
     // The simulation starting and ending time
     double START_TIME = 0.0;
-    double END_TIME = 5;
+    double END_TIME = 25;
 
-    double FLOW_LAUNCH_END_TIME = 1;
+    double FLOW_LAUNCH_END_TIME = 5;
 
     uint32_t linkLatency = 10;
 

@@ -1,9 +1,10 @@
 # loads=("0.6" "0.7" "0.8")
-loads=("0.7")
+loads=("0.3" "0.4")
 # algs=("ECMP" "Clove" "TianWu" "DRILL" "LetFlow")
-algs=("ECMP" "Clove" "TianWu" "DRILL" "LetFlow")
+algs=("ECMP" "Clove" "DRILL" "LetFlow")
 # workloads = ("datamining", "ml", "websearch")
-workloads=("datamining")
+
+workloads=("ml")
 for load in ${loads[@]}; do
     for alg in ${algs[@]}; do
 	    for workload in ${workloads[@]}; do

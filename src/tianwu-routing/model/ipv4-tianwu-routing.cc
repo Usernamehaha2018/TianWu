@@ -134,8 +134,16 @@ namespace ns3
           std::cout << m->flowid<<" "<<m->network1<<" "<<m->network2<<"\n";
       }
     }
+     m_flowPortOld.clear();
+     m_flowSeenOld.clear();
+    for(auto j= m_flowPort.begin();j!=m_flowPort.end();j++){
+      for(auto m:j->second)
+        m_flowPortOld[j->first].push_back(m);
+    }
+
     m_flowPort.clear();
     m_flowSeen.clear();
+    // std::cout<<m_flowPortOld.size()<<"\n";
     Simulator::Schedule(10*m_flowletTimeout, &Ipv4TianWuRouting::CalculateUtilized, this);
     // Simulator::Schedule(5*m_flowletTimeout, &Ipv4TianWuRouting::SetChangeAble, this);
   }
@@ -281,13 +289,14 @@ uint32_t
       {
         // record flow
         auto s = std::find(m_flowSeen.begin(), m_flowSeen.end(), flowId);
-        if(s==m_flowSeen.end()){
+        if(s==m_flowSeen.end() && p->GetSize()>1000){
           struct TianWuRouteFlow t;
           t.flowid = flowId;
           t.network1 = destAddress;
           t.network2 = header.GetSource();
           m_flowPort[flowlet.port].push_back(t);
           m_flowSeen.push_back(flowId);
+          // std::cout<<p->GetSize()<<"\n";
         }
         auto j = std::find(m_highUtilizedPortSet.begin(), m_highUtilizedPortSet.end(), flowlet.port);
         if (j != m_highUtilizedPortSet.end())
@@ -296,9 +305,12 @@ uint32_t
           for (auto entry : routeEntries)
           {
             auto i = std::find(m_underUtilizedPortSet.begin(), m_underUtilizedPortSet.end(), entry.port);
-            if (i != m_underUtilizedPortSet.end())
+            if (i != m_underUtilizedPortSet.end() &&((m_flowPortOld.find(entry.port) ==m_flowPortOld.end() && (m_flowPortOld.find(flowlet.port) !=m_flowPortOld.end()&&m_flowPortOld[flowlet.port].size()>1))
+              || m_flowPortOld[flowlet.port].size() > m_flowPortOld[entry.port].size()+1))
             { 
-              if(t_id==7)std::cout<< Simulator::Now().GetSeconds()<< " "<<"tianwu change port "<<flowId<< " from " <<flowlet.port <<" to "<< entry.port<<std::endl;
+              if(t_id==7){std::cout<< Simulator::Now().GetSeconds()<< " "<<"tianwu change port "<<flowId<< " from " <<flowlet.port <<" to "<< entry.port<<std::endl;
+              
+              }
               selectedPort = entry.port;
               m_underUtilizedPortSet.erase(i);
               flowlet.lastSeenTime = now;

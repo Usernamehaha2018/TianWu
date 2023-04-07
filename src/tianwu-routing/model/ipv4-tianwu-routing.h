@@ -73,6 +73,9 @@ public:
   std::map<uint32_t, std::vector<TianWuRouteFlow>> m_flowPort;
   std::vector<uint32_t> m_flowSeen;
 
+  std::map<uint32_t, std::vector<TianWuRouteFlow>> m_flowPortOld;
+  std::vector<uint32_t> m_flowSeenOld;
+
   std::map<int, uint32_t> m_portTransmit;
   int changeAble;
 

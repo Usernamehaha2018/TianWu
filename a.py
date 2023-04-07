@@ -12,10 +12,10 @@ import matplotlib.colors as mcolors
 from matplotlib.pyplot import MultipleLocator
 import matplotlib
 
-modes = ["tianwu", "letflow","ecmp", "drill", "clove" ]
+modes = [ "letflow","ecmp", "drill", "clove" ]
 bottoms_20 = {}
 tops_20 = {}
-loads = [0.8]
+loads = [0.3, 0.4]
 # loads = [0.6,0.7,0.8]
 workloads = ["ml", "datamining"]
 fcts = {}
@@ -38,10 +38,11 @@ if __name__ == '__main__':
         tops_20[mode] = []
         for load in loads:
             fcts[mode] = []
-            read_xml("0-1-large-load-4X4-"+str(load)+"-Tcp-"+mode+"-simulation-1-b600.xml", mode) 
+            read_xml("0-1-large-load-4X4-"+str(load)+"-DcTcp-"+mode+"-simulation-1-b600.xml", mode) 
             fcts[mode].sort()
             print(sum(fcts[mode])/len(fcts[mode]))
             print(fcts[mode][int(0.999*len(fcts[mode]))])
+            # print(fcts[mode][-1])
             # print(fcts[mode][-10:])
             bottom_20 = int(0.2*len(fcts[mode]))
             bottoms_20[mode].append(sum(fcts[mode][-bottom_20:])/bottom_20)
@@ -98,4 +99,17 @@ if __name__ == '__main__':
     # plt.show()
     plt.savefig("fc2.png")
     
-    
+#     mywang@tian-609-11:~/TianWu$ python3 a.py 
+# letflow :
+# 16366204.060495535
+# 3312744584
+# 1612758142
+# ecmp :
+# 16546095.770280467
+# 3140461259
+# drill :
+# 19111474.617972583
+# 3384930689
+# clove :
+# 15020501.284398189
+# 2726312917
