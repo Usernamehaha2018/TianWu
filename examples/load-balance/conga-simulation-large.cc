@@ -236,6 +236,70 @@ void install_applications (int fromLeafId, NodeContainer servers, double request
     }
 }
 
+
+static void CwndChange(uint32_t oldv, uint32_t nv)
+{
+
+}
+
+void install_applications_new (NodeContainer servers, double START_TIME, double END_TIME)
+{
+    NS_LOG_INFO ("Install applications:");
+    
+    for (int i = 0; i < 14; i++)
+    {
+        int fromServerIndex = 0+i;
+
+        double startTime = 0.0000002;
+            uint16_t port = 293;
+
+	        int destServerIndex = 32 + i;
+            
+
+	        Ptr<Node> destServer = servers.Get (destServerIndex);
+	        Ptr<Ipv4> ipv4 = destServer->GetObject<Ipv4> ();
+	        Ipv4InterfaceAddress destInterface = ipv4->GetAddress (1,0);
+	        Ipv4Address destAddress = destInterface.GetLocal ();
+
+
+
+	        Ptr<Node> fServer = servers.Get (fromServerIndex);
+	        Ptr<Ipv4> ipv42 = fServer->GetObject<Ipv4> ();
+	        Ipv4InterfaceAddress srcInterface = ipv42->GetAddress (1,0);
+	        Ipv4Address srcAddress = srcInterface.GetLocal ();
+            std::cout << srcAddress<<"\n";
+
+            BulkSendHelper source ("ns3::TcpSocketFactory", InetSocketAddress (destAddress, port));
+            uint32_t flowSize = 99999999*2;
+ 	        source.SetAttribute ("SendSize", UintegerValue (PACKET_SIZE));
+            source.SetAttribute ("MaxBytes", UintegerValue (flowSize));
+            // source.SetAttribute ("DelayThresh", UintegerValue (applicationPauseThresh));
+            // source.SetAttribute ("DelayTime", TimeValue (MicroSeconds (applicationPauseTime)));
+
+            // Install apps
+            ApplicationContainer sourceApp = source.Install (servers.Get (fromServerIndex));
+            sourceApp.Start (Seconds (startTime));
+            sourceApp.Stop (Seconds (END_TIME));
+    //         DynamicCast<TcpSocketBase>( (DynamicCast<BulkSendApplication> (sourceApp.Get(0)))->GetSocket())->TraceConnectWithoutContext ("CongestionWindow", 
+    // MakeCallback (&CwndChange));
+
+            // Install packet sinks
+            PacketSinkHelper sink ("ns3::TcpSocketFactory",
+                    InetSocketAddress (Ipv4Address::GetAny (), port));
+            ApplicationContainer sinkApp = sink.Install (servers. Get (destServerIndex));
+            sinkApp.Start (Seconds (START_TIME));
+            sinkApp.Stop (Seconds (END_TIME));
+
+            /*
+            NS_LOG_INFO ("\tFlow from server: " << fromServerIndex << " to server: "
+                    << destServerIndex << " on port: " << port << " with flow size: "
+                    << flowSize << " [start time: " << startTime <<"]");
+            */
+
+        
+    }
+}
+
 int main (int argc, char *argv[])
 {
 
@@ -265,9 +329,9 @@ int main (int argc, char *argv[])
 
     // The simulation starting and ending time
     double START_TIME = 0.0;
-    double END_TIME = 25;
+    double END_TIME = 10;
 
-    double FLOW_LAUNCH_END_TIME = 5;
+    double FLOW_LAUNCH_END_TIME = 0.15;
 
     uint32_t linkLatency = 10;
 
@@ -1315,6 +1379,9 @@ int main (int argc, char *argv[])
     {
         install_applications(fromLeafId, servers, requestRate, cdfTable, flowCount, totalFlowSize, SERVER_COUNT, LEAF_COUNT, START_TIME, END_TIME, FLOW_LAUNCH_END_TIME, applicationPauseThresh, applicationPauseTime);
     }
+
+
+    // install_applications_new(servers,START_TIME, END_TIME);
 
     NS_LOG_INFO ("Total flow: " << flowCount);
 

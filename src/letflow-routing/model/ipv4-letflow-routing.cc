@@ -109,7 +109,6 @@ Ipv4LetFlowRouting::RouteInput (Ptr<const Packet> p, const Ipv4Header &header, P
   Ptr<Packet> packet = ConstCast<Packet> (p);
 
   Ipv4Address destAddress = header.GetDestination();
-
   // LetFlow routing only supports unicast
   if (destAddress.IsMulticast() || destAddress.IsBroadcast()) {
     NS_LOG_ERROR (this << " LetFlow routing only supports unicast");
@@ -168,6 +167,17 @@ Ipv4LetFlowRouting::RouteInput (Ptr<const Packet> p, const Ipv4Header &header, P
       ucb (route, packet, header);
 
       m_flowletTable[flowId] = flowlet;
+
+
+
+        // if((header.GetSource().Get()%32) / 2 <= 4&&selectedPort>8){
+        //   if(header.GetSource().Get() == Ipv4Address("10.1.1.2").Get())std::cout << header.GetSource() <<" "<<selectedPort <<"\n";
+        //   if(header.GetSource().Get() == Ipv4Address("10.1.1.4").Get())std::cout << header.GetSource() <<" "<<selectedPort <<"\n";
+        //   if(header.GetSource().Get() == Ipv4Address("10.1.1.6").Get())std::cout << header.GetSource() <<" "<<selectedPort <<"\n";
+        //   if(header.GetSource().Get() == Ipv4Address("10.1.1.8").Get())std::cout << header.GetSource() <<" "<<selectedPort <<"\n";
+        //   if(header.GetSource().Get() == Ipv4Address("10.1.1.10").Get())std::cout << header.GetSource() <<" "<<selectedPort <<"\n";
+        // }
+
 
       return true;
     }

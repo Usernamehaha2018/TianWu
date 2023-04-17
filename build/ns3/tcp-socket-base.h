@@ -967,6 +967,9 @@ protected:
 
   Ptr<RttEstimator> m_rtt; //!< Round trip time estimator
 
+  uint32_t m_cout;
+  static void coutcwnd(Ipv4Address i, Ptr<TcpSocketState> t);
+
   // Rx and Tx buffer management
   TracedValue<SequenceNumber32> m_nextTxSequence; //!< Next seqnum to be sent (SND.NXT), ReTx pushes it back
   TracedValue<SequenceNumber32> m_highTxMark;     //!< Highest seqno ever sent, regardless of ReTx

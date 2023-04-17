@@ -1251,6 +1251,12 @@ TcpSocketBase::OutOfRange (SequenceNumber32 head, SequenceNumber32 tail) const
   return (tail < m_rxBuffer->NextRxSequence () || m_rxBuffer->MaxRxSequence () <= head);
 }
 
+
+void TcpSocketBase::coutcwnd(Ipv4Address i, Ptr<TcpSocketState>t){
+  std::cout << Simulator::Now().GetSeconds()<<" "<< i<<" "<< t->m_cWnd<<"\n";
+  Simulator::Schedule(Seconds(0.0001),&coutcwnd,i, t);
+}
+
 /* Function called by the L3 protocol when it received a packet to pass on to
     the TCP. This function is registered as the "RxCallback" function in
     SetupCallback(), which invoked by Bind(), and CompleteFork() */
@@ -1263,6 +1269,36 @@ TcpSocketBase::ForwardUp (Ptr<Packet> packet, Ipv4Header header, uint16_t port,
                 ":" << m_endPoint->GetPeerPort () <<
                 " to " << m_endPoint->GetLocalAddress () <<
                 ":" << m_endPoint->GetLocalPort ());
+
+  // if(port == 293 && m_endPoint->GetLocalAddress().Get() == Ipv4Address("10.1.1.2").Get()&& m_cout!=1){
+  //   m_cout = 1;
+  //   coutcwnd(m_endPoint->GetLocalAddress(), m_tcb);
+  //   std::cout << Simulator::Now().GetSeconds()<<" "<<" "<< m_tcb->m_cWnd<<"\n";
+  // }
+  // if(port == 293 && m_endPoint->GetLocalAddress().Get() == Ipv4Address("10.1.1.8").Get()&& m_cout!=1){
+  //   m_cout = 1;
+  //   coutcwnd(m_endPoint->GetLocalAddress(), m_tcb);
+  //   std::cout << Simulator::Now().GetSeconds()<<" "<<m_endPoint->GetLocalAddress()<<" "<< m_tcb->m_cWnd<<"\n";
+  // }
+
+
+  // if(port == 293 && m_endPoint->GetLocalAddress().Get() == Ipv4Address("10.1.1.4").Get()&& m_cout!=1){
+  //   m_cout = 1;
+  //   coutcwnd(m_endPoint->GetLocalAddress(), m_tcb);
+  //   std::cout << Simulator::Now().GetSeconds()<<" "<<" "<< m_tcb->m_cWnd<<"\n";
+  // }
+  // if(port == 293 && m_endPoint->GetLocalAddress().Get() == Ipv4Address("10.1.1.6").Get()&& m_cout!=1){
+  //   m_cout = 1;
+  //   coutcwnd(m_endPoint->GetLocalAddress(), m_tcb);
+  //   std::cout << Simulator::Now().GetSeconds()<<" "<<m_endPoint->GetLocalAddress()<<" "<< m_tcb->m_cWnd<<"\n";
+  // }
+
+  //   if(port == 293 && m_endPoint->GetLocalAddress().Get() == Ipv4Address("10.1.1.4").Get()){
+  //   std::cout <<m_endPoint->GetLocalAddress()<<" "<< m_tcb->m_cWnd<<"\n";
+  // }
+  // if(port == 293 && m_endPoint->GetLocalAddress().Get() == Ipv4Address("10.1.1.8").Get()){
+  //   std::cout <<m_endPoint->GetLocalAddress()<<" "<< m_tcb->m_cWnd<<"\n";
+  // }
 
   Address fromAddress = InetSocketAddress (header.GetSource (), port);
   Address toAddress = InetSocketAddress (header.GetDestination (),
