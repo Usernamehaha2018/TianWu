@@ -1381,7 +1381,7 @@ int main (int argc, char *argv[])
     }
 
 
-    // install_applications_new(servers,START_TIME, END_TIME);
+    install_applications_new(servers,START_TIME, END_TIME);
 
     NS_LOG_INFO ("Total flow: " << flowCount);
 

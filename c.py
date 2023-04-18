@@ -38,6 +38,10 @@ if __name__=="__main__":
                 pass
             
         line = f.readline() 
+    
+    sns.set_style("whitegrid")
+    matplotlib.rcParams.update({'font.size': 15, "font.weight": "bold"}) 
+    plt.xticks(None, weight='bold')
         
     y_major_locator=MultipleLocator(100000)
     ax=plt.gca()
