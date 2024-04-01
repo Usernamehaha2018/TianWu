@@ -13,7 +13,7 @@ from matplotlib.pyplot import MultipleLocator
 import matplotlib
 
 # modes = ["clove","ecmp" ]
-modes = [ "letflow","ecmp", "drill", "clove" ]
+modes = [ "letflow","tianwu" ]
 bottoms_20 = {}
 tops_20 = {}
 mid_20 = {}
@@ -21,8 +21,8 @@ mid_40 = {}
 mid_60 = {}
 p99 = {}
 # loads = [0.3,0.4,0.5,0.6,0.7, 0.8]
-loads = [0.05]
-workloads = ["ml", "datamining"]
+loads = [0]
+workloads = ["ml"]
 fcts = {}
 
 
@@ -45,7 +45,7 @@ if __name__ == '__main__':
     for mode in modes:
         print(mode, ":")
         fcts[mode] = []
-        for seed in ["7","8","9"]:
+        for seed in ["8"]:
             for load in loads:
                 if mode+str(load) not in bottoms_20.keys():
                     bottoms_20[mode+str(load)] = []
@@ -56,7 +56,7 @@ if __name__ == '__main__':
                     mid_60[mode+str(load)] = []
                 
                 
-                read_xml("datamining-1-large-load-4X4-"+str(load)+"-DcTcp-"+mode+"-simulation-"+seed+"-b600.xml", mode) 
+                read_xml("ml-1-large-load-4X4-"+str(load)+"-DcTcp-"+mode+"-simulation-"+seed+"-b600.xml", mode) 
                 fcts[mode].sort()
                 print(sum(fcts[mode])/len(fcts[mode]))
                 print(fcts[mode][int(0.999*len(fcts[mode]))])

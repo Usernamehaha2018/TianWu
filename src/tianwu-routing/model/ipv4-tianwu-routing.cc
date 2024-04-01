@@ -29,6 +29,7 @@ namespace ns3
     Simulator::Schedule(8*m_flowletTimeout, &Ipv4TianWuRouting::CalculateUtilized, this);
     t_id = tianwuid;
     tianwuid += 1;
+    std::cout << tianwuid<< std::endl;
     NS_LOG_FUNCTION(this);
   }
 
@@ -99,41 +100,52 @@ namespace ns3
   }
 
   void
+  Ipv4TianWuRouting::SetTianwuParas(double max, double min, uint64_t speed, uint32_t freq, uint32_t leaf)
+  {
+    m_max = max;
+    m_min = min;
+    m_spine_speed = speed;
+    m_sched_freq = freq;
+    is_leaf = leaf;
+  }
+
+  void
   Ipv4TianWuRouting::SetChangeAble()
   {
     changeAble = 1;
   }
+
   void
   Ipv4TianWuRouting::CalculateUtilized()
   {
+    
     changeAble = 0;
     auto iter = m_portTransmit.begin();
     m_highUtilizedPortSet.clear();
     m_underUtilizedPortSet.clear();
     while(iter != m_portTransmit.end()) {
-      if((m_flowletTimeout.GetMicroSeconds() *10 *0.8*10000000000)/(8*1000000) < iter->second )
+      if((m_flowletTimeout.GetMicroSeconds() *m_sched_freq *m_max*m_spine_speed)/(8*1000000) < iter->second )
         {
           m_highUtilizedPortSet.push_back(iter->first);
-          // if(iter->first>=9)std::cout <<t_id<<"\n";
         }
-      if((m_flowletTimeout.GetMicroSeconds() *10 *0.2*10000000000)/(8*1000000) > iter->second )
+      if((m_flowletTimeout.GetMicroSeconds() *m_sched_freq *m_min*m_spine_speed)/(8*1000000) > iter->second )
         {
-          m_underUtilizedPortSet.push_back(iter->first);
+          m_underUtilizedPortSet.push_back(iter->first); 
         }
-        if(t_id == 7)std::cout<<" At " << Simulator::Now().GetSeconds() <<" port "<<iter->first<<" "<< (double)iter->second/((m_flowletTimeout.GetMicroSeconds() *10 *10000000000)/(8*1000000))<<std::endl;
+        // if(t_id == 7)std::cout<<" At " << Simulator::Now().GetSeconds() <<" port "<<iter->first<<" "<< (double)iter->second/((m_flowletTimeout.GetMicroSeconds() *m_sched_freq *m_max*m_spine_speed)/(8*1000000)) <<std::endl;
         iter->second = 0;
         iter++;
         
     }
     
-    if(t_id == 7){
-      std::cout<<"\n";
-      for(auto j= m_flowPort.begin();j!=m_flowPort.end();j++){
-        std::cout<<j->first<<" ";
-        for(auto m = j->second.begin(); m!=j->second.end();m++)
-          std::cout << m->flowid<<" "<<m->network1<<" "<<m->network2<<"\n";
-      }
-    }
+    // if(t_id == 7){
+    //   std::cout<<"\n";
+    //   for(auto j= m_flowPort.begin();j!=m_flowPort.end();j++){
+    //     std::cout<<j->first<<" ";
+    //     for(auto m = j->second.begin(); m!=j->second.end();m++)
+    //       std::cout << m->flowid<<" "<<m->network1<<" "<<m->network2<<"\n";
+    //   }
+    // }
      m_flowPortOld.clear();
      m_flowSeenOld.clear();
     for(auto j= m_flowPort.begin();j!=m_flowPort.end();j++){
@@ -308,9 +320,9 @@ uint32_t
             if (i != m_underUtilizedPortSet.end() &&((m_flowPortOld.find(entry.port) ==m_flowPortOld.end() && (m_flowPortOld.find(flowlet.port) !=m_flowPortOld.end()&&m_flowPortOld[flowlet.port].size()>1))
               || m_flowPortOld[flowlet.port].size() > m_flowPortOld[entry.port].size()+1))
             { 
-              if(t_id==7){std::cout<< Simulator::Now().GetSeconds()<< " "<<"tianwu change port "<<flowId<< " from " <<flowlet.port <<" to "<< entry.port<<std::endl;
+              std::cout<< Simulator::Now().GetSeconds()<< " "<<"tianwu change port "<<flowId<< " from " <<flowlet.port <<" to "<< entry.port<<std::endl;
               
-              }
+              // }
               selectedPort = entry.port;
               m_underUtilizedPortSet.erase(i);
               flowlet.lastSeenTime = now;
@@ -351,9 +363,11 @@ uint32_t
       }
     }
 
-    // Not hit. Random Select the Port
-    if(t_id == 7&&flowletItr!=m_flowletTable.end()&&flowletItr->second.lastSeen>10)
-    {std::cout<<"timeout for " <<flowId<<"\n";}
+
+    // if(t_id == 7&&flowletItr!=m_flowletTable.end()&&flowletItr->second.lastSeen>10)
+    // {std::cout<<"timeout for " <<flowId<<"\n";}
+
+    // Not hit. Random Select the Port    
     selectedPort = routeEntries[rand() % routeEntries.size()].port;
 
     TianWuFlowlet flowlet;
@@ -363,6 +377,7 @@ uint32_t
     flowlet.lastSeen = 0;
     flowlet.lastSeenTime = now;
 
+    if(is_leaf && selectedPort > 15)std::cout<< Simulator::Now().GetSeconds()<<" "<< t_id <<" tianwu choose port for "<<flowId <<" at "<<flowlet.port<<std::endl;
     Ptr<Ipv4Route> route = Ipv4TianWuRouting::ConstructIpv4Route(selectedPort, destAddress);
     ucb(route, packet, header);
 

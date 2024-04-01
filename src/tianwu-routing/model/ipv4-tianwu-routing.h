@@ -65,6 +65,7 @@ public:
   Ptr<Ipv4Route> ConstructIpv4Route (uint32_t port, Ipv4Address destAddress);
 
   void SetFlowletTimeout (Time timeout);
+  void SetTianwuParas (double max, double min, uint64_t speed, uint32_t freq, uint32_t leaf);
   void SetChangeAble ();
   void CalculateUtilized();
   std::vector<int> m_underUtilizedPortSet;
@@ -82,6 +83,12 @@ public:
 private:
   // Flowlet Timeout
   Time m_flowletTimeout;
+
+  double m_max;
+  double m_min;
+  uint64_t m_spine_speed;
+  uint32_t m_sched_freq;
+  uint32_t is_leaf;
 
   // Ipv4 associated with this router
   Ptr<Ipv4> m_ipv4;
