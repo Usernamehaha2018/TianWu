@@ -58,6 +58,7 @@ public:
   virtual void PrintRoutingTable (Ptr<OutputStreamWrapper> stream) const;
 
   uint32_t CalculateQueueLength (uint32_t interface);
+  
 
   virtual void DoDispose (void);
 
@@ -83,7 +84,8 @@ public:
 private:
   // Flowlet Timeout
   Time m_flowletTimeout;
-
+  
+  uint32_t m_trans ;
   double m_max;
   double m_min;
   uint64_t m_spine_speed;

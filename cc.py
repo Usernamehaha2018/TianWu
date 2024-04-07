@@ -20,9 +20,9 @@ mid_20 = {}
 mid_40 = {}
 mid_60 = {}
 p99 = {}
-# loads = [0.3,0.4,0.5,0.6,0.7, 0.8]
-loads = [0]
-workloads = ["ml"]
+loads = [0.5,0.8]
+# loads = [0]
+workloads = [""]
 fcts = {}
 
 
@@ -35,7 +35,8 @@ def read_xml(xml_file, mode):
         b = obj.getAttribute('txBytes')
         timeFirstTxPacket = obj.getAttribute('timeFirstTxPacket')
         if t1 and t2 and b:
-            
+            fcts[mode].append(int(t2[1:-4]) - int(t1[1:-4]))
+            # ml
             if  int(t1[1:-4]) == 200:
                 fcts[mode].append(int(t2[1:-4]) - int(t1[1:-4]))
                 # print(b, int(t2[1:-4]) - int(t1[1:-4]))
@@ -56,9 +57,9 @@ if __name__ == '__main__':
                     mid_60[mode+str(load)] = []
                 
                 
-                read_xml("ml-1-large-load-4X4-"+str(load)+"-DcTcp-"+mode+"-simulation-"+seed+"-b600.xml", mode) 
+                read_xml("hadoop-1-large-load-8X8-"+str(load)+"-DcTcp-"+mode+"-simulation-"+seed+"-b600.xml", mode) 
                 fcts[mode].sort()
-                print(sum(fcts[mode])/len(fcts[mode]))
+                print(mode, load, sum(fcts[mode])/len(fcts[mode]))
                 print(fcts[mode][int(0.999*len(fcts[mode]))])
                 # print(fcts[mode][-1])
                 # print(fcts[mode][-10:])
