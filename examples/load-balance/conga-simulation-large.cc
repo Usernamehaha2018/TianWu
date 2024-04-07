@@ -68,6 +68,11 @@ enum RunMode
     TianWu
 };
 
+void print_time(){
+    std::cout<<" At " << Simulator::Now().GetSeconds() << "\n";
+    Simulator::Schedule(Seconds(0.001), &print_time);
+}
+
 std::stringstream tlbBibleFilename;
 std::stringstream tlbBibleFilename2;
 std::stringstream rbTraceFilename;
@@ -205,7 +210,7 @@ void install_applications(int fromLeafId, NodeContainer servers, double requestR
 
             BulkSendHelper source("ns3::TcpSocketFactory", InetSocketAddress(destAddress, port));
             uint32_t flowSize = gen_random_cdf(cdfTable);
-            // std::cout<<flowSize<<"\n";
+            if(fromLeafId == 0)std::cout<<flowSize<<"\n";
 
             totalFlowSize += flowSize;
             source.SetAttribute("SendSize", UintegerValue(PACKET_SIZE));
@@ -244,7 +249,7 @@ void install_applications_new(NodeContainer servers, double START_TIME, double E
 {
     NS_LOG_INFO("Install applications:");
 
-    for (int i = 0; i < 12; i++)
+    for (int i = 0; i < 7; i++)
     {
         int fromServerIndex = 0 + i;
 
@@ -252,6 +257,7 @@ void install_applications_new(NodeContainer servers, double START_TIME, double E
         uint16_t port = 293;
 
         int destServerIndex = server_count + i;
+        std::cout << fromServerIndex << " "<< destServerIndex<<std::endl;
 
         Ptr<Node> destServer = servers.Get(destServerIndex);
         Ptr<Ipv4> ipv4 = destServer->GetObject<Ipv4>();
@@ -454,6 +460,7 @@ int main(int argc, char *argv[])
     cmd.AddValue("congaFlowletTimeout", "Flowlet timeout in Conga", congaFlowletTimeout);
     cmd.AddValue("letFlowFlowletTimeout", "Flowlet timeout in LetFlow", letFlowFlowletTimeout);
     cmd.AddValue("tianWuFlowletTimeout", "Flowlet timeout in TianWu", tianWuFlowletTimeout);
+    cmd.AddValue("tianWuSchedFreq", "Schedule frequency in TianWu", tianwu_sched_freq);
 
     cmd.AddValue("enableRandomDrop", "Whether the Spine-0 to other leaves has the random drop problem", enableRandomDrop);
     cmd.AddValue("randomDropRate", "The random drop rate when the random drop is enabled", randomDropRate);
@@ -1329,8 +1336,9 @@ int main(int argc, char *argv[])
         {
             install_applications(fromLeafId, servers, requestRate, cdfTable, flowCount, totalFlowSize, SERVER_COUNT, LEAF_COUNT, START_TIME, END_TIME, FLOW_LAUNCH_END_TIME, applicationPauseThresh, applicationPauseTime);
         }
+        std::cout << flowCount<<std::endl;
 
-    install_applications_new(servers, START_TIME, END_TIME, SERVER_COUNT);
+    // install_applications_new(servers, START_TIME, END_TIME, SERVER_COUNT);
 
     NS_LOG_INFO("Total flow: " << flowCount);
 
@@ -1540,6 +1548,7 @@ int main(int argc, char *argv[])
     }
 
     NS_LOG_INFO("Start simulation");
+    Simulator::Schedule(Seconds(0.00001), &print_time);
     std::cout<<"start\n";
     Simulator::Stop(Seconds(END_TIME));
     Simulator::Run();
