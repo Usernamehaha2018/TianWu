@@ -29,7 +29,6 @@ namespace ns3
     Simulator::Schedule(8*m_flowletTimeout, &Ipv4TianWuRouting::CalculateUtilized, this);
     t_id = tianwuid;
     tianwuid += 1;
-    std::cout << tianwuid<< std::endl;
     NS_LOG_FUNCTION(this);
   }
 

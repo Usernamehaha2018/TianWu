@@ -381,6 +381,9 @@ int main(int argc, char *argv[])
     std::string blackHoleDestAddrStr = "10.1.2.0";
     std::string blackHoleDestMaskStr = "255.255.255.0";
 
+    // 0 symmetry 1 leaf-spine asm 2 fat-tree asm
+    uint32_t zte_mode = 0;
+
     bool congaAwareAsym = true;
     bool asymCapacity2 = false;
 
@@ -463,6 +466,8 @@ int main(int argc, char *argv[])
     cmd.AddValue("blackHoleSrcMask", "The packet black hole source mask", blackHoleSrcMaskStr);
     cmd.AddValue("blackHoleDestAddr", "The packet black hole destination address", blackHoleDestAddrStr);
     cmd.AddValue("blackHoleDestMask", "The packet black hole destination mask", blackHoleDestMaskStr);
+
+    cmd.AddValue("zteMode", "for zte configuration", zte_mode);
 
     cmd.AddValue("congaAwareAsym", "Whether Conga is aware of the capacity of asymmetric path capacity", congaAwareAsym);
 
@@ -976,6 +981,17 @@ int main(int argc, char *argv[])
                     asymLink.insert(std::make_pair(i, j));
                     asymLink.insert(std::make_pair(j, i));
                 }
+                // For ZTE asymmetry
+                if(zte_mode == 2){
+                    if( LEAF_COUNT!=8 || SPINE_COUNT!=8 || SPINE_LEAF_CAPACITY!=100 * LINK_CAPACITY_BASE){
+                        std::cout<<"False leaf, spine or rate configuration\n";
+                        exit(1);
+                    }
+                    if(j == 0)spineLeafCapacity = 60 * LINK_CAPACITY_BASE;
+                    else if(j == 1)spineLeafCapacity = 80 * LINK_CAPACITY_BASE;
+                    else if(j == 2)spineLeafCapacity = 120 * LINK_CAPACITY_BASE;
+                    else if(j == 3)spineLeafCapacity = 140 * LINK_CAPACITY_BASE;
+                }
 
                 p2p.SetDeviceAttribute("DataRate", DataRateValue(DataRate(spineLeafCapacity)));
                 ipv4.NewNetwork();
@@ -1030,6 +1046,12 @@ int main(int argc, char *argv[])
                                       << ipv4InterfaceContainer.GetAddress(0) << " <-> " << ipv4InterfaceContainer.GetAddress(1)
                                       << " with port " << netDeviceContainer.Get(0)->GetIfIndex() << " <-> " << netDeviceContainer.Get(1)->GetIfIndex()
                                       << " with data rate " << spineLeafCapacity);
+
+
+                std::cout<<"Leaf - " << i << " is connected to Spine - " << j << " with address "
+                                      << ipv4InterfaceContainer.GetAddress(0) << " <-> " << ipv4InterfaceContainer.GetAddress(1)
+                                      << " with port " << netDeviceContainer.Get(0)->GetIfIndex() << " <-> " << netDeviceContainer.Get(1)->GetIfIndex()
+                                      << " with data rate " << spineLeafCapacity<<"\n";
 
                 if (runMode == TLB || runMode == DRB || runMode == PRESTO || runMode == WEIGHTED_PRESTO || runMode == Clove)
                 {
@@ -1330,7 +1352,7 @@ int main(int argc, char *argv[])
             install_applications(fromLeafId, servers, requestRate, cdfTable, flowCount, totalFlowSize, SERVER_COUNT, LEAF_COUNT, START_TIME, END_TIME, FLOW_LAUNCH_END_TIME, applicationPauseThresh, applicationPauseTime);
         }
 
-    install_applications_new(servers, START_TIME, END_TIME, SERVER_COUNT);
+    // install_applications_new(servers, START_TIME, END_TIME, SERVER_COUNT);
 
     NS_LOG_INFO("Total flow: " << flowCount);
 
