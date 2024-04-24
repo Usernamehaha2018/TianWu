@@ -144,6 +144,8 @@ Ipv4LetFlowRouting::RouteInput (Ptr<const Packet> p, const Ipv4Header &header, P
   if (routeEntries.empty ())
   {
     NS_LOG_ERROR (this << " LetFlow routing cannot find routing entry");
+    std::cout << destAddress <<" "<< header.GetSource()<<std::endl;
+    exit(0);
     ecb (packet, header, Socket::ERROR_NOROUTETOHOST);
     return false;
   }

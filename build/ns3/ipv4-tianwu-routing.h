@@ -67,7 +67,6 @@ public:
 
   void SetFlowletTimeout (Time timeout);
   void SetTianwuParas (double max, double min, uint64_t speed, uint32_t freq, uint32_t leaf);
-  void SetChangeAble ();
   void CalculateUtilized();
   std::vector<int> m_underUtilizedPortSet;
   std::vector<int> m_highUtilizedPortSet;
@@ -79,7 +78,6 @@ public:
   std::vector<uint32_t> m_flowSeenOld;
 
   std::map<int, uint32_t> m_portTransmit;
-  int changeAble;
 
 private:
   // Flowlet Timeout
@@ -91,6 +89,7 @@ private:
   uint64_t m_spine_speed;
   uint32_t m_sched_freq;
   uint32_t is_leaf;
+  bool m_is_set;
 
   // Ipv4 associated with this router
   Ptr<Ipv4> m_ipv4;

@@ -26,7 +26,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-radio-bearer-info.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-radio-bearer-info.cc.1.o", 
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-radio-bearer-info.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-radio-bearer-info.cc.1.o", 
     "file": "../src/lte/model/lte-radio-bearer-info.cc"
   }, 
   {
@@ -41,11 +41,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/wireless/ofdm-validation.cc -c -o /home/mywang/TianWu/build/examples/wireless/ofdm-validation.cc.12.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/wireless/ofdm-validation.cc -c -o /home/mywang/TianWu/build/examples/wireless/ofdm-validation.cc.12.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../examples/wireless/ofdm-validation.cc"
   }, 
   {
@@ -90,18 +86,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-enb-cmac-sap.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-enb-cmac-sap.cc.1.o", 
-    "file": "../src/lte/model/lte-enb-cmac-sap.cc"
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/fd-net-device/examples/fd-tap-ping6.cc -c -o /home/mywang/TianWu/build/src/fd-net-device/examples/fd-tap-ping6.cc.9.o", 
-    "file": "../src/fd-net-device/examples/fd-tap-ping6.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/fd-net-device/examples/fd-tap-ping6.cc -c -o /home/mywang/TianWu/build/src/fd-net-device/examples/fd-tap-ping6.cc.9.o", 
-    "file": "../src/fd-net-device/examples/fd-tap-ping6.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/helper/event-garbage-collector.cc -c -o /home/mywang/TianWu/build/src/core/helper/event-garbage-collector.cc.1.o", 
+    "file": "../src/core/helper/event-garbage-collector.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -110,14 +96,11 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/icmpv6-header.cc -c -o /home/mywang/TianWu/build/src/internet/model/icmpv6-header.cc.1.o", 
     "file": "../src/internet/model/icmpv6-header.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-=======
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/ipv6-interface-address.cc -c -o /home/mywang/TianWu/build/src/internet/model/ipv6-interface-address.cc.1.o", 
     "file": "../src/internet/model/ipv6-interface-address.cc"
   }, 
@@ -125,11 +108,6 @@
     "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/network/helper/application-container.cc -c -o /home/mywang/TianWu/build/src/network/helper/application-container.cc.1.o", 
     "file": "../src/network/helper/application-container.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/helper/ripng-helper.cc -c -o /home/mywang/TianWu/build/src/internet/helper/ripng-helper.cc.1.o", 
-    "file": "../src/internet/helper/ripng-helper.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -208,11 +186,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/ff-mac-csched-sap.cc -c -o /home/mywang/TianWu/build/src/lte/model/ff-mac-csched-sap.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/ff-mac-csched-sap.cc -c -o /home/mywang/TianWu/build/src/lte/model/ff-mac-csched-sap.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/model/ff-mac-csched-sap.cc"
   }, 
   {
@@ -252,18 +226,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-radio-bearer-tag.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-radio-bearer-tag.cc.1.o", 
     "file": "../src/lte/model/lte-radio-bearer-tag.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/model/aarf-wifi-manager.cc -c -o /home/mywang/TianWu/build/src/wifi/model/aarf-wifi-manager.cc.1.o", 
-    "file": "../src/wifi/model/aarf-wifi-manager.cc"
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-radio-bearer-tag.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-radio-bearer-tag.cc.1.o", 
-    "file": "../src/lte/model/lte-radio-bearer-tag.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -344,11 +308,6 @@
     "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/stats/model/data-calculator.cc -c -o /home/mywang/TianWu/build/src/stats/model/data-calculator.cc.1.o", 
     "file": "../src/stats/model/data-calculator.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wave/model/vsa-manager.cc -c -o /home/mywang/TianWu/build/src/wave/model/vsa-manager.cc.1.o", 
-    "file": "../src/wave/model/vsa-manager.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -447,11 +406,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/flow-monitor/model/ipv6-flow-probe.cc -c -o /home/mywang/TianWu/build/src/flow-monitor/model/ipv6-flow-probe.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/flow-monitor/model/ipv6-flow-probe.cc -c -o /home/mywang/TianWu/build/src/flow-monitor/model/ipv6-flow-probe.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/flow-monitor/model/ipv6-flow-probe.cc"
   }, 
   {
@@ -461,11 +416,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/udp/udp-echo.cc -c -o /home/mywang/TianWu/build/examples/udp/udp-echo.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/udp/udp-echo.cc -c -o /home/mywang/TianWu/build/examples/udp/udp-echo.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../examples/udp/udp-echo.cc"
   }, 
   {
@@ -495,11 +446,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-amc.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-amc.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-amc.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-amc.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/model/lte-amc.cc"
   }, 
   {
@@ -519,11 +466,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/tcp/tcp-pcap-nanosec-example.cc -c -o /home/mywang/TianWu/build/examples/tcp/tcp-pcap-nanosec-example.cc.7.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/tcp/tcp-pcap-nanosec-example.cc -c -o /home/mywang/TianWu/build/examples/tcp/tcp-pcap-nanosec-example.cc.7.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../examples/tcp/tcp-pcap-nanosec-example.cc"
   }, 
   {
@@ -533,11 +476,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/netanim/examples/star-animation.cc -c -o /home/mywang/TianWu/build/src/netanim/examples/star-animation.cc.3.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/netanim/examples/star-animation.cc -c -o /home/mywang/TianWu/build/src/netanim/examples/star-animation.cc.3.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/netanim/examples/star-animation.cc"
   }, 
   {
@@ -547,28 +486,13 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/spectrum/helper/adhoc-aloha-noack-ideal-phy-helper.cc -c -o /home/mywang/TianWu/build/src/spectrum/helper/adhoc-aloha-noack-ideal-phy-helper.cc.1.o", 
-    "file": "../src/spectrum/helper/adhoc-aloha-noack-ideal-phy-helper.cc"
-=======
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wimax/model/wimax-mac-queue.cc -c -o /home/mywang/TianWu/build/src/wimax/model/wimax-mac-queue.cc.1.o", 
     "file": "../src/wimax/model/wimax-mac-queue.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/examples/lena-pathloss-traces.cc -c -o /home/mywang/TianWu/build/src/lte/examples/lena-pathloss-traces.cc.5.o", 
-    "file": "../src/lte/examples/lena-pathloss-traces.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/examples/lena-pathloss-traces.cc -c -o /home/mywang/TianWu/build/src/lte/examples/lena-pathloss-traces.cc.5.o", 
     "file": "../src/lte/examples/lena-pathloss-traces.cc"
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -Isrc/aodv -I../src/aodv -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/aodv/model/aodv-packet.cc -c -o /home/mywang/TianWu/build/src/aodv/model/aodv-packet.cc.1.o", 
-    "file": "../src/aodv/model/aodv-packet.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -582,14 +506,11 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/stats/model/uinteger-32-probe.cc -c -o /home/mywang/TianWu/build/src/stats/model/uinteger-32-probe.cc.1.o", 
     "file": "../src/stats/model/uinteger-32-probe.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-=======
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/mesh/model/dot11s/ie-dot11s-prep.cc -c -o /home/mywang/TianWu/build/src/mesh/model/dot11s/ie-dot11s-prep.cc.1.o", 
     "file": "../src/mesh/model/dot11s/ie-dot11s-prep.cc"
   }, 
@@ -605,13 +526,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/helper/mac-stats-calculator.cc -c -o /home/mywang/TianWu/build/src/lte/helper/mac-stats-calculator.cc.1.o", 
-    "file": "../src/lte/helper/mac-stats-calculator.cc"
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-enb-cmac-sap.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-enb-cmac-sap.cc.1.o", 
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-enb-cmac-sap.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-enb-cmac-sap.cc.1.o", 
     "file": "../src/lte/model/lte-enb-cmac-sap.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -625,11 +541,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-rlc-sap.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-rlc-sap.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-rlc-sap.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-rlc-sap.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/model/lte-rlc-sap.cc"
   }, 
   {
@@ -669,11 +581,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/netanim/examples/wireless-animation.cc -c -o /home/mywang/TianWu/build/src/netanim/examples/wireless-animation.cc.4.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/netanim/examples/wireless-animation.cc -c -o /home/mywang/TianWu/build/src/netanim/examples/wireless-animation.cc.4.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/netanim/examples/wireless-animation.cc"
   }, 
   {
@@ -723,11 +631,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/helper/epc-helper.cc -c -o /home/mywang/TianWu/build/src/lte/helper/epc-helper.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/helper/epc-helper.cc -c -o /home/mywang/TianWu/build/src/lte/helper/epc-helper.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/helper/epc-helper.cc"
   }, 
   {
@@ -782,8 +686,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/stats/model/boolean-probe.cc -c -o /home/mywang/TianWu/build/src/stats/model/boolean-probe.cc.1.o", 
-    "file": "../src/stats/model/boolean-probe.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-pdcp-tag.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-pdcp-tag.cc.1.o", 
+    "file": "../src/lte/model/lte-pdcp-tag.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -792,7 +696,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/fd-net-device/examples/fd2fd-onoff.cc -c -o /home/mywang/TianWu/build/src/fd-net-device/examples/fd2fd-onoff.cc.2.o", 
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/fd-net-device/examples/fd2fd-onoff.cc -c -o /home/mywang/TianWu/build/src/fd-net-device/examples/fd2fd-onoff.cc.2.o", 
     "file": "../src/fd-net-device/examples/fd2fd-onoff.cc"
   }, 
   {
@@ -832,11 +736,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/congestion-probing/examples/congestion-probing-example.cc -c -o /home/mywang/TianWu/build/src/congestion-probing/examples/congestion-probing-example.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/congestion-probing/examples/congestion-probing-example.cc -c -o /home/mywang/TianWu/build/src/congestion-probing/examples/congestion-probing-example.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/congestion-probing/examples/congestion-probing-example.cc"
   }, 
   {
@@ -861,11 +761,6 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/wireless/simple-ht-hidden-stations.cc -c -o /home/mywang/TianWu/build/examples/wireless/simple-ht-hidden-stations.cc.24.o", 
-    "file": "../examples/wireless/simple-ht-hidden-stations.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/helper/rip-helper.cc -c -o /home/mywang/TianWu/build/src/internet/helper/rip-helper.cc.1.o", 
     "file": "../src/internet/helper/rip-helper.cc"
   }, 
@@ -878,11 +773,6 @@
     "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-ffr-soft-algorithm.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-ffr-soft-algorithm.cc.1.o", 
     "file": "../src/lte/model/lte-ffr-soft-algorithm.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/model/object-base.cc -c -o /home/mywang/TianWu/build/src/core/model/object-base.cc.1.o", 
-    "file": "../src/core/model/object-base.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -1041,11 +931,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/load-balance/tlb-simulation.cc -c -o /home/mywang/TianWu/build/examples/load-balance/tlb-simulation.cc.7.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/load-balance/tlb-simulation.cc -c -o /home/mywang/TianWu/build/examples/load-balance/tlb-simulation.cc.7.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../examples/load-balance/tlb-simulation.cc"
   }, 
   {
@@ -1055,11 +941,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/wireless/power-adaptation-distance.cc -c -o /home/mywang/TianWu/build/examples/wireless/power-adaptation-distance.cc.20.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/wireless/power-adaptation-distance.cc -c -o /home/mywang/TianWu/build/examples/wireless/power-adaptation-distance.cc.20.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../examples/wireless/power-adaptation-distance.cc"
   }, 
   {
@@ -1069,20 +951,12 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-rlc-am-header.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-rlc-am-header.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-rlc-am-header.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-rlc-am-header.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/model/lte-rlc-am-header.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/traffic-control/examples/red-tests.cc -c -o /home/mywang/TianWu/build/src/traffic-control/examples/red-tests.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/traffic-control/examples/red-tests.cc -c -o /home/mywang/TianWu/build/src/traffic-control/examples/red-tests.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/traffic-control/examples/red-tests.cc"
   }, 
   {
@@ -1142,36 +1016,17 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/spectrum/examples/adhoc-aloha-ideal-phy-matrix-propagation-loss-model.cc -c -o /home/mywang/TianWu/build/src/spectrum/examples/adhoc-aloha-ideal-phy-matrix-propagation-loss-model.cc.2.o", 
     "file": "../src/spectrum/examples/adhoc-aloha-ideal-phy-matrix-propagation-loss-model.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/spectrum/model/non-communicating-net-device.cc -c -o /home/mywang/TianWu/build/src/spectrum/model/non-communicating-net-device.cc.1.o", 
-    "file": "../src/spectrum/model/non-communicating-net-device.cc"
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/spectrum/examples/adhoc-aloha-ideal-phy-matrix-propagation-loss-model.cc -c -o /home/mywang/TianWu/build/src/spectrum/examples/adhoc-aloha-ideal-phy-matrix-propagation-loss-model.cc.2.o", 
-    "file": "../src/spectrum/examples/adhoc-aloha-ideal-phy-matrix-propagation-loss-model.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/network/utils/ethernet-trailer.cc -c -o /home/mywang/TianWu/build/src/network/utils/ethernet-trailer.cc.1.o", 
     "file": "../src/network/utils/ethernet-trailer.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/routing/drb-routing.cc -c -o /home/mywang/TianWu/build/examples/routing/drb-routing.cc.14.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/network/utils/ethernet-trailer.cc -c -o /home/mywang/TianWu/build/src/network/utils/ethernet-trailer.cc.1.o", 
-    "file": "../src/network/utils/ethernet-trailer.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/routing/drb-routing.cc -c -o /home/mywang/TianWu/build/examples/routing/drb-routing.cc.14.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../examples/routing/drb-routing.cc"
   }, 
   {
@@ -1186,14 +1041,6 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-fr-hard-algorithm.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-fr-hard-algorithm.cc.1.o", 
-    "file": "../src/lte/model/lte-fr-hard-algorithm.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-=======
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/network/utils/sll-header.cc -c -o /home/mywang/TianWu/build/src/network/utils/sll-header.cc.1.o", 
     "file": "../src/network/utils/sll-header.cc"
   }, 
@@ -1244,11 +1091,6 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/ff-mac-common.cc -c -o /home/mywang/TianWu/build/src/lte/model/ff-mac-common.cc.1.o", 
-    "file": "../src/lte/model/ff-mac-common.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/model/config.cc -c -o /home/mywang/TianWu/build/src/core/model/config.cc.1.o", 
     "file": "../src/core/model/config.cc"
   }, 
@@ -1284,11 +1126,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/olsr/examples/simple-point-to-point-olsr.cc -c -o /home/mywang/TianWu/build/src/olsr/examples/simple-point-to-point-olsr.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/olsr/examples/simple-point-to-point-olsr.cc -c -o /home/mywang/TianWu/build/src/olsr/examples/simple-point-to-point-olsr.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/olsr/examples/simple-point-to-point-olsr.cc"
   }, 
   {
@@ -1343,8 +1181,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -Isrc/aodv -I../src/aodv -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/aodv/model/aodv-id-cache.cc -c -o /home/mywang/TianWu/build/src/aodv/model/aodv-id-cache.cc.1.o", 
-    "file": "../src/aodv/model/aodv-id-cache.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/wimax/examples/wimax-simple.cc -c -o /home/mywang/TianWu/build/src/wimax/examples/wimax-simple.cc.3.o", 
+    "file": "../src/wimax/examples/wimax-simple.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -1373,11 +1211,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/applications/helper/udp-echo-helper.cc -c -o /home/mywang/TianWu/build/src/applications/helper/udp-echo-helper.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/applications/helper/udp-echo-helper.cc -c -o /home/mywang/TianWu/build/src/applications/helper/udp-echo-helper.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/applications/helper/udp-echo-helper.cc"
   }, 
   {
@@ -1402,16 +1236,12 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/applications/model/udp-echo-server.cc -c -o /home/mywang/TianWu/build/src/applications/model/udp-echo-server.cc.1.o", 
-=======
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/routing/simple-routing-ping6.cc -c -o /home/mywang/TianWu/build/examples/routing/simple-routing-ping6.cc.8.o", 
     "file": "../examples/routing/simple-routing-ping6.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/applications/model/udp-echo-server.cc -c -o /home/mywang/TianWu/build/src/applications/model/udp-echo-server.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/applications/model/udp-echo-server.cc -c -o /home/mywang/TianWu/build/src/applications/model/udp-echo-server.cc.1.o", 
     "file": "../src/applications/model/udp-echo-server.cc"
   }, 
   {
@@ -1448,14 +1278,6 @@
     "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/socket/socket-bound-static-routing.cc -c -o /home/mywang/TianWu/build/examples/socket/socket-bound-static-routing.cc.1.o", 
     "file": "../examples/socket/socket-bound-static-routing.cc"
-<<<<<<< HEAD
-=======
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/mesh/model/dot11s/dot11s-mac-header.cc -c -o /home/mywang/TianWu/build/src/mesh/model/dot11s/dot11s-mac-header.cc.1.o", 
-    "file": "../src/mesh/model/dot11s/dot11s-mac-header.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -1514,11 +1336,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/traffic-control/examples/red-vs-ared.cc -c -o /home/mywang/TianWu/build/src/traffic-control/examples/red-vs-ared.cc.2.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/traffic-control/examples/red-vs-ared.cc -c -o /home/mywang/TianWu/build/src/traffic-control/examples/red-vs-ared.cc.2.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/traffic-control/examples/red-vs-ared.cc"
   }, 
   {
@@ -1615,7 +1433,6 @@
     "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wimax/model/bs-scheduler-rtps.cc -c -o /home/mywang/TianWu/build/src/wimax/model/bs-scheduler-rtps.cc.1.o", 
     "file": "../src/wimax/model/bs-scheduler-rtps.cc"
-<<<<<<< HEAD
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -1625,17 +1442,6 @@
   {
     "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/epc-tft.cc -c -o /home/mywang/TianWu/build/src/lte/model/epc-tft.cc.1.o", 
-=======
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/mobility/helper/ns2-mobility-helper.cc -c -o /home/mywang/TianWu/build/src/mobility/helper/ns2-mobility-helper.cc.1.o", 
-    "file": "../src/mobility/helper/ns2-mobility-helper.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/epc-tft.cc -c -o /home/mywang/TianWu/build/src/lte/model/epc-tft.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/model/epc-tft.cc"
   }, 
   {
@@ -1785,13 +1591,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wimax/model/bs-scheduler-simple.cc -c -o /home/mywang/TianWu/build/src/wimax/model/bs-scheduler-simple.cc.1.o", 
-    "file": "../src/wimax/model/bs-scheduler-simple.cc"
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/helper/point-to-point-epc-helper.cc -c -o /home/mywang/TianWu/build/src/lte/helper/point-to-point-epc-helper.cc.1.o", 
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/helper/point-to-point-epc-helper.cc -c -o /home/mywang/TianWu/build/src/lte/helper/point-to-point-epc-helper.cc.1.o", 
     "file": "../src/lte/helper/point-to-point-epc-helper.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -1812,14 +1613,11 @@
     "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/examples/ideal-wifi-manager-example.cc -c -o /home/mywang/TianWu/build/src/wifi/examples/ideal-wifi-manager-example.cc.3.o", 
     "file": "../src/wifi/examples/ideal-wifi-manager-example.cc"
-<<<<<<< HEAD
-=======
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/load-balance/xpath-routing.cc -c -o /home/mywang/TianWu/build/examples/load-balance/xpath-routing.cc.6.o", 
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/load-balance/xpath-routing.cc -c -o /home/mywang/TianWu/build/examples/load-balance/xpath-routing.cc.6.o", 
     "file": "../examples/load-balance/xpath-routing.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -1833,11 +1631,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/tta-ff-mac-scheduler.cc -c -o /home/mywang/TianWu/build/src/lte/model/tta-ff-mac-scheduler.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/tta-ff-mac-scheduler.cc -c -o /home/mywang/TianWu/build/src/lte/model/tta-ff-mac-scheduler.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/model/tta-ff-mac-scheduler.cc"
   }, 
   {
@@ -1852,21 +1646,12 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wave/helper/wave-helper.cc -c -o /home/mywang/TianWu/build/src/wave/helper/wave-helper.cc.1.o", 
     "file": "../src/wave/helper/wave-helper.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/helper/phy-rx-stats-calculator.cc -c -o /home/mywang/TianWu/build/src/lte/helper/phy-rx-stats-calculator.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/uan/examples/uan-cw-example.cc -c -o /home/mywang/TianWu/build/src/uan/examples/uan-cw-example.cc.1.o", 
-    "file": "../src/uan/examples/uan-cw-example.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/helper/phy-rx-stats-calculator.cc -c -o /home/mywang/TianWu/build/src/lte/helper/phy-rx-stats-calculator.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/helper/phy-rx-stats-calculator.cc"
   }, 
   {
@@ -1926,16 +1711,13 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/examples/lena-dual-stripe.cc -c -o /home/mywang/TianWu/build/src/lte/examples/lena-dual-stripe.cc.2.o", 
     "file": "../src/lte/examples/lena-dual-stripe.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-=======
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/helper/event-garbage-collector.cc -c -o /home/mywang/TianWu/build/src/core/helper/event-garbage-collector.cc.1.o", 
-    "file": "../src/core/helper/event-garbage-collector.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/fd-net-device/examples/fd-tap-ping6.cc -c -o /home/mywang/TianWu/build/src/fd-net-device/examples/fd-tap-ping6.cc.9.o", 
+    "file": "../src/fd-net-device/examples/fd-tap-ping6.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -1979,23 +1761,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/tcp/tcp-nsc-lfn.cc -c -o /home/mywang/TianWu/build/examples/tcp/tcp-nsc-lfn.cc.2.o", 
-    "file": "../examples/tcp/tcp-nsc-lfn.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/wireless/wifi-adhoc.cc -c -o /home/mywang/TianWu/build/examples/wireless/wifi-adhoc.cc.2.o", 
     "file": "../examples/wireless/wifi-adhoc.cc"
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/wireless/wifi-adhoc.cc -c -o /home/mywang/TianWu/build/examples/wireless/wifi-adhoc.cc.2.o", 
-    "file": "../examples/wireless/wifi-adhoc.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/traffic-control/examples/codel-vs-pfifo-basic-test.cc -c -o /home/mywang/TianWu/build/src/traffic-control/examples/codel-vs-pfifo-basic-test.cc.5.o", 
-    "file": "../src/traffic-control/examples/codel-vs-pfifo-basic-test.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -2044,8 +1811,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/epc-tft-classifier.cc -c -o /home/mywang/TianWu/build/src/lte/model/epc-tft-classifier.cc.1.o", 
-    "file": "../src/lte/model/epc-tft-classifier.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/wireless/simple-ht-hidden-stations.cc -c -o /home/mywang/TianWu/build/examples/wireless/simple-ht-hidden-stations.cc.24.o", 
+    "file": "../examples/wireless/simple-ht-hidden-stations.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -2081,16 +1848,6 @@
     "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/mobility/model/waypoint.cc -c -o /home/mywang/TianWu/build/src/mobility/model/waypoint.cc.1.o", 
     "file": "../src/mobility/model/waypoint.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-mac-sap.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-mac-sap.cc.1.o", 
-    "file": "../src/lte/model/lte-mac-sap.cc"
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wimax/model/wimax-phy.cc -c -o /home/mywang/TianWu/build/src/wimax/model/wimax-phy.cc.1.o", 
-    "file": "../src/wimax/model/wimax-phy.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -2134,11 +1891,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/flow-monitor/model/flow-classifier.cc -c -o /home/mywang/TianWu/build/src/flow-monitor/model/flow-classifier.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/flow-monitor/model/flow-classifier.cc -c -o /home/mywang/TianWu/build/src/flow-monitor/model/flow-classifier.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/flow-monitor/model/flow-classifier.cc"
   }, 
   {
@@ -2238,11 +1991,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/core/examples/main-random-variable.cc -c -o /home/mywang/TianWu/build/src/core/examples/main-random-variable.cc.4.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/examples/main-random-variable.cc -c -o /home/mywang/TianWu/build/src/core/examples/main-random-variable.cc.4.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/core/examples/main-random-variable.cc"
   }, 
   {
@@ -2297,11 +2046,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/error-model/simple-error-model.cc -c -o /home/mywang/TianWu/build/examples/error-model/simple-error-model.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/error-model/simple-error-model.cc -c -o /home/mywang/TianWu/build/examples/error-model/simple-error-model.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../examples/error-model/simple-error-model.cc"
   }, 
   {
@@ -2361,11 +2106,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/naming/object-names.cc -c -o /home/mywang/TianWu/build/examples/naming/object-names.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/naming/object-names.cc -c -o /home/mywang/TianWu/build/examples/naming/object-names.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../examples/naming/object-names.cc"
   }, 
   {
@@ -2475,19 +2216,16 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/tutorial/fifth.cc -c -o /home/mywang/TianWu/build/examples/tutorial/fifth.cc.6.o", 
+    "file": "../examples/tutorial/fifth.cc"
+  }, 
+  {
+    "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/helper/wifi-radio-energy-model-helper.cc -c -o /home/mywang/TianWu/build/src/wifi/helper/wifi-radio-energy-model-helper.cc.1.o", 
     "file": "../src/wifi/helper/wifi-radio-energy-model-helper.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/wimax/examples/wimax-simple.cc -c -o /home/mywang/TianWu/build/src/wimax/examples/wimax-simple.cc.3.o", 
-    "file": "../src/wimax/examples/wimax-simple.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-=======
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/arp-header.cc -c -o /home/mywang/TianWu/build/src/internet/model/arp-header.cc.1.o", 
     "file": "../src/internet/model/arp-header.cc"
   }, 
@@ -2513,11 +2251,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-rlc-um.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-rlc-um.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-rlc-um.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-rlc-um.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/model/lte-rlc-um.cc"
   }, 
   {
@@ -2542,11 +2276,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../utils/test-runner.cc -c -o /home/mywang/TianWu/build/utils/test-runner.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../utils/test-runner.cc -c -o /home/mywang/TianWu/build/utils/test-runner.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../utils/test-runner.cc"
   }, 
   {
@@ -2606,20 +2336,12 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/wireless/wifi-simple-interference.cc -c -o /home/mywang/TianWu/build/examples/wireless/wifi-simple-interference.cc.10.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/wireless/wifi-simple-interference.cc -c -o /home/mywang/TianWu/build/examples/wireless/wifi-simple-interference.cc.10.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../examples/wireless/wifi-simple-interference.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/epc-ue-nas.cc -c -o /home/mywang/TianWu/build/src/lte/model/epc-ue-nas.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/epc-ue-nas.cc -c -o /home/mywang/TianWu/build/src/lte/model/epc-ue-nas.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/model/epc-ue-nas.cc"
   }, 
   {
@@ -2644,11 +2366,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-ue-cmac-sap.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-ue-cmac-sap.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-ue-cmac-sap.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-ue-cmac-sap.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/model/lte-ue-cmac-sap.cc"
   }, 
   {
@@ -2668,11 +2386,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/examples/lena-simple-epc.cc -c -o /home/mywang/TianWu/build/src/lte/examples/lena-simple-epc.cc.11.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/examples/lena-simple-epc.cc -c -o /home/mywang/TianWu/build/src/lte/examples/lena-simple-epc.cc.11.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/examples/lena-simple-epc.cc"
   }, 
   {
@@ -2697,11 +2411,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/tutorial/first.cc -c -o /home/mywang/TianWu/build/examples/tutorial/first.cc.2.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/tutorial/first.cc -c -o /home/mywang/TianWu/build/examples/tutorial/first.cc.2.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../examples/tutorial/first.cc"
   }, 
   {
@@ -2731,11 +2441,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../scratch/hidden-terminal.cc -c -o /home/mywang/TianWu/build/scratch/hidden-terminal.cc.3.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../scratch/hidden-terminal.cc -c -o /home/mywang/TianWu/build/scratch/hidden-terminal.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../scratch/hidden-terminal.cc"
   }, 
   {
@@ -2760,13 +2466,13 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/load-balance/tlb-conga-simulation.cc -c -o /home/mywang/TianWu/build/examples/load-balance/tlb-conga-simulation.cc.10.o", 
-    "file": "../examples/load-balance/tlb-conga-simulation.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/traffic-control/examples/pfifo-vs-red.cc -c -o /home/mywang/TianWu/build/src/traffic-control/examples/pfifo-vs-red.cc.4.o", 
+    "file": "../src/traffic-control/examples/pfifo-vs-red.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/traffic-control/examples/pfifo-vs-red.cc -c -o /home/mywang/TianWu/build/src/traffic-control/examples/pfifo-vs-red.cc.4.o", 
-    "file": "../src/traffic-control/examples/pfifo-vs-red.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-enb-rrc.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-enb-rrc.cc.1.o", 
+    "file": "../src/lte/model/lte-enb-rrc.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -2785,11 +2491,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/csma/examples/csma-packet-socket.cc -c -o /home/mywang/TianWu/build/src/csma/examples/csma-packet-socket.cc.3.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/csma/examples/csma-packet-socket.cc -c -o /home/mywang/TianWu/build/src/csma/examples/csma-packet-socket.cc.3.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/csma/examples/csma-packet-socket.cc"
   }, 
   {
@@ -2814,11 +2516,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/wireless/vht-wifi-network.cc -c -o /home/mywang/TianWu/build/examples/wireless/vht-wifi-network.cc.17.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/wireless/vht-wifi-network.cc -c -o /home/mywang/TianWu/build/examples/wireless/vht-wifi-network.cc.17.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../examples/wireless/vht-wifi-network.cc"
   }, 
   {
@@ -2828,13 +2526,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/routing/simple-routing-ping6.cc -c -o /home/mywang/TianWu/build/examples/routing/simple-routing-ping6.cc.8.o", 
-    "file": "../examples/routing/simple-routing-ping6.cc"
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/nix-vector-routing/examples/nix-simple.cc -c -o /home/mywang/TianWu/build/src/nix-vector-routing/examples/nix-simple.cc.1.o", 
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/nix-vector-routing/examples/nix-simple.cc -c -o /home/mywang/TianWu/build/src/nix-vector-routing/examples/nix-simple.cc.1.o", 
     "file": "../src/nix-vector-routing/examples/nix-simple.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -2873,8 +2566,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/point-to-point/model/point-to-point-remote-channel.cc -c -o /home/mywang/TianWu/build/src/point-to-point/model/point-to-point-remote-channel.cc.1.o", 
-    "file": "../src/point-to-point/model/point-to-point-remote-channel.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-rlc.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-rlc.cc.1.o", 
+    "file": "../src/lte/model/lte-rlc.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -2923,8 +2616,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-enb-rrc.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-enb-rrc.cc.1.o", 
-    "file": "../src/lte/model/lte-enb-rrc.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/helper/mac-stats-calculator.cc -c -o /home/mywang/TianWu/build/src/lte/helper/mac-stats-calculator.cc.1.o", 
+    "file": "../src/lte/helper/mac-stats-calculator.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -2940,19 +2633,16 @@
     "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/network/utils/packet-socket-client.cc -c -o /home/mywang/TianWu/build/src/network/utils/packet-socket-client.cc.1.o", 
     "file": "../src/network/utils/packet-socket-client.cc"
-<<<<<<< HEAD
-=======
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/applications/model/seq-ts-header.cc -c -o /home/mywang/TianWu/build/src/applications/model/seq-ts-header.cc.1.o", 
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/applications/model/seq-ts-header.cc -c -o /home/mywang/TianWu/build/src/applications/model/seq-ts-header.cc.1.o", 
     "file": "../src/applications/model/seq-ts-header.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wimax/model/ss-record.cc -c -o /home/mywang/TianWu/build/src/wimax/model/ss-record.cc.1.o", 
     "file": "../src/wimax/model/ss-record.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -2983,6 +2673,11 @@
     "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-enb-mac.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-enb-mac.cc.1.o", 
     "file": "../src/lte/model/lte-enb-mac.cc"
+  }, 
+  {
+    "directory": "/home/mywang/TianWu/build", 
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/applications/model/bulk-send-application.cc -c -o /home/mywang/TianWu/build/src/applications/model/bulk-send-application.cc.1.o", 
+    "file": "../src/applications/model/bulk-send-application.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -3028,19 +2723,6 @@
     "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/conga-routing/model/ipv4-conga-tag.cc -c -o /home/mywang/TianWu/build/src/conga-routing/model/ipv4-conga-tag.cc.1.o", 
     "file": "../src/conga-routing/model/ipv4-conga-tag.cc"
-<<<<<<< HEAD
-=======
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/model/attribute.cc -c -o /home/mywang/TianWu/build/src/core/model/attribute.cc.1.o", 
-    "file": "../src/core/model/attribute.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -Isrc/aodv -I../src/aodv -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/aodv/model/aodv-rqueue.cc -c -o /home/mywang/TianWu/build/src/aodv/model/aodv-rqueue.cc.1.o", 
-    "file": "../src/aodv/model/aodv-rqueue.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -3174,11 +2856,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-anr.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-anr.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-anr.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-anr.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/model/lte-anr.cc"
   }, 
   {
@@ -3228,20 +2906,12 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/wireless/ht-wifi-network.cc -c -o /home/mywang/TianWu/build/examples/wireless/ht-wifi-network.cc.16.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/wireless/ht-wifi-network.cc -c -o /home/mywang/TianWu/build/examples/wireless/ht-wifi-network.cc.16.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../examples/wireless/ht-wifi-network.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/buildings/model/itu-r-1238-propagation-loss-model.cc -c -o /home/mywang/TianWu/build/src/buildings/model/itu-r-1238-propagation-loss-model.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/buildings/model/itu-r-1238-propagation-loss-model.cc -c -o /home/mywang/TianWu/build/src/buildings/model/itu-r-1238-propagation-loss-model.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/buildings/model/itu-r-1238-propagation-loss-model.cc"
   }, 
   {
@@ -3306,16 +2976,12 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-spectrum-phy.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-spectrum-phy.cc.1.o", 
-=======
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/network/model/tag-buffer.cc -c -o /home/mywang/TianWu/build/src/network/model/tag-buffer.cc.1.o", 
     "file": "../src/network/model/tag-buffer.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-spectrum-phy.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-spectrum-phy.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-spectrum-phy.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-spectrum-phy.cc.1.o", 
     "file": "../src/lte/model/lte-spectrum-phy.cc"
   }, 
   {
@@ -3345,14 +3011,11 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/bridge/examples/csma-bridge.cc -c -o /home/mywang/TianWu/build/src/bridge/examples/csma-bridge.cc.1.o", 
     "file": "../src/bridge/examples/csma-bridge.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-=======
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wave/model/bsm-application.cc -c -o /home/mywang/TianWu/build/src/wave/model/bsm-application.cc.1.o", 
     "file": "../src/wave/model/bsm-application.cc"
   }, 
@@ -3363,11 +3026,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/mpi/examples/simple-distributed-empty-node.cc -c -o /home/mywang/TianWu/build/src/mpi/examples/simple-distributed-empty-node.cc.4.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/mpi/examples/simple-distributed-empty-node.cc -c -o /home/mywang/TianWu/build/src/mpi/examples/simple-distributed-empty-node.cc.4.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/mpi/examples/simple-distributed-empty-node.cc"
   }, 
   {
@@ -3387,11 +3046,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/applications/model/onoff-application.cc -c -o /home/mywang/TianWu/build/src/applications/model/onoff-application.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/applications/model/onoff-application.cc -c -o /home/mywang/TianWu/build/src/applications/model/onoff-application.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/applications/model/onoff-application.cc"
   }, 
   {
@@ -3426,13 +3081,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-rlc.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-rlc.cc.1.o", 
-    "file": "../src/lte/model/lte-rlc.cc"
-=======
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/point-to-point/model/point-to-point-remote-channel.cc -c -o /home/mywang/TianWu/build/src/point-to-point/model/point-to-point-remote-channel.cc.1.o", 
     "file": "../src/point-to-point/model/point-to-point-remote-channel.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -3446,16 +3096,12 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/ipv4-l3-protocol.cc -c -o /home/mywang/TianWu/build/src/internet/model/ipv4-l3-protocol.cc.1.o", 
-    "file": "../src/internet/model/ipv4-l3-protocol.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-fr-hard-algorithm.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-fr-hard-algorithm.cc.1.o", 
+    "file": "../src/lte/model/lte-fr-hard-algorithm.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/applications/model/udp-echo-client.cc -c -o /home/mywang/TianWu/build/src/applications/model/udp-echo-client.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/applications/model/udp-echo-client.cc -c -o /home/mywang/TianWu/build/src/applications/model/udp-echo-client.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/applications/model/udp-echo-client.cc"
   }, 
   {
@@ -3595,8 +3241,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/network/model/address.cc -c -o /home/mywang/TianWu/build/src/network/model/address.cc.1.o", 
-    "file": "../src/network/model/address.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/spectrum/helper/adhoc-aloha-noack-ideal-phy-helper.cc -c -o /home/mywang/TianWu/build/src/spectrum/helper/adhoc-aloha-noack-ideal-phy-helper.cc.1.o", 
+    "file": "../src/spectrum/helper/adhoc-aloha-noack-ideal-phy-helper.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -3625,13 +3271,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/nix-vector-routing/examples/nix-simple.cc -c -o /home/mywang/TianWu/build/src/nix-vector-routing/examples/nix-simple.cc.1.o", 
-    "file": "../src/nix-vector-routing/examples/nix-simple.cc"
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-mac-sap.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-mac-sap.cc.1.o", 
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-mac-sap.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-mac-sap.cc.1.o", 
     "file": "../src/lte/model/lte-mac-sap.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -3665,19 +3306,6 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-rlc-sdu-status-tag.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-rlc-sdu-status-tag.cc.1.o", 
-    "file": "../src/lte/model/lte-rlc-sdu-status-tag.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/uan/model/uan-prop-model.cc -c -o /home/mywang/TianWu/build/src/uan/model/uan-prop-model.cc.1.o", 
-    "file": "../src/uan/model/uan-prop-model.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/ipv6-packet-info-tag.cc -c -o /home/mywang/TianWu/build/src/internet/model/ipv6-packet-info-tag.cc.1.o", 
     "file": "../src/internet/model/ipv6-packet-info-tag.cc"
   }, 
@@ -3758,8 +3386,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -Isrc/propagation -I../src/propagation -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/propagation/model/propagation-delay-model.cc -c -o /home/mywang/TianWu/build/src/propagation/model/propagation-delay-model.cc.1.o", 
-    "file": "../src/propagation/model/propagation-delay-model.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/ipv6/test-ipv6.cc -c -o /home/mywang/TianWu/build/examples/ipv6/test-ipv6.cc.5.o", 
+    "file": "../examples/ipv6/test-ipv6.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -3773,14 +3401,6 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/routing/simple-alternate-routing.cc -c -o /home/mywang/TianWu/build/examples/routing/simple-alternate-routing.cc.6.o", 
-    "file": "../examples/routing/simple-alternate-routing.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-=======
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/traffic-control/model/codel-queue-disc.cc -c -o /home/mywang/TianWu/build/src/traffic-control/model/codel-queue-disc.cc.1.o", 
     "file": "../src/traffic-control/model/codel-queue-disc.cc"
   }, 
@@ -3821,15 +3441,6 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/load-balance/xpath-routing.cc -c -o /home/mywang/TianWu/build/examples/load-balance/xpath-routing.cc.6.o", 
-    "file": "../examples/load-balance/xpath-routing.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wimax/model/ss-record.cc -c -o /home/mywang/TianWu/build/src/wimax/model/ss-record.cc.1.o", 
-    "file": "../src/wimax/model/ss-record.cc"
-=======
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/helper/ripng-helper.cc -c -o /home/mywang/TianWu/build/src/internet/helper/ripng-helper.cc.1.o", 
     "file": "../src/internet/helper/ripng-helper.cc"
   }, 
@@ -3837,7 +3448,6 @@
     "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -Isrc/aodv -I../src/aodv -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/aodv/model/aodv-id-cache.cc -c -o /home/mywang/TianWu/build/src/aodv/model/aodv-id-cache.cc.1.o", 
     "file": "../src/aodv/model/aodv-id-cache.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -3861,8 +3471,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-enb-phy-sap.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-enb-phy-sap.cc.1.o", 
-    "file": "../src/lte/model/lte-enb-phy-sap.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/model/qos-utils.cc -c -o /home/mywang/TianWu/build/src/wifi/model/qos-utils.cc.1.o", 
+    "file": "../src/wifi/model/qos-utils.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -3896,16 +3506,13 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/fd-net-device/examples/fd2fd-onoff.cc -c -o /home/mywang/TianWu/build/src/fd-net-device/examples/fd2fd-onoff.cc.2.o", 
-    "file": "../src/fd-net-device/examples/fd2fd-onoff.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/icmpv4.cc -c -o /home/mywang/TianWu/build/src/internet/model/icmpv4.cc.1.o", 
+    "file": "../src/internet/model/icmpv4.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-=======
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/icmpv4.cc -c -o /home/mywang/TianWu/build/src/internet/model/icmpv4.cc.1.o", 
-    "file": "../src/internet/model/icmpv4.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/epc-tft-classifier.cc -c -o /home/mywang/TianWu/build/src/lte/model/epc-tft-classifier.cc.1.o", 
+    "file": "../src/lte/model/epc-tft-classifier.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -3929,11 +3536,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/load-balance/conga-simulation-large.cc -c -o /home/mywang/TianWu/build/examples/load-balance/conga-simulation-large.cc.4.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/load-balance/conga-simulation-large.cc -c -o /home/mywang/TianWu/build/examples/load-balance/conga-simulation-large.cc.4.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../examples/load-balance/conga-simulation-large.cc"
   }, 
   {
@@ -3993,11 +3596,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-rlc-header.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-rlc-header.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-rlc-header.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-rlc-header.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/model/lte-rlc-header.cc"
   }, 
   {
@@ -4062,8 +3661,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-radio-bearer-info.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-radio-bearer-info.cc.1.o", 
-    "file": "../src/lte/model/lte-radio-bearer-info.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/model/object-base.cc -c -o /home/mywang/TianWu/build/src/core/model/object-base.cc.1.o", 
+    "file": "../src/core/model/object-base.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -4117,23 +3716,18 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/examples/main-ptr.cc -c -o /home/mywang/TianWu/build/src/core/examples/main-ptr.cc.3.o", 
-    "file": "../src/core/examples/main-ptr.cc"
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/ff-mac-common.cc -c -o /home/mywang/TianWu/build/src/lte/model/ff-mac-common.cc.1.o", 
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/ff-mac-common.cc -c -o /home/mywang/TianWu/build/src/lte/model/ff-mac-common.cc.1.o", 
     "file": "../src/lte/model/ff-mac-common.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/tcp-header.cc -c -o /home/mywang/TianWu/build/src/internet/model/tcp-header.cc.1.o", 
     "file": "../src/internet/model/tcp-header.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/tcp-header.cc -c -o /home/mywang/TianWu/build/src/internet/model/tcp-header.cc.1.o", 
-    "file": "../src/internet/model/tcp-header.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/network/model/address.cc -c -o /home/mywang/TianWu/build/src/network/model/address.cc.1.o", 
+    "file": "../src/network/model/address.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -4172,11 +3766,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/csma-layout/examples/csma-star.cc -c -o /home/mywang/TianWu/build/src/csma-layout/examples/csma-star.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/csma-layout/examples/csma-star.cc -c -o /home/mywang/TianWu/build/src/csma-layout/examples/csma-star.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/csma-layout/examples/csma-star.cc"
   }, 
   {
@@ -4211,11 +3801,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/helper/lte-helper.cc -c -o /home/mywang/TianWu/build/src/lte/helper/lte-helper.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/helper/lte-helper.cc -c -o /home/mywang/TianWu/build/src/lte/helper/lte-helper.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/helper/lte-helper.cc"
   }, 
   {
@@ -4250,20 +3836,12 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/dsdv/examples/dsdv-manet.cc -c -o /home/mywang/TianWu/build/src/dsdv/examples/dsdv-manet.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/dsdv/examples/dsdv-manet.cc -c -o /home/mywang/TianWu/build/src/dsdv/examples/dsdv-manet.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/dsdv/examples/dsdv-manet.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/rr-ff-mac-scheduler.cc -c -o /home/mywang/TianWu/build/src/lte/model/rr-ff-mac-scheduler.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/rr-ff-mac-scheduler.cc -c -o /home/mywang/TianWu/build/src/lte/model/rr-ff-mac-scheduler.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/model/rr-ff-mac-scheduler.cc"
   }, 
   {
@@ -4318,11 +3896,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../scratch/scratch-simulator.cc -c -o /home/mywang/TianWu/build/scratch/scratch-simulator.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../scratch/scratch-simulator.cc -c -o /home/mywang/TianWu/build/scratch/scratch-simulator.cc.3.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../scratch/scratch-simulator.cc"
   }, 
   {
@@ -4352,8 +3926,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/tutorial/seventh.cc -c -o /home/mywang/TianWu/build/examples/tutorial/seventh.cc.8.o", 
-    "file": "../examples/tutorial/seventh.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/tcp/tcp-nsc-lfn.cc -c -o /home/mywang/TianWu/build/examples/tcp/tcp-nsc-lfn.cc.2.o", 
+    "file": "../examples/tcp/tcp-nsc-lfn.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -4397,16 +3971,12 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/applications/model/bulk-send-application.cc -c -o /home/mywang/TianWu/build/src/applications/model/bulk-send-application.cc.1.o", 
-    "file": "../src/applications/model/bulk-send-application.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wimax/model/crc8.cc -c -o /home/mywang/TianWu/build/src/wimax/model/crc8.cc.1.o", 
+    "file": "../src/wimax/model/crc8.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/wimax/examples/wimax-ipv4.cc -c -o /home/mywang/TianWu/build/src/wimax/examples/wimax-ipv4.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wimax/examples/wimax-ipv4.cc -c -o /home/mywang/TianWu/build/src/wimax/examples/wimax-ipv4.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/wimax/examples/wimax-ipv4.cc"
   }, 
   {
@@ -4461,8 +4031,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet-apps/helper/ping6-helper.cc -c -o /home/mywang/TianWu/build/src/internet-apps/helper/ping6-helper.cc.1.o", 
-    "file": "../src/internet-apps/helper/ping6-helper.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/load-balance/tlb-conga-simulation.cc -c -o /home/mywang/TianWu/build/examples/load-balance/tlb-conga-simulation.cc.10.o", 
+    "file": "../examples/load-balance/tlb-conga-simulation.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -4481,13 +4051,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-pdcp-tag.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-pdcp-tag.cc.1.o", 
-    "file": "../src/lte/model/lte-pdcp-tag.cc"
-=======
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/stats/model/boolean-probe.cc -c -o /home/mywang/TianWu/build/src/stats/model/boolean-probe.cc.1.o", 
     "file": "../src/stats/model/boolean-probe.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -4503,17 +4068,6 @@
     "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/ipv4-routing-protocol.cc -c -o /home/mywang/TianWu/build/src/internet/model/ipv4-routing-protocol.cc.1.o", 
     "file": "../src/internet/model/ipv4-routing-protocol.cc"
-<<<<<<< HEAD
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/network/model/tag-buffer.cc -c -o /home/mywang/TianWu/build/src/network/model/tag-buffer.cc.1.o", 
-    "file": "../src/network/model/tag-buffer.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/fd-net-device/examples/fd-emu-udp-echo.cc -c -o /home/mywang/TianWu/build/src/fd-net-device/examples/fd-emu-udp-echo.cc.6.o", 
-=======
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -4522,8 +4076,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/fd-net-device/examples/fd-emu-udp-echo.cc -c -o /home/mywang/TianWu/build/src/fd-net-device/examples/fd-emu-udp-echo.cc.6.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/fd-net-device/examples/fd-emu-udp-echo.cc -c -o /home/mywang/TianWu/build/src/fd-net-device/examples/fd-emu-udp-echo.cc.6.o", 
     "file": "../src/fd-net-device/examples/fd-emu-udp-echo.cc"
   }, 
   {
@@ -4638,11 +4191,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-ue-power-control.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-ue-power-control.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-ue-power-control.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-ue-power-control.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/model/lte-ue-power-control.cc"
   }, 
   {
@@ -4682,11 +4231,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/helper/lte-stats-calculator.cc -c -o /home/mywang/TianWu/build/src/lte/helper/lte-stats-calculator.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/helper/lte-stats-calculator.cc -c -o /home/mywang/TianWu/build/src/lte/helper/lte-stats-calculator.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/helper/lte-stats-calculator.cc"
   }, 
   {
@@ -4701,13 +4246,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/drill-routing/model/ipv4-drill-routing.cc -c -o /home/mywang/TianWu/build/src/drill-routing/model/ipv4-drill-routing.cc.1.o", 
     "file": "../src/drill-routing/model/ipv4-drill-routing.cc"
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/bridge/examples/csma-bridge.cc -c -o /home/mywang/TianWu/build/src/bridge/examples/csma-bridge.cc.1.o", 
-    "file": "../src/bridge/examples/csma-bridge.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -4731,13 +4271,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/applications/model/seq-ts-header.cc -c -o /home/mywang/TianWu/build/src/applications/model/seq-ts-header.cc.1.o", 
-    "file": "../src/applications/model/seq-ts-header.cc"
-=======
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/mobility/model/waypoint-mobility-model.cc -c -o /home/mywang/TianWu/build/src/mobility/model/waypoint-mobility-model.cc.1.o", 
     "file": "../src/mobility/model/waypoint-mobility-model.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -4806,16 +4341,12 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/helper/radio-bearer-stats-connector.cc -c -o /home/mywang/TianWu/build/src/lte/helper/radio-bearer-stats-connector.cc.1.o", 
-=======
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/ipv4-l3-protocol.cc -c -o /home/mywang/TianWu/build/src/internet/model/ipv4-l3-protocol.cc.1.o", 
     "file": "../src/internet/model/ipv4-l3-protocol.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/helper/radio-bearer-stats-connector.cc -c -o /home/mywang/TianWu/build/src/lte/helper/radio-bearer-stats-connector.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/helper/radio-bearer-stats-connector.cc -c -o /home/mywang/TianWu/build/src/lte/helper/radio-bearer-stats-connector.cc.1.o", 
     "file": "../src/lte/helper/radio-bearer-stats-connector.cc"
   }, 
   {
@@ -4855,13 +4386,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/dsr/model/dsr-fs-header.cc -c -o /home/mywang/TianWu/build/src/dsr/model/dsr-fs-header.cc.1.o", 
-    "file": "../src/dsr/model/dsr-fs-header.cc"
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/flow-monitor/model/ipv4-flow-classifier.cc -c -o /home/mywang/TianWu/build/src/flow-monitor/model/ipv4-flow-classifier.cc.1.o", 
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/flow-monitor/model/ipv4-flow-classifier.cc -c -o /home/mywang/TianWu/build/src/flow-monitor/model/ipv4-flow-classifier.cc.1.o", 
     "file": "../src/flow-monitor/model/ipv4-flow-classifier.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -4880,8 +4406,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wimax/model/crc8.cc -c -o /home/mywang/TianWu/build/src/wimax/model/crc8.cc.1.o", 
-    "file": "../src/wimax/model/crc8.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/energy/helper/energy-harvester-helper.cc -c -o /home/mywang/TianWu/build/src/energy/helper/energy-harvester-helper.cc.1.o", 
+    "file": "../src/energy/helper/energy-harvester-helper.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -4895,11 +4421,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/uan/examples/uan-rc-example.cc -c -o /home/mywang/TianWu/build/src/uan/examples/uan-rc-example.cc.2.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/uan/examples/uan-rc-example.cc -c -o /home/mywang/TianWu/build/src/uan/examples/uan-rc-example.cc.2.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/uan/examples/uan-rc-example.cc"
   }, 
   {
@@ -4919,17 +4441,13 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/wireless/wifi-simple-infra.cc -c -o /home/mywang/TianWu/build/examples/wireless/wifi-simple-infra.cc.9.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/wireless/wifi-simple-infra.cc -c -o /home/mywang/TianWu/build/examples/wireless/wifi-simple-infra.cc.9.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../examples/wireless/wifi-simple-infra.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/wireless/rate-adaptation-distance.cc -c -o /home/mywang/TianWu/build/examples/wireless/rate-adaptation-distance.cc.22.o", 
-    "file": "../examples/wireless/rate-adaptation-distance.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/spectrum/model/non-communicating-net-device.cc -c -o /home/mywang/TianWu/build/src/spectrum/model/non-communicating-net-device.cc.1.o", 
+    "file": "../src/spectrum/model/non-communicating-net-device.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -4968,11 +4486,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/tutorial/second.cc -c -o /home/mywang/TianWu/build/examples/tutorial/second.cc.3.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/tutorial/second.cc -c -o /home/mywang/TianWu/build/examples/tutorial/second.cc.3.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../examples/tutorial/second.cc"
   }, 
   {
@@ -5027,11 +4541,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/epc-x2.cc -c -o /home/mywang/TianWu/build/src/lte/model/epc-x2.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/epc-x2.cc -c -o /home/mywang/TianWu/build/src/lte/model/epc-x2.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/model/epc-x2.cc"
   }, 
   {
@@ -5041,13 +4551,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/ipv6/test-ipv6.cc -c -o /home/mywang/TianWu/build/examples/ipv6/test-ipv6.cc.5.o", 
-    "file": "../examples/ipv6/test-ipv6.cc"
-=======
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -Isrc/propagation -I../src/propagation -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/propagation/model/propagation-delay-model.cc -c -o /home/mywang/TianWu/build/src/propagation/model/propagation-delay-model.cc.1.o", 
     "file": "../src/propagation/model/propagation-delay-model.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -5061,13 +4566,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-ue-net-device.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-ue-net-device.cc.1.o", 
-    "file": "../src/lte/model/lte-ue-net-device.cc"
-=======
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet-apps/helper/ping6-helper.cc -c -o /home/mywang/TianWu/build/src/internet-apps/helper/ping6-helper.cc.1.o", 
     "file": "../src/internet-apps/helper/ping6-helper.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -5121,22 +4621,13 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/tutorial/sixth.cc -c -o /home/mywang/TianWu/build/examples/tutorial/sixth.cc.7.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/tutorial/sixth.cc -c -o /home/mywang/TianWu/build/examples/tutorial/sixth.cc.7.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../examples/tutorial/sixth.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/helper/point-to-point-epc-helper.cc -c -o /home/mywang/TianWu/build/src/lte/helper/point-to-point-epc-helper.cc.1.o", 
-    "file": "../src/lte/helper/point-to-point-epc-helper.cc"
-=======
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wimax/model/bs-scheduler-simple.cc -c -o /home/mywang/TianWu/build/src/wimax/model/bs-scheduler-simple.cc.1.o", 
     "file": "../src/wimax/model/bs-scheduler-simple.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -5165,11 +4656,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/config-store/model/attribute-default-iterator.cc -c -o /home/mywang/TianWu/build/src/config-store/model/attribute-default-iterator.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/config-store/model/attribute-default-iterator.cc -c -o /home/mywang/TianWu/build/src/config-store/model/attribute-default-iterator.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/config-store/model/attribute-default-iterator.cc"
   }, 
   {
@@ -5184,16 +4671,12 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/wireless/rate-adaptation-distance.cc -c -o /home/mywang/TianWu/build/examples/wireless/rate-adaptation-distance.cc.22.o", 
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/wireless/rate-adaptation-distance.cc -c -o /home/mywang/TianWu/build/examples/wireless/rate-adaptation-distance.cc.22.o", 
     "file": "../examples/wireless/rate-adaptation-distance.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/applications/model/udp-server.cc -c -o /home/mywang/TianWu/build/src/applications/model/udp-server.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/applications/model/udp-server.cc -c -o /home/mywang/TianWu/build/src/applications/model/udp-server.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/applications/model/udp-server.cc"
   }, 
   {
@@ -5228,14 +4711,11 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/tutorial/seventh.cc -c -o /home/mywang/TianWu/build/examples/tutorial/seventh.cc.8.o", 
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/tutorial/seventh.cc -c -o /home/mywang/TianWu/build/examples/tutorial/seventh.cc.8.o", 
     "file": "../examples/tutorial/seventh.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/network/utils/simple-channel.cc -c -o /home/mywang/TianWu/build/src/network/utils/simple-channel.cc.1.o", 
     "file": "../src/network/utils/simple-channel.cc"
   }, 
@@ -5271,11 +4751,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-rlc-tm.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-rlc-tm.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-rlc-tm.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-rlc-tm.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/model/lte-rlc-tm.cc"
   }, 
   {
@@ -5292,6 +4768,11 @@
     "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/epc-sgw-pgw-application.cc -c -o /home/mywang/TianWu/build/src/lte/model/epc-sgw-pgw-application.cc.1.o", 
     "file": "../src/lte/model/epc-sgw-pgw-application.cc"
+  }, 
+  {
+    "directory": "/home/mywang/TianWu/build", 
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-ue-net-device.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-ue-net-device.cc.1.o", 
+    "file": "../src/lte/model/lte-ue-net-device.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -5325,11 +4806,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/applications/model/udp-client.cc -c -o /home/mywang/TianWu/build/src/applications/model/udp-client.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/applications/model/udp-client.cc -c -o /home/mywang/TianWu/build/src/applications/model/udp-client.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/applications/model/udp-client.cc"
   }, 
   {
@@ -5339,11 +4816,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-net-device.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-net-device.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-net-device.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-net-device.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/model/lte-net-device.cc"
   }, 
   {
@@ -5353,11 +4826,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/helper/radio-environment-map-helper.cc -c -o /home/mywang/TianWu/build/src/lte/helper/radio-environment-map-helper.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/helper/radio-environment-map-helper.cc -c -o /home/mywang/TianWu/build/src/lte/helper/radio-environment-map-helper.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/helper/radio-environment-map-helper.cc"
   }, 
   {
@@ -5372,11 +4841,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/tdmt-ff-mac-scheduler.cc -c -o /home/mywang/TianWu/build/src/lte/model/tdmt-ff-mac-scheduler.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/tdmt-ff-mac-scheduler.cc -c -o /home/mywang/TianWu/build/src/lte/model/tdmt-ff-mac-scheduler.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/model/tdmt-ff-mac-scheduler.cc"
   }, 
   {
@@ -5406,8 +4871,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/tutorial/fifth.cc -c -o /home/mywang/TianWu/build/examples/tutorial/fifth.cc.6.o", 
-    "file": "../examples/tutorial/fifth.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/dsr/model/dsr-fs-header.cc -c -o /home/mywang/TianWu/build/src/dsr/model/dsr-fs-header.cc.1.o", 
+    "file": "../src/dsr/model/dsr-fs-header.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -5471,11 +4936,6 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/mpi/model/mpi-interface.cc -c -o /home/mywang/TianWu/build/src/mpi/model/mpi-interface.cc.1.o", 
-    "file": "../src/mpi/model/mpi-interface.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wimax/model/simple-ofdm-wimax-channel.cc -c -o /home/mywang/TianWu/build/src/wimax/model/simple-ofdm-wimax-channel.cc.1.o", 
     "file": "../src/wimax/model/simple-ofdm-wimax-channel.cc"
   }, 
@@ -5501,11 +4961,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/ff-mac-sched-sap.cc -c -o /home/mywang/TianWu/build/src/lte/model/ff-mac-sched-sap.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/ff-mac-sched-sap.cc -c -o /home/mywang/TianWu/build/src/lte/model/ff-mac-sched-sap.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/model/ff-mac-sched-sap.cc"
   }, 
   {
@@ -5615,11 +5071,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-asn1-header.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-asn1-header.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-asn1-header.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-asn1-header.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/lte/model/lte-asn1-header.cc"
   }, 
   {
@@ -5629,13 +5081,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/energy/helper/energy-harvester-helper.cc -c -o /home/mywang/TianWu/build/src/energy/helper/energy-harvester-helper.cc.1.o", 
-    "file": "../src/energy/helper/energy-harvester-helper.cc"
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/routing/simple-alternate-routing.cc -c -o /home/mywang/TianWu/build/examples/routing/simple-alternate-routing.cc.6.o", 
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/routing/simple-alternate-routing.cc -c -o /home/mywang/TianWu/build/examples/routing/simple-alternate-routing.cc.6.o", 
     "file": "../examples/routing/simple-alternate-routing.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -5649,13 +5096,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/model/qos-utils.cc -c -o /home/mywang/TianWu/build/src/wifi/model/qos-utils.cc.1.o", 
-    "file": "../src/wifi/model/qos-utils.cc"
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-enb-phy-sap.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-enb-phy-sap.cc.1.o", 
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-enb-phy-sap.cc -c -o /home/mywang/TianWu/build/src/lte/model/lte-enb-phy-sap.cc.1.o", 
     "file": "../src/lte/model/lte-enb-phy-sap.cc"
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -5739,11 +5181,7 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-<<<<<<< HEAD
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/config-store/examples/config-store-save.cc -c -o /home/mywang/TianWu/build/src/config-store/examples/config-store-save.cc.1.o", 
-=======
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/config-store/examples/config-store-save.cc -c -o /home/mywang/TianWu/build/src/config-store/examples/config-store-save.cc.1.o", 
->>>>>>> e174a41fccb1cfd20fd908ed1e50904cfe634595
     "file": "../src/config-store/examples/config-store-save.cc"
   }, 
   {
@@ -5780,11 +5218,6 @@
     "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wimax/model/ss-link-manager.cc -c -o /home/mywang/TianWu/build/src/wimax/model/ss-link-manager.cc.1.o", 
     "file": "../src/wimax/model/ss-link-manager.cc"
-  }, 
-  {
-    "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -Isrc/point-to-point-layout -I../src/point-to-point-layout -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/point-to-point-layout/model/point-to-point-grid.cc -c -o /home/mywang/TianWu/build/src/point-to-point-layout/model/point-to-point-grid.cc.1.o", 
-    "file": "../src/point-to-point-layout/model/point-to-point-grid.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -5825,6 +5258,11 @@
     "directory": "/home/mywang/TianWu/build", 
     "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../examples/tcp/tcp-nsc-comparison.cc -c -o /home/mywang/TianWu/build/examples/tcp/tcp-nsc-comparison.cc.8.o", 
     "file": "../examples/tcp/tcp-nsc-comparison.cc"
+  }, 
+  {
+    "directory": "/home/mywang/TianWu/build", 
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/examples/main-ptr.cc -c -o /home/mywang/TianWu/build/src/core/examples/main-ptr.cc.3.o", 
+    "file": "../src/core/examples/main-ptr.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
@@ -5888,8 +5326,8 @@
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
-    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -I. -I.. -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_LIBXML2=1 ../src/flow-monitor/model/ipv4-flow-classifier.cc -c -o /home/mywang/TianWu/build/src/flow-monitor/model/ipv4-flow-classifier.cc.1.o", 
-    "file": "../src/flow-monitor/model/ipv4-flow-classifier.cc"
+    "command": "g++-5 -w -std=c++11 -march=native -fstrict-overflow -fPIC -pthread -Isrc/point-to-point-layout -I../src/point-to-point-layout -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/point-to-point-layout/model/point-to-point-grid.cc -c -o /home/mywang/TianWu/build/src/point-to-point-layout/model/point-to-point-grid.cc.1.o", 
+    "file": "../src/point-to-point-layout/model/point-to-point-grid.cc"
   }, 
   {
     "directory": "/home/mywang/TianWu/build", 
