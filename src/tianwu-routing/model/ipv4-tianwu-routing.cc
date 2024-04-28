@@ -29,7 +29,8 @@ namespace ns3
     m_trans = 0;
     t_id = tianwuid;
     tianwuid += 1;
-    std::cout << tianwuid<< std::endl;
+    m_is_set = false;
+    Simulator::Schedule(Seconds(0), &Ipv4TianWuRouting::Port_change_init, this);
     NS_LOG_FUNCTION(this);
   }
 
@@ -100,73 +101,75 @@ namespace ns3
   }
 
   void
-  Ipv4TianWuRouting::SetTianwuParas(double max, double min, uint64_t speed, uint32_t freq, uint32_t leaf)
+  Ipv4TianWuRouting::SetTianwuParas(double max, double min, uint64_t speed, uint32_t freq, uint32_t leaf, double max_reroute)
   {
     m_max = max;
     m_min = min;
     m_spine_speed = speed;
     m_sched_freq = freq;
-    Simulator::Schedule(m_sched_freq*m_flowletTimeout, &Ipv4TianWuRouting::CalculateUtilized, this);
+    if(m_is_set == 0){Simulator::Schedule(m_sched_freq*m_flowletTimeout, &Ipv4TianWuRouting::CalculateUtilized, this);m_is_set = 1;}
     is_leaf = leaf;
+    m_max_reroute = max_reroute;
   }
 
   void
-  Ipv4TianWuRouting::SetChangeAble()
-  {
-    changeAble = 1;
+  Ipv4TianWuRouting::Port_change_init(){
+    for(auto i = 0; i< m_ipv4->GetNInterfaces();i++){
+      m_ports_moved[i] = 0;
+    }
   }
+
 
   void
   Ipv4TianWuRouting::CalculateUtilized()
   {
-    // std::cout << m_flowletTimeout<<std::endl;
-    // if(t_id == 8)
-    // {std::cout<<Simulator::Now()<<" "<<m_trans << std::endl;
-    // }
-    changeAble = 0;
     auto iter = m_portTransmit.begin();
     m_highUtilizedPortSet.clear();
     m_underUtilizedPortSet.clear();
+    if(t_id>=8)std::cout<<t_id <<" "<< Simulator::Now()<<" ";
     while(iter != m_portTransmit.end()) {
-      // if(iter->first > 16 && t_id == 8)std::cout << iter->first << " "<<1.000001*iter->second/((m_flowletTimeout.GetMicroSeconds() *m_sched_freq *m_spine_speed)/(8*1000000))<<" ";
-      if((m_flowletTimeout.GetMicroSeconds() *m_sched_freq *m_max*m_spine_speed)/(8*1000000) < iter->second )
+        if(t_id>=8 && iter->first > 16)std::cout<< iter->first<<": "<< (double)iter->second*8*1000000/(m_flowletTimeout.GetMicroSeconds() *m_sched_freq *m_max*m_spine_speed)<<"     ";
+      if((double)m_max < (double)iter->second*8*1000000/(m_flowletTimeout.GetMicroSeconds() *m_sched_freq *m_max*m_spine_speed))
         {
           m_highUtilizedPortSet.push_back(iter->first);
         }
-      if((m_flowletTimeout.GetMicroSeconds() *m_sched_freq *m_min*m_spine_speed)/(8*1000000) > iter->second )
+      if((double)m_min > (double)iter->second*8*1000000/(m_flowletTimeout.GetMicroSeconds() *m_sched_freq *m_max*m_spine_speed) )
         {
           m_underUtilizedPortSet.push_back(iter->first); 
         }
-        // if(t_id == 7)std::cout<<" At " << Simulator::Now().GetSeconds() <<" port "<<iter->first<<" "<< (double)iter->second/((m_flowletTimeout.GetMicroSeconds() *m_sched_freq *m_max*m_spine_speed)/(8*1000000)) <<std::endl;
         iter->second = 0;
         iter++;
         
     }
+    if(t_id>=8)std::cout<<"\n";
     
-    // if(is_leaf &&  t_id >= 8){
-    //   std::cout<< t_id << "high";
-    //   for(auto j= m_highUtilizedPortSet.begin();j!=m_highUtilizedPortSet.end();j++){
-        
-    //     if(*j > 16)std::cout<<*j << " ";
-    //   }
-    //   std::cout<<"low";
-    //   for(auto j= m_underUtilizedPortSet.begin();j!=m_underUtilizedPortSet.end();j++){
-        
-    //     if(*j > 16)std::cout<<*j<<" ";
-    //   }
-    // }
      m_flowPortOld.clear();
-     m_flowSeenOld.clear();
     for(auto j= m_flowPort.begin();j!=m_flowPort.end();j++){
       for(auto m:j->second)
         m_flowPortOld[j->first].push_back(m);
     }
 
+    if(t_id >= 8){
+      for(auto j= m_flowPortOld.begin();j!=m_flowPortOld.end();j++){
+        if(j->first>16)std::cout<< j->first<<": " << j->second.size()<<" ";
+      }
+      std::cout <<"\n"<<"High: ";
+      for(auto h: m_highUtilizedPortSet){
+        if(h> 16)std::cout<<h<<" ";
+      }
+      std::cout<<"Low ";
+      for(auto h: m_underUtilizedPortSet){
+        if(h> 16)std::cout<<h<< " ";
+      }
+      std::cout <<"\n";
+    }
+
+    Port_change_init();
+    
+
     m_flowPort.clear();
     m_flowSeen.clear();
-    // std::cout<<m_flowPortOld.size()<<"\n";
     Simulator::Schedule(m_sched_freq*m_flowletTimeout, &Ipv4TianWuRouting::CalculateUtilized, this);
-    // Simulator::Schedule(5*m_flowletTimeout, &Ipv4TianWuRouting::SetChangeAble, this);
   }
 
   Ptr<Ipv4Route>
@@ -184,7 +187,7 @@ uint32_t
   Ptr<Ipv4L3Protocol> ipv4L3Protocol = DynamicCast<Ipv4L3Protocol> (m_ipv4);
   if (!ipv4L3Protocol)
   {
-    NS_LOG_ERROR (this << " Drill routing cannot work other than Ipv4L3Protocol");
+    NS_LOG_ERROR (this << " TianWu routing cannot work other than Ipv4L3Protocol");
     return 0;
   }
 
@@ -222,7 +225,7 @@ uint32_t
                                 UnicastForwardCallback ucb, MulticastForwardCallback mcb,
                                 LocalDeliverCallback lcb, ErrorCallback ecb)
   {
-    if(p->GetSize()>1000)m_trans += p->GetSize();
+
     NS_LOG_LOGIC(this << " RouteInput: " << p << "Ip header: " << header);
 
     NS_ASSERT(m_ipv4->GetInterfaceForDevice(idev) >= 0);
@@ -230,7 +233,6 @@ uint32_t
     Ptr<Packet> packet = ConstCast<Packet>(p);
 
     Ipv4Address destAddress = header.GetDestination();
-
     // TianWu routing only supports unicast
     if (destAddress.IsMulticast() || destAddress.IsBroadcast())
     {
@@ -278,19 +280,16 @@ uint32_t
     std::map<uint32_t, struct TianWuFlowlet>::iterator flowletItr = m_flowletTable.find(flowId);
     if (flowletItr != m_flowletTable.end())
     {
-
-
       TianWuFlowlet flowlet = flowletItr->second;
-      
-      if (now - flowlet.activeTime <= m_flowletTimeout && flowlet.lastSeen <6)
-      {
-
-        if (now - flowlet.lastSeenTime > m_flowletTimeout / 2)
+        if (now - flowlet.lastSeenTime > m_flowletTimeout)
         {
           flowlet.lastSeen += 1;
-          // Do not forget to update the flowlet active time
           flowlet.lastSeenTime = now;
-        }
+          // Do not forget to update the flowlet active time
+        }      
+      if (now - flowlet.activeTime <= m_flowletTimeout && flowlet.lastSeen <m_sched_freq/2)
+      {
+
 
         // Do not forget to update the flowlet active time
         flowlet.activeTime = now;
@@ -303,12 +302,10 @@ uint32_t
 
         m_flowletTable[flowId] = flowlet;
 
-        // if(t_id == 8 && selectedPort > 16)std::cout << selectedPort<<std::endl;
-
         m_portTransmit[selectedPort] += p->GetSize();
-
         return true;
       }
+      
       else if (now - flowlet.activeTime <= m_flowletTimeout )
       {
         // record flow
@@ -320,21 +317,32 @@ uint32_t
           t.network2 = header.GetSource();
           m_flowPort[flowlet.port].push_back(t);
           m_flowSeen.push_back(flowId);
-          // std::cout<<p->GetSize()<<"\n";
         }
         auto j = std::find(m_highUtilizedPortSet.begin(), m_highUtilizedPortSet.end(), flowlet.port);
-        if (j != m_highUtilizedPortSet.end())
+        if (j != m_highUtilizedPortSet.end() && (double)m_ports_moved[flowlet.port]/(double)m_flowPortOld[flowlet.port].size() < m_max_reroute)
         {
 
           for (auto entry : routeEntries)
           {
             auto i = std::find(m_underUtilizedPortSet.begin(), m_underUtilizedPortSet.end(), entry.port);
-            if (i != m_underUtilizedPortSet.end() &&((m_flowPortOld.find(entry.port) ==m_flowPortOld.end() && (m_flowPortOld.find(flowlet.port) !=m_flowPortOld.end()&&m_flowPortOld[flowlet.port].size()>1))
-              || m_flowPortOld[flowlet.port].size() > m_flowPortOld[entry.port].size()+1))
+            if (i != m_underUtilizedPortSet.end() )
             { 
-              std::cout<< Simulator::Now().GetSeconds()<< " "<<"tianwu change port "<<flowId<< " from " <<flowlet.port <<" to "<< entry.port<<std::endl;
-              
-              // }
+              m_ports_moved[flowlet.port] += 1;
+              std::cout<< Simulator::Now().GetSeconds()<< " "<<t_id<<"tianwu change port "<<flowId<< " from " <<flowlet.port <<" to "<< entry.port<<std::endl;
+              // delete flow from the old port
+              std::vector<TianWuRouteFlow> cur_flow = m_flowPort[flowlet.port];
+              for(uint32_t m = 0; m < cur_flow.size(); m++){ 
+                if (cur_flow[m].flowid == flowId){
+                  cur_flow.erase(cur_flow.begin()+m);
+                  m_flowPort[flowlet.port] = cur_flow;
+                  break;
+                }
+              }
+              struct TianWuRouteFlow t;
+              t.flowid = flowId;
+              t.network1 = destAddress;
+              t.network2 = header.GetSource();
+              m_flowPort[entry.port].push_back(t);
               selectedPort = entry.port;
               m_underUtilizedPortSet.erase(i);
               flowlet.lastSeenTime = now;
@@ -344,8 +352,6 @@ uint32_t
               ucb(route, packet, header);
               m_flowletTable[flowId] = flowlet;
 
-              // if(t_id == 8 && selectedPort > 16)std::cout << selectedPort<<std::endl;
-
               m_portTransmit[selectedPort] += p->GetSize();
               return true;
             }
@@ -353,35 +359,15 @@ uint32_t
 
           // this means no available under utilized port
         }
-        // std::cout <<"No available port "<<t_id<<" "<<flowlet.lastSeen<<std::endl;
         flowlet.activeTime = now;
         selectedPort = flowlet.port;
         Ptr<Ipv4Route> route = Ipv4TianWuRouting::ConstructIpv4Route(selectedPort, destAddress);
         ucb(route, packet, header);
         m_flowletTable[flowId] = flowlet;
-
-// if(t_id == 8 && selectedPort > 16)std::cout << selectedPort<<std::endl;
         m_portTransmit[selectedPort] += p->GetSize();
         return true;
-      }
-      else if (now - flowlet.activeTime > m_flowletTimeout && flowlet.lastSeen > 5 ){
-        flowlet.activeTime = now;
-        selectedPort = flowlet.port;
-        Ptr<Ipv4Route> route = Ipv4TianWuRouting::ConstructIpv4Route(selectedPort, destAddress);
-        ucb(route, packet, header);
-        m_flowletTable[flowId] = flowlet;
-
-// if(t_id == 8 && selectedPort > 16)std::cout << selectedPort<<std::endl;
-        m_portTransmit[selectedPort] += p->GetSize();
-        return true;
-
-
       }
     }
-
-
-    // if(t_id == 7&&flowletItr!=m_flowletTable.end()&&flowletItr->second.lastSeen>10)
-    // {std::cout<<"timeout for " <<flowId<<"\n";}
 
     // Not hit. Random Select the Port    
     selectedPort = routeEntries[rand() % routeEntries.size()].port;
@@ -392,13 +378,10 @@ uint32_t
     flowlet.activeTime = now;
     flowlet.lastSeen = 0;
     flowlet.lastSeenTime = now;
-
-    // if(is_leaf && selectedPort > 15)std::cout<< Simulator::Now().GetSeconds()<<" "<< t_id <<" tianwu choose port for "<<flowId <<" at "<<flowlet.port<<std::endl;
     Ptr<Ipv4Route> route = Ipv4TianWuRouting::ConstructIpv4Route(selectedPort, destAddress);
     ucb(route, packet, header);
 
     m_flowletTable[flowId] = flowlet;
-     m_portTransmit[selectedPort] += p->GetSize();
     return true;
   }
 

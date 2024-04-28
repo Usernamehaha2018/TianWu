@@ -66,9 +66,9 @@ public:
   Ptr<Ipv4Route> ConstructIpv4Route (uint32_t port, Ipv4Address destAddress);
 
   void SetFlowletTimeout (Time timeout);
-  void SetTianwuParas (double max, double min, uint64_t speed, uint32_t freq, uint32_t leaf);
-  void SetChangeAble ();
+  void SetTianwuParas (double max, double min, uint64_t speed, uint32_t freq, uint32_t leaf, double max_reroute);
   void CalculateUtilized();
+  void Port_change_init();
   std::vector<int> m_underUtilizedPortSet;
   std::vector<int> m_highUtilizedPortSet;
 
@@ -77,9 +77,9 @@ public:
 
   std::map<uint32_t, std::vector<TianWuRouteFlow>> m_flowPortOld;
   std::vector<uint32_t> m_flowSeenOld;
+  std::map<uint32_t, uint32_t> m_ports_moved;
 
   std::map<int, uint32_t> m_portTransmit;
-  int changeAble;
 
 private:
   // Flowlet Timeout
@@ -91,6 +91,8 @@ private:
   uint64_t m_spine_speed;
   uint32_t m_sched_freq;
   uint32_t is_leaf;
+  bool m_is_set;
+  double m_max_reroute;
 
   // Ipv4 associated with this router
   Ptr<Ipv4> m_ipv4;
