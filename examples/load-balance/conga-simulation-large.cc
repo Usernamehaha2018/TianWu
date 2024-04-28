@@ -102,6 +102,9 @@ void install_applications(int fromLeafId, NodeContainer servers, double requestR
 
             BulkSendHelper source("ns3::TcpSocketFactory", InetSocketAddress(destAddress, port));
             uint32_t flowSize = gen_random_cdf(cdfTable);
+            if(flowSize == 0){
+                flowSize = 64;
+            }
             // if(fromLeafId == 0)std::cout<<flowSize<<"\n";
 
             totalFlowSize += flowSize;
@@ -138,11 +141,6 @@ void install_applications(int fromLeafId, NodeContainer servers, double requestR
     
     
 }
-
-static void CwndChange(uint32_t oldv, uint32_t nv)
-{
-}
-
 
 int main(int argc, char *argv[])
 {

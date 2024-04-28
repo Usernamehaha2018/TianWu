@@ -298,7 +298,7 @@ uint32_t
           for (auto entry : routeEntries)
           {
             auto i = std::find(m_underUtilizedPortSet.begin(), m_underUtilizedPortSet.end(), entry.port);
-            if (i != m_underUtilizedPortSet.end() &&(m_flowPortOld[flowlet.port].size() > m_flowPortOld[entry.port].size()+1))
+            if (i != m_underUtilizedPortSet.end())
             { 
               std::cout<< Simulator::Now().GetSeconds()<< " "<<"tianwu change port "<<flowId<< " from " <<flowlet.port <<" to "<< entry.port<<std::endl;
               // delete flow from the old port
