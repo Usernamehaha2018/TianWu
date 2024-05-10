@@ -13,7 +13,7 @@ from matplotlib.pyplot import MultipleLocator
 import matplotlib
 
 # modes = ["clove","ecmp" ]
-modes = [ "tianwu"]
+modes = [ "tianwu","letflow"]
 bottoms_20 = {}
 tops_20 = {}
 mid_20 = {}

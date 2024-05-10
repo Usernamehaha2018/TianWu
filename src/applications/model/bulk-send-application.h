@@ -74,6 +74,11 @@ public:
    */
   static TypeId GetTypeId (void);
 
+
+  uint64_t start_time;
+  void SetCallback (Callback<void,uint64_t, uint64_t, uint64_t> callback);
+  Callback<void,uint64_t,uint64_t, uint64_t> m_Finishcallback;
+
   BulkSendApplication ();
 
   virtual ~BulkSendApplication ();
@@ -132,6 +137,8 @@ private:
    * \brief Connection Succeeded (called by Socket through a callback)
    * \param socket the connected socket
    */
+  void normalClose(Ptr<Socket>);
+  void errorClose(Ptr<Socket>);
   void ConnectionSucceeded (Ptr<Socket> socket);
   /**
    * \brief Connection Failed (called by Socket through a callback)
@@ -142,6 +149,7 @@ private:
    * \brief Send more data as soon as some has been transmitted.
    */
   void DataSend (Ptr<Socket>, uint32_t); // for socket's SetSendCallback
+  void DataFinish(Ptr<Socket>, uint64_t);
 
   void ResumeSend (void);
 };

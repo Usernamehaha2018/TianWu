@@ -1213,11 +1213,13 @@ TcpSocketBase::DoClose (void)
   return 0;
 }
 
+
 /* Peacefully close the socket by notifying the upper layer and deallocate end point */
 void
 TcpSocketBase::CloseAndNotify (void)
 {
   NS_LOG_FUNCTION (this);
+  
 
 
   if (!m_closeNotified)
@@ -1228,6 +1230,8 @@ TcpSocketBase::CloseAndNotify (void)
 
   NS_LOG_DEBUG (TcpStateName[m_state] << " -> CLOSED");
   m_state = CLOSED;
+  std::cout <<m_tot_bytes<< " "<<m_start_time<<" "<< Simulator::Now().GetNanoSeconds()<< "fin\n";
+  // NotifyFin(Simulator::Now().GetNanoSeconds());
   DeallocateEndPoint ();
 }
 
@@ -1391,7 +1395,8 @@ TcpSocketBase::DoForwardUp (Ptr<Packet> packet, const Address &fromAddress,
         {
           // TODO Check @ Hong
           // We just ignore those packets
-          // SendEmptyPacket (TcpHeader::ACK);
+          std::cout << "empty\n";
+          SendEmptyPacket (TcpHeader::ACK);
         }
       return;
     }
@@ -1624,6 +1629,7 @@ TcpSocketBase::ProcessEstablished (Ptr<Packet> packet, const TcpHeader& tcpHeade
 void
 TcpSocketBase::ReceivedAck (Ptr<Packet> packet, const TcpHeader& tcpHeader)
 {
+  // std::cout<<"ACK\n";
   NS_LOG_FUNCTION (this << tcpHeader);
 
   NS_ASSERT (0 != (tcpHeader.GetFlags () & TcpHeader::ACK));
@@ -1708,11 +1714,12 @@ TcpSocketBase::ReceivedAck (Ptr<Packet> packet, const TcpHeader& tcpHeader)
     {
       // There is a DupAck
       ++m_dupAckCount;
+      ++m_dupAckTotCount;
      
       UintegerValue uv;
       GlobalValue::GetValueByName ("DupAckCnt", uv);
 
-      //  std::cout <<Simulator::Now().GetSeconds()<<" "<< uv.Get()<< "\n";
+       std::cout <<Simulator::Now().GetSeconds()<<" "<< uv.Get()<< "\n";
        uv.Set(uv.Get() + 1);
        GlobalValue::Bind("DupAckCnt", uv);
 
@@ -1739,6 +1746,7 @@ TcpSocketBase::ReceivedAck (Ptr<Packet> packet, const TcpHeader& tcpHeader)
         {
           if ((m_dupAckCount == m_retxThresh) && (m_highRxAckMark >= m_recover))
             {
+              std::cout <<"fast\n";
               // triple duplicate ack triggers fast retransmit (RFC2582 sec.3 bullet #1)
               NS_LOG_DEBUG (TcpSocketState::TcpCongStateName[m_tcb->m_congState] <<
                             " -> RECOVERY");
@@ -4055,6 +4063,20 @@ TcpSocketBase::SetMinRto (Time minRto)
   NS_LOG_FUNCTION (this << minRto);
   m_minRto = minRto;
 }
+
+uint32_t
+TcpSocketBase::GetDupCnt ()
+{
+  return m_dupAckTotCount;
+}
+
+
+Ipv4Address
+TcpSocketBase::GetAddress ()
+{
+  return  m_endPoint->GetLocalAddress ();
+}
+
 
 Time
 TcpSocketBase::GetMinRto (void) const

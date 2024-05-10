@@ -28,7 +28,6 @@
 #include "point-to-point-net-device.h"
 #include "point-to-point-channel.h"
 #include "ppp-header.h"
-
 namespace ns3 {
 
 NS_LOG_COMPONENT_DEFINE ("PointToPointNetDevice");
@@ -588,6 +587,8 @@ PointToPointNetDevice::Send (
 
   // Enqueue may fail (overflow). Stop the tx queue, so that the upper layers
   // do not send packets until there is room in the queue again.
+
+  // std::cout<<m_node->GetNDevices()<< "mac tx drop\n";
   m_macTxDropTrace (packet);
   if (txq)
   {

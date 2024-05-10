@@ -75,11 +75,14 @@ public:
   std::map<uint32_t, std::vector<TianWuRouteFlow>> m_flowPort;
   std::vector<uint32_t> m_flowSeen;
 
+  std::map<uint32_t, std::vector<uint32_t> >m_flowSeenLarge;
+
   std::map<uint32_t, std::vector<TianWuRouteFlow>> m_flowPortOld;
   std::vector<uint32_t> m_flowSeenOld;
   std::map<uint32_t, uint32_t> m_ports_moved;
 
   std::map<int, uint32_t> m_portTransmit;
+  std::map<int, uint32_t> m_portLargeTransmit;
 
 private:
   // Flowlet Timeout

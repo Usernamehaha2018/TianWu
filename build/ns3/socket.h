@@ -74,6 +74,8 @@ public:
 
   Socket (void);
   virtual ~Socket (void);
+    uint64_t m_tot_bytes;
+  uint64_t m_start_time;
 
   /**
    * \enum SocketErrno
@@ -228,6 +230,7 @@ public:
    *        buffer limit, a maximum-sized integer is always returned.
    */
   void SetSendCallback (Callback<void, Ptr<Socket>, uint32_t> sendCb);
+  void SetFinCallback (Callback<void, Ptr<Socket>, uint64_t> finCb);
   /**
    * \brief Notify application when new data is available to be read.
    *
@@ -928,6 +931,8 @@ protected:
    */
   void NotifySend (uint32_t spaceAvailable);
 
+  void NotifyFin (uint64_t fin_time);
+
   /**
    * \brief Notify through the callback (if set) that some data have been received.
    */
@@ -977,6 +982,7 @@ private:
   Callback<void, Ptr<Socket>, const Address&>    m_newConnectionCreated; //!< connection created callback
   Callback<void, Ptr<Socket>, uint32_t>          m_dataSent;             //!< data sent callback
   Callback<void, Ptr<Socket>, uint32_t >         m_sendCb;               //!< packet sent callback
+  Callback<void, Ptr<Socket>, uint64_t >         m_finCb;               //!< packet sent callback
   Callback<void, Ptr<Socket> >                   m_receivedData;         //!< data received callback
 
   //IPv4 options

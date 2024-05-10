@@ -141,6 +141,17 @@ namespace ns3
         iter++;
         
     }
+
+// ports
+    auto iter2 = m_portLargeTransmit.begin();
+    while(iter2 != m_portLargeTransmit.end()) {
+        if(t_id>=8 && iter2->first > 16)std::cout<< iter2->first<<": "<< (double)iter2->second*8*1000000/(m_flowletTimeout.GetMicroSeconds() *m_sched_freq *m_max*m_spine_speed)<<"     ";
+        iter2->second = 0;
+        iter2++;
+    }
+//
+
+
     if(t_id>=8)std::cout<<"\n";
     
      m_flowPortOld.clear();
@@ -153,6 +164,14 @@ namespace ns3
       for(auto j= m_flowPortOld.begin();j!=m_flowPortOld.end();j++){
         if(j->first>16)std::cout<< j->first<<": " << j->second.size()<<" ";
       }
+
+      // port
+      for(auto j= m_flowSeenLarge.begin();j!=m_flowSeenLarge.end();j++){
+        if(j->first>16)std::cout<< j->first<<": " << j->second.size()<<" ";
+      }
+      m_flowSeenLarge.clear();
+
+      //
       std::cout <<"\n"<<"High: ";
       for(auto h: m_highUtilizedPortSet){
         if(h> 16)std::cout<<h<<" ";
@@ -274,6 +293,9 @@ uint32_t
       return false;
     }
 
+    // if (flowletItr != m_flowletTable.end()){
+
+    // }
     uint32_t selectedPort;
 
     // If the flowlet table entry is valid, return the port
@@ -303,6 +325,12 @@ uint32_t
         m_flowletTable[flowId] = flowlet;
 
         m_portTransmit[selectedPort] += p->GetSize();
+              // port
+          auto flows = std::find(m_flowSeenLarge[selectedPort].begin(), m_flowSeenLarge[selectedPort].end(), flowId);
+          if(flows == m_flowSeenLarge[selectedPort].end()){
+            m_flowSeenLarge[selectedPort].push_back(flowId);
+          }
+      //
         return true;
       }
       
@@ -325,10 +353,11 @@ uint32_t
           for (auto entry : routeEntries)
           {
             auto i = std::find(m_underUtilizedPortSet.begin(), m_underUtilizedPortSet.end(), entry.port);
-            if (i != m_underUtilizedPortSet.end() )
+            if (i != m_underUtilizedPortSet.end() && CalculateQueueLength(*i) > CalculateQueueLength(*j))
             { 
+              
               m_ports_moved[flowlet.port] += 1;
-              std::cout<< Simulator::Now().GetSeconds()<< " "<<t_id<<"tianwu change port "<<flowId<< " from " <<flowlet.port <<" to "<< entry.port<<std::endl;
+              // std::cout<< Simulator::Now().GetSeconds()<< " "<<t_id<<"tianwu change port "<<flowId<< " from " <<flowlet.port <<" to "<< entry.port<<std::endl;
               // delete flow from the old port
               std::vector<TianWuRouteFlow> cur_flow = m_flowPort[flowlet.port];
               for(uint32_t m = 0; m < cur_flow.size(); m++){ 
@@ -353,6 +382,14 @@ uint32_t
               m_flowletTable[flowId] = flowlet;
 
               m_portTransmit[selectedPort] += p->GetSize();
+              // port
+              m_portLargeTransmit[selectedPort] += p->GetSize();
+                    // port
+          auto flows = std::find(m_flowSeenLarge[selectedPort].begin(), m_flowSeenLarge[selectedPort].end(), flowId);
+          if(flows == m_flowSeenLarge[selectedPort].end()){
+            m_flowSeenLarge[selectedPort].push_back(flowId);
+          }
+      //
               return true;
             }
           }
@@ -365,6 +402,14 @@ uint32_t
         ucb(route, packet, header);
         m_flowletTable[flowId] = flowlet;
         m_portTransmit[selectedPort] += p->GetSize();
+        // port
+        m_portLargeTransmit[selectedPort] += p->GetSize();
+              // port
+          auto flows = std::find(m_flowSeenLarge[selectedPort].begin(), m_flowSeenLarge[selectedPort].end(), flowId);
+          if(flows == m_flowSeenLarge[selectedPort].end()){
+            m_flowSeenLarge[selectedPort].push_back(flowId);
+          }
+      //
         return true;
       }
     }
@@ -382,6 +427,13 @@ uint32_t
     ucb(route, packet, header);
 
     m_flowletTable[flowId] = flowlet;
+    m_portTransmit[selectedPort] += p->GetSize();
+          // port
+          auto flows = std::find(m_flowSeenLarge[selectedPort].begin(), m_flowSeenLarge[selectedPort].end(), flowId);
+          if(flows == m_flowSeenLarge[selectedPort].end()){
+            m_flowSeenLarge[selectedPort].push_back(flowId);
+          }
+      //
     return true;
   }
 

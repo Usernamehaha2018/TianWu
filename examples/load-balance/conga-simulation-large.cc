@@ -63,6 +63,13 @@ void print_time(){
     Simulator::Schedule(Seconds(0.001), &print_time);
 }
 
+FILE* out_file;
+void finish_time_to_file(uint64_t s, uint64_t e, uint64_t b){
+    std::stringstream data;
+    data << s << " "<< e <<" "<< b<< "\n";
+    fputs(data.str().c_str(), out_file);
+}
+
 
 // Port from Traffic Generator
 // Acknowledged to https://github.com/HKUST-SING/TrafficGenerator/blob/master/src/common/common.c
@@ -120,6 +127,7 @@ void install_applications(int fromLeafId, NodeContainer servers, double requestR
             ApplicationContainer sourceApp = source.Install(servers.Get(fromServerIndex));
             sourceApp.Start(Seconds(startTime));
             sourceApp.Stop(Seconds(END_TIME));
+            DynamicCast<BulkSendApplication>(sourceApp.Get(0))->SetCallback(MakeCallback(&finish_time_to_file));
 
 
             // Install packet sinks
@@ -594,84 +602,31 @@ int main(int argc, char *argv[])
     std::cout << flowCount<<std::endl;
 
     // install_applications_new(servers, START_TIME, END_TIME, SERVER_COUNT);
+    std::stringstream fileName;
+    fileName << id << "-";
+    if (runMode == ECMP)
+    {
+        fileName << "ecmp-simulation-";
+    }
+    else if (runMode == LetFlow)
+    {
+        fileName << "letflow-simulation-";
+    }
+    else if (runMode == TianWu)
+    {
+        fileName <<"tianwu-simulation-";
+    }
+
+    fileName << randomSeed << "-";
+    out_file = fopen( fileName.str().c_str(), "w+" );
 
     NS_LOG_INFO("Total flow: " << flowCount);
 
     NS_LOG_INFO("Actual average flow size: " << static_cast<double>(totalFlowSize) / flowCount);
-
-    NS_LOG_INFO("Enabling flow monitor");
-
-    Ptr<FlowMonitor> flowMonitor;
-    FlowMonitorHelper flowHelper;
-    flowMonitor = flowHelper.InstallAll();
-
-    NS_LOG_INFO("Enabling link monitor");
-
-    Ptr<LinkMonitor> linkMonitor = Create<LinkMonitor>();
-    for (int i = 0; i < SPINE_COUNT; i++)
-    {
-        std::stringstream name;
-        name << "Spine " << i;
-        Ptr<Ipv4LinkProbe> spineLinkProbe = Create<Ipv4LinkProbe>(spines.Get(i), linkMonitor);
-        spineLinkProbe->SetProbeName(name.str());
-        spineLinkProbe->SetCheckTime(Seconds(0.01));
-        spineLinkProbe->SetDataRateAll(DataRate(SPINE_LEAF_CAPACITY));
-    }
-    for (int i = 0; i < LEAF_COUNT; i++)
-    {
-        std::stringstream name;
-        name << "Leaf " << i;
-        Ptr<Ipv4LinkProbe> leafLinkProbe = Create<Ipv4LinkProbe>(leaves.Get(i), linkMonitor);
-        leafLinkProbe->SetProbeName(name.str());
-        leafLinkProbe->SetCheckTime(Seconds(0.01));
-        leafLinkProbe->SetDataRateAll(DataRate(SPINE_LEAF_CAPACITY));
-    }
-
-    linkMonitor->Start(Seconds(START_TIME));
-    linkMonitor->Stop(Seconds(END_TIME));
-
-    flowMonitor->CheckForLostPackets();
-
-    std::stringstream flowMonitorFilename;
-    std::stringstream linkMonitorFilename;
-
-    flowMonitorFilename << id << "-1-large-load-" << LEAF_COUNT << "X" << SPINE_COUNT << "-" << load << "-" << transportProt << "-";
-    linkMonitorFilename << id << "-1-large-load-" << LEAF_COUNT << "X" << SPINE_COUNT << "-" << load << "-" << transportProt << "-";
-
-    if (runMode == ECMP)
-    {
-        flowMonitorFilename << "ecmp-simulation-";
-        linkMonitorFilename << "ecmp-simulation-";
-    }
-    else if (runMode == LetFlow)
-    {
-        // flowMonitorFilename << "letflow-simulation-" << letFlowFlowletTimeout << "-";
-        // linkMonitorFilename << "letflow-simulation-" << letFlowFlowletTimeout << "-";
-        flowMonitorFilename << "letflow-simulation-";
-        linkMonitorFilename << "letflow-simulation-";
-    }
-    else if (runMode == TianWu)
-    {
-        // flowMonitorFilename << "tianwu-simulation-" << tianWuFlowletTimeout << "-";
-        // linkMonitorFilename << "tianwu-simulation-" << tianWuFlowletTimeout << "-";
-        flowMonitorFilename << "tianwu-simulation-";
-        linkMonitorFilename << "tianwu-simulation-";
-    }
-
-    flowMonitorFilename << randomSeed << "-";
-    linkMonitorFilename << randomSeed << "-";
-
-
-    flowMonitorFilename << "b" << BUFFER_SIZE << ".xml";
-    linkMonitorFilename << "b" << BUFFER_SIZE << "-link-utility.out";
-
     NS_LOG_INFO("Start simulation");
     Simulator::Schedule(Seconds(0.00001), &print_time);
     Simulator::Stop(Seconds(END_TIME));
     Simulator::Run();
-
-    flowMonitor->SerializeToXmlFile(flowMonitorFilename.str(), true, true);
-    linkMonitor->OutputToFile(linkMonitorFilename.str(), &LinkMonitor::DefaultFormat);
 
     Simulator::Destroy();
     free_cdf(cdfTable);

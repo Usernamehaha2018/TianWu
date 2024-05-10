@@ -30,12 +30,15 @@
 #include "ns3/trace-source-accessor.h"
 #include "ns3/tcp-socket-factory.h"
 #include "bulk-send-application.h"
+#include "ns3/tcp-socket-base.h"
 
 namespace ns3 {
 
 NS_LOG_COMPONENT_DEFINE ("BulkSendApplication");
 
 NS_OBJECT_ENSURE_REGISTERED (BulkSendApplication);
+
+
 
 TypeId
 BulkSendApplication::GetTypeId (void)
@@ -97,6 +100,19 @@ BulkSendApplication::~BulkSendApplication ()
   NS_LOG_FUNCTION (this);
 }
 
+void 
+BulkSendApplication::DataFinish(Ptr<Socket>, uint64_t end_time){
+  std::cout << "fin data\n";
+  m_Finishcallback(start_time, end_time, m_maxBytes);
+}
+
+void 
+BulkSendApplication::SetCallback (Callback<void,uint64_t, uint64_t, uint64_t> callback)
+{
+  NS_LOG_FUNCTION (this << &callback);
+  m_Finishcallback = callback;
+}
+
 void
 BulkSendApplication::SetMaxBytes (uint32_t maxBytes)
 {
@@ -156,9 +172,15 @@ void BulkSendApplication::StartApplication (void) // Called at time specified by
         MakeCallback (&BulkSendApplication::ConnectionFailed, this));
       m_socket->SetSendCallback (
         MakeCallback (&BulkSendApplication::DataSend, this));
+      // set callback
+      // m_socket->SetFinCallback (
+      //   MakeCallback (&BulkSendApplication::DataFinish, this));
+      m_socket->SetCloseCallbacks(MakeCallback(&BulkSendApplication::normalClose, this), 
+      MakeCallback(&BulkSendApplication::errorClose, this));
     }
   if (m_connected)
     {
+      start_time = Simulator::Now().GetNanoSeconds();
       SendData ();
     }
 }
@@ -231,11 +253,24 @@ void BulkSendApplication::SendData (void)
     }
 }
 
+void BulkSendApplication::normalClose (Ptr<Socket> socket)
+{
+  std::cout <<"normal close\n";
+  NS_LOG_LOGIC ("BulkSendApplication Connection succeeded");
+}
+void BulkSendApplication::errorClose (Ptr<Socket> socket)
+{
+  std::cout<<"err close\n";
+  NS_LOG_LOGIC ("BulkSendApplication Connection succeeded");
+}
+
 void BulkSendApplication::ConnectionSucceeded (Ptr<Socket> socket)
 {
   NS_LOG_FUNCTION (this << socket);
   NS_LOG_LOGIC ("BulkSendApplication Connection succeeded");
   m_connected = true;
+  (socket)->m_start_time = Simulator::Now().GetNanoSeconds();
+  (socket)->m_tot_bytes = m_maxBytes;
   SendData ();
 }
 

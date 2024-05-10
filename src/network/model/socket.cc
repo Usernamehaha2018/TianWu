@@ -124,6 +124,15 @@ Socket::SetSendCallback (Callback<void, Ptr<Socket>, uint32_t> sendCb)
   m_sendCb = sendCb;
 }
 
+void
+Socket::SetFinCallback (Callback<void, Ptr<Socket>, uint64_t> finCb)
+{
+  NS_LOG_FUNCTION (this << &finCb);
+  
+  m_finCb = finCb;
+}
+
+
 void 
 Socket::SetRecvCallback (Callback<void, Ptr<Socket> > receivedData)
 {
@@ -302,6 +311,16 @@ Socket::NotifySend (uint32_t spaceAvailable)
 }
 
 void 
+Socket::NotifyFin (uint64_t fin_time)
+{     
+  // NS_LOG_FUNCTION (this << spaceAvailable);
+  if (!m_finCb.IsNull ())
+    {
+      m_finCb (this, fin_time);
+    }
+}
+
+void 
 Socket::NotifyDataRecv (void)
 {
   NS_LOG_FUNCTION (this);
@@ -323,6 +342,7 @@ Socket::DoDispose (void)
   m_newConnectionCreated = MakeNullCallback<void,Ptr<Socket>, const Address &> ();
   m_dataSent = MakeNullCallback<void,Ptr<Socket>, uint32_t> ();
   m_sendCb = MakeNullCallback<void,Ptr<Socket>, uint32_t> ();
+  m_finCb = MakeNullCallback<void,Ptr<Socket>, uint64_t> ();
   m_receivedData = MakeNullCallback<void,Ptr<Socket> > ();
 }
 

@@ -106,6 +106,8 @@ public:
    *
    * \returns True if the addresses are matching.
    */
+  Ipv4Address GetSrcAddress();
+  Ipv4Address GetDstAddress();
   bool IsSrcDstValid (Ipv4Address src, Ipv4Address dst) const;
 private:
   uint32_t m_flowId;      //!< flow identifier
@@ -114,6 +116,17 @@ private:
   Ipv4Address m_src;      //!< IP source
   Ipv4Address m_dst;      //!< IP destination
 };
+
+Ipv4Address 
+Ipv4FlowProbeTag::GetSrcAddress(){
+  return m_src;
+}
+
+Ipv4Address 
+Ipv4FlowProbeTag::GetDstAddress(){
+  return m_dst;
+}
+
 
 TypeId
 Ipv4FlowProbeTag::GetTypeId (void)
@@ -436,6 +449,10 @@ Ipv4FlowProbe::DropLogger (const Ipv4Header &ipHeader, Ptr<const Packet> ipPaylo
           NS_FATAL_ERROR ("Unexpected drop reason code " << reason);
         }
 
+      // std::cout <<"Drop ("<<this<<", "<<flowId<<", "<<packetId<<", "<<size<<", " << reason
+      //                       << ", destIp=" << ipHeader.GetDestination () << "); "
+      //                       << "HDR: " << ipHeader << " PKT: " << *ipPayload<<"\n";
+
       m_flowMonitor->ReportDrop (this, flowId, packetId, size, myReason);
     }
 }
@@ -457,7 +474,7 @@ Ipv4FlowProbe::QueueDropLogger (Ptr<const Packet> ipPayload)
 
   NS_LOG_DEBUG ("Drop ("<<this<<", "<<flowId<<", "<<packetId<<", "<<size<<", " << DROP_QUEUE
                         << "); ");
-
+  // std::cout<<flowId<<" "<<fTag.GetSrcAddress()<<" "<<fTag.GetDstAddress()<<" "<<fTag.GetPacketSize()<< " drop\n";
   m_flowMonitor->ReportDrop (this, flowId, packetId, size, DROP_QUEUE);
 }
 

@@ -22,63 +22,83 @@ p99 = {}
 loads = [0.8]
 workloads = [""]
 fcts = {}
+fcts2 = {}
 
 
-def read_xml(xml_file, mode):
-    tree = minidom.parse(xml_file)
-    objs = tree.getElementsByTagName('Flow')
-    for _, obj in enumerate(objs):
-        t1 = obj.getAttribute('timeFirstTxPacket')
-        t2 = obj.getAttribute('timeLastTxPacket')
-        b = obj.getAttribute('txBytes')
-        timeFirstTxPacket = obj.getAttribute('timeFirstTxPacket')
-        if t1 and t2 and b:
-            fcts[mode].append(int(t2[1:-4]) - int(t1[1:-4]))
+def read_file(file, mode):
+    with open(file, "r") as f:
+        for line in f:
+            try:
+                data = [int(i) for i in line.split()]
+                fcts[mode].append(data[1]-data[0])
+            except:
+                pass
+
+
             
 if __name__ == '__main__':
-    
     for mode in modes:
         print(mode, ":")
         fcts[mode] = []
+        fcts2[mode] = []
         for seed in ["100"]:
             for load in loads:
-                if mode+str(load) not in bottoms_20.keys():
-                    bottoms_20[mode+str(load)] = []
-                    tops_20[mode+str(load)] = []
-                    p99[mode+str(load)] = []
-                    mid_20[mode+str(load)] = []
-                    mid_40[mode+str(load)] = []
-                    mid_60[mode+str(load)] = []
-                
-                
-                read_xml("test-1-large-load-8X8-"+str(load)+"-DcTcp-"+mode+"-simulation-"+seed+"-b600.xml", mode) 
+                read_file("test-"+mode+"-simulation-"+seed+"-", mode) 
                 fcts[mode].sort()
                 print(len(fcts[mode]))
                 print(mode, load, sum(fcts[mode])/len(fcts[mode]))
-                print(fcts[mode][int(0.999*len(fcts[mode]))])
-    for mode in modes:
-        print(mode)
-        print(sum(fcts[mode])/len(fcts[mode]), fcts[mode][int(0.999*len(fcts[mode]))])
+                print(fcts[mode][int(0.9999*len(fcts[mode]))])
+    # for mode in modes:
+    #     print(mode)
+    #     print(sum(fcts[mode])/len(fcts[mode]), fcts[mode][int(0.999*len(fcts[mode]))])
         # print()
 
-    x = [30,40,50,60,70,80]
-    x_major_locator=MultipleLocator(4)
-    # print(y3)
-    sns.set_style("whitegrid")
-    matplotlib.rcParams.update({'font.size': 20, "font.weight": "bold"}) 
-    plt.xticks(None, weight='bold')
-    plt.xlim((40, 80))
-    
-    my_x_ticks = np.arange(40, 81, 10)
-    shapes = ["ro-", "g*-", "k^-", "ys-", "bp-"]
-    for i, mode in enumerate(modes):
-        plt.plot(x, tops_20[mode], shapes[i], label=mode, linewidth=2.5, markersize=8)
+    # write fcts data
+    # f = open("fcts", "w")
+    # f.write(str(fcts))
+    # f.close()
+    # exit(0)
+    # x_nums = 10
+    # y_modes = {}
+    # xs = []
+    # y_fcts = {}
+    # sizes = [x[0] for x in fcts["ecmp"]]
+    # for mode in modes:
+    #     y_fcts[mode] = []
+    #     y_modes[mode] = [x[1] for x in fcts[mode]]
+    # l = int(len(sizes)/10)-1
+    # for i in range(x_nums):            
+    #     if i == 9:
+    #         res = len(sizes)
+    #     else:
+    #         res = (i+1)*l
+    #     cur = sizes[i*l:res]
+    #     xs.append(int(sum(cur)/len(cur)))
+    #     for mode in modes:
+    #         cur_y = int(sum(y_modes[mode][i*l:res])/len(y_modes[mode][i*l:res]))
+    #         y_fcts[mode].append(cur_y)
 
-    plt.legend(loc='upper left' )
-    plt.tight_layout()
+    
+
+
+
+    # x_major_locator=MultipleLocator(4)
+    # # print(y3)
+    # sns.set_style("whitegrid")
+    # matplotlib.rcParams.update({'font.size': 20, "font.weight": "bold"}) 
+    # plt.xticks(None, weight='bold')
+    # # plt.xlim((40, 80))
+    
+    # # my_x_ticks = np.arange(40, 81, 10)
+    # shapes = ["ro-", "g*-", "k^-"]
+    # for i, mode in enumerate(modes):
+    #     plt.plot(xs, y_fcts[mode], shapes[i], label=mode, linewidth=2.5, markersize=8)
+
+    # plt.legend(loc='upper left' )
     # plt.tight_layout()
-    # plt.show()
-    plt.savefig("fc2.png")
+    # # plt.tight_layout()
+    # # plt.show()
+    # plt.savefig("fc2.png")
     
 
 

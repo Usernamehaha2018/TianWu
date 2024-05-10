@@ -313,6 +313,10 @@ public:
    */
   void SetMinRto (Time minRto);
 
+  uint32_t GetDupCnt();
+
+  Ipv4Address GetAddress();
+
   /**
    * \brief Get the Minimum RTO.
    * \return The minimum RTO.
@@ -941,6 +945,7 @@ protected:
   EventId           m_persistEvent;    //!< Persist event: Send 1 byte to probe for a non-zero Rx window
   EventId           m_timewaitEvent;   //!< TIME_WAIT expiration event: Move this socket to CLOSED state
   uint32_t          m_dupAckCount;     //!< Dupack counter
+  uint32_t          m_dupAckTotCount;     //!< Dupack counter
   uint32_t          m_delAckCount;     //!< Delayed ACK counter
   uint32_t          m_delAckMaxCount;  //!< Number of packet to fire an ACK before delay timeout
   bool              m_noDelay;         //!< Set to true to disable Nagle's algorithm
