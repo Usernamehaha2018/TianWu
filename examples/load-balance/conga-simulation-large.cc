@@ -33,7 +33,7 @@ extern "C"
 }
 
 #define LINK_CAPACITY_BASE 1000000000 // 1Gbps
-#define BUFFER_SIZE 600               // 250 packets
+#define BUFFER_SIZE 2400               // 250 packets
 
 #define RED_QUEUE_MARKING 65 // 65 Packets (available only in DcTcp)
 
@@ -221,7 +221,11 @@ int main(int argc, char *argv[])
 
     double FLOW_LAUNCH_END_TIME = 0.15;
 
-    uint32_t linkLatency = 10;
+    uint32_t linkLatency = 1;
+
+    uint32_t resequenceInOrderTimer = 5; // MicroSeconds
+    // uint32_t resequenceInOrderSize = 600; // 100 Packets
+    uint32_t resequenceOutOrderTimer = 100; // MicroSeconds
 
     int SERVER_COUNT = 16;
     int SPINE_COUNT = 8;
@@ -241,8 +245,8 @@ int main(int argc, char *argv[])
 
     bool enableLargeDupAck = false;
 
-    uint32_t letFlowFlowletTimeout = 500;
-    uint32_t tianWuFlowletTimeout = 500;
+    uint32_t letFlowFlowletTimeout = 50;
+    uint32_t tianWuFlowletTimeout = 50;
     double tianwu_max = 0.8;
     double tianwu_min = 0.5;
     uint32_t tianwu_sched_freq = 10;
@@ -337,11 +341,16 @@ int main(int argc, char *argv[])
     Config::SetDefault("ns3::TcpSocket::DelAckCount", UintegerValue(0));
     Config::SetDefault("ns3::TcpSocket::ConnTimeout", TimeValue(MilliSeconds(5)));
     Config::SetDefault("ns3::TcpSocket::InitialCwnd", UintegerValue(10));
-    Config::SetDefault("ns3::TcpSocketBase::MinRto", TimeValue(MilliSeconds(5)));
+    Config::SetDefault("ns3::TcpSocketBase::MinRto", TimeValue(MilliSeconds(1)));
     Config::SetDefault("ns3::TcpSocketBase::ClockGranularity", TimeValue(MicroSeconds(100)));
-    Config::SetDefault("ns3::RttEstimator::InitialEstimation", TimeValue(MicroSeconds(80)));
+    Config::SetDefault("ns3::RttEstimator::InitialEstimation", TimeValue(MicroSeconds(10)));
     Config::SetDefault("ns3::TcpSocket::SndBufSize", UintegerValue(160000000));
     Config::SetDefault("ns3::TcpSocket::RcvBufSize", UintegerValue(160000000));
+
+    Config::SetDefault ("ns3::TcpSocketBase::ResequenceBuffer", BooleanValue (true));
+    Config::SetDefault ("ns3::TcpResequenceBuffer::InOrderQueueTimerLimit", TimeValue (MicroSeconds (resequenceInOrderTimer)));
+    // Config::SetDefault ("ns3::TcpResequenceBuffer::SizeLimit", UintegerValue (resequenceInOrderSize));
+    Config::SetDefault ("ns3::TcpResequenceBuffer::OutOrderQueueTimerLimit", TimeValue (MicroSeconds (resequenceOutOrderTimer)));
 
     if (enableLargeDupAck)
     {
@@ -579,6 +588,7 @@ int main(int argc, char *argv[])
 
     NS_LOG_INFO("Calculating request rate");
     double requestRate = load * LEAF_SERVER_CAPACITY * SERVER_COUNT / oversubRatio / (8 * avg_cdf(cdfTable)) / SERVER_COUNT;
+    std::cout <<requestRate << " "<< avg_cdf(cdfTable)<<"\n";
     NS_LOG_INFO("Average request rate: " << requestRate << " per second");
 
     NS_LOG_INFO("Initialize random seed: " << randomSeed);
@@ -617,7 +627,11 @@ int main(int argc, char *argv[])
         fileName <<"tianwu-simulation-";
     }
 
+
     fileName << randomSeed << "-";
+    
+    fileName << tianwu_max_reroute << "-" << tianwu_min;
+    fileName <<"-"<< tianwu_sched_freq << "-" << tianWuFlowletTimeout;
     out_file = fopen( fileName.str().c_str(), "w+" );
 
     NS_LOG_INFO("Total flow: " << flowCount);

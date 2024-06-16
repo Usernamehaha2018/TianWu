@@ -74,8 +74,6 @@ public:
 
   Socket (void);
   virtual ~Socket (void);
-    uint64_t m_tot_bytes;
-  uint64_t m_start_time;
 
   /**
    * \enum SocketErrno

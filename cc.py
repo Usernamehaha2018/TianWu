@@ -12,7 +12,7 @@ import matplotlib.colors as mcolors
 from matplotlib.pyplot import MultipleLocator
 import matplotlib
 
-modes = ["tianwu"]
+modes = ["letflow", "tianwu"]
 bottoms_20 = {}
 tops_20 = {}
 mid_20 = {}
@@ -41,13 +41,13 @@ if __name__ == '__main__':
         print(mode, ":")
         fcts[mode] = []
         fcts2[mode] = []
-        for seed in ["100"]:
+        for seed in ["101"]:
             for load in loads:
-                read_file("test-"+mode+"-simulation-"+seed+"-", mode) 
+                read_file("hadoop-"+mode+"-simulation-"+seed+"-0.6-0.5-5-200", mode) 
                 fcts[mode].sort()
                 print(len(fcts[mode]))
                 print(mode, load, sum(fcts[mode])/len(fcts[mode]))
-                print(fcts[mode][int(0.9999*len(fcts[mode]))])
+                print(fcts[mode][int(0.999*len(fcts[mode]))])
     # for mode in modes:
     #     print(mode)
     #     print(sum(fcts[mode])/len(fcts[mode]), fcts[mode][int(0.999*len(fcts[mode]))])

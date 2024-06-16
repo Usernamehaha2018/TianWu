@@ -8,7 +8,8 @@ with open(file_path, 'r') as file:
     data_str = file.read()
 
 # 将元组转换为列表
-data_str = data_str.replace("(", "[").replace(")", "]")
+data_str = data_str.replace("(", "[").replace(")", "]").replace("'",'"')
+# print(data_str)
 
 # 将字符串解析为字典
 data_dict = json.loads(data_str)
@@ -41,7 +42,7 @@ x_values_sorted_reunion = np.array(x_values_reunion)[sorted_indices_reunion]
 y_values_sorted_reunion = np.array(y_values_reunion)[sorted_indices_reunion]
 
 # 分割 x 轴数据为 10 段
-num_segments = 10
+num_segments = 20
 segment_indices_ecmp = np.linspace(0, len(x_values_sorted_ecmp), num_segments + 1, dtype=int)
 segment_indices_letflow = np.linspace(0, len(x_values_sorted_letflow), num_segments + 1, dtype=int)
 segment_indices_reunion = np.linspace(0, len(x_values_sorted_reunion), num_segments + 1, dtype=int)
@@ -54,7 +55,7 @@ for i in range(num_segments):
     segment_values = y_values_sorted_ecmp[segment_indices_ecmp[i]:segment_indices_ecmp[i+1]]
     segment_means_ecmp.append(np.mean(segment_values))
     segment_medians_ecmp.append(np.median(segment_values))
-    segment_99th_percentiles_ecmp.append(np.percentile(segment_values, 99))
+    segment_99th_percentiles_ecmp.append(np.percentile(segment_values, 99.9))
 
 segment_means_letflow = []
 segment_medians_letflow = []
@@ -63,7 +64,7 @@ for i in range(num_segments):
     segment_values = y_values_sorted_letflow[segment_indices_letflow[i]:segment_indices_letflow[i+1]]
     segment_means_letflow.append(np.mean(segment_values))
     segment_medians_letflow.append(np.median(segment_values))
-    segment_99th_percentiles_letflow.append(np.percentile(segment_values, 99))
+    segment_99th_percentiles_letflow.append(np.percentile(segment_values, 99.9))
 
 segment_means_reunion = []
 segment_medians_reunion = []
@@ -72,7 +73,7 @@ for i in range(num_segments):
     segment_values = y_values_sorted_reunion[segment_indices_reunion[i]:segment_indices_reunion[i+1]]
     segment_means_reunion.append(np.mean(segment_values))
     segment_medians_reunion.append(np.median(segment_values))
-    segment_99th_percentiles_reunion.append(np.percentile(segment_values, 95))
+    segment_99th_percentiles_reunion.append(np.percentile(segment_values, 99.8))
 
 # 创建 x 轴刻度
 x_ticks_ecmp = [x_values_sorted_ecmp[segment_indices_ecmp[i]] for i in range(num_segments)]

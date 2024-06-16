@@ -17,7 +17,7 @@ for load in ${loads[@]}; do
                 for ml in ${min_loads[@]}; do
                     for mr in ${max_retoute[@]}; do
                     # (time ./waf --run "conga-simulation-large --ID=$workload --load=$load --runMode=$alg --transportProt=DcTcp --cdfFileName=mix/$workload.txt --randomSeed=$seed --FlowLaunchEndTime=0.15 --serverCount=32 --spineLeafCapacity=40 --spineCount=4 --leafCount=4";) &
-                        (time ./waf --run "conga-simulation-large --ID=$ml-$mr-test --load=$load --runMode=$alg --transportProt=DcTcp --cdfFileName=mix/$workload.txt --randomSeed=$seed --FlowLaunchEndTime=0.005 --leafServerCapacity=100 --spineLeafCapacity=100  --tianWuFlowletTimeout=200 --tianWuSchedFreq=10 --tianWuMaxReroute=$mr --tianWuMin=$ml";) &
+                        (time ./waf --run "conga-simulation-large --ID=test --load=$load --runMode=$alg --transportProt=DcTcp --cdfFileName=mix/$workload.txt --randomSeed=$seed --FlowLaunchEndTime=0.005 --leafServerCapacity=100 --spineLeafCapacity=100  --tianWuFlowletTimeout=200 --tianWuSchedFreq=10 --tianWuMaxReroute=$mr --tianWuMin=$ml";) &
                         sleep 1
                     done
                 done

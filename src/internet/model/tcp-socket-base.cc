@@ -346,7 +346,7 @@ TcpSocketBase::TcpSocketBase (void)
     m_timestampToEcho (0),
     m_sendPendingDataEvent (),
     m_recover (0), // Set to the initial sequence number
-    m_retxThresh (3),
+    m_retxThresh (30),
     m_limitedTx (false),
     m_retransOut (0),
     m_ecn (true),
@@ -1230,7 +1230,6 @@ TcpSocketBase::CloseAndNotify (void)
 
   NS_LOG_DEBUG (TcpStateName[m_state] << " -> CLOSED");
   m_state = CLOSED;
-  std::cout <<m_tot_bytes<< " "<<m_start_time<<" "<< Simulator::Now().GetNanoSeconds()<< "fin\n";
   // NotifyFin(Simulator::Now().GetNanoSeconds());
   DeallocateEndPoint ();
 }
@@ -2243,6 +2242,7 @@ TcpSocketBase::ProcessWait (Ptr<Packet> packet, const TcpHeader& tcpHeader)
           && tcpHeader.GetAckNumber () == m_highTxMark + SequenceNumber32 (1))
         { // This ACK corresponds to the FIN sent
           NS_LOG_DEBUG ("FIN_WAIT_1 -> FIN_WAIT_2");
+          NotifyFin(Simulator::Now().GetNanoSeconds());
           m_state = FIN_WAIT_2;
         }
     }

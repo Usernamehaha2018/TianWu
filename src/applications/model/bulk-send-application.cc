@@ -102,7 +102,6 @@ BulkSendApplication::~BulkSendApplication ()
 
 void 
 BulkSendApplication::DataFinish(Ptr<Socket>, uint64_t end_time){
-  std::cout << "fin data\n";
   m_Finishcallback(start_time, end_time, m_maxBytes);
 }
 
@@ -141,6 +140,7 @@ BulkSendApplication::DoDispose (void)
 void BulkSendApplication::StartApplication (void) // Called at time specified by Start
 {
   NS_LOG_FUNCTION (this);
+  start_time = Simulator::Now().GetNanoSeconds();
 
   // Create the socket if not already
   if (!m_socket)
@@ -173,14 +173,11 @@ void BulkSendApplication::StartApplication (void) // Called at time specified by
       m_socket->SetSendCallback (
         MakeCallback (&BulkSendApplication::DataSend, this));
       // set callback
-      // m_socket->SetFinCallback (
-      //   MakeCallback (&BulkSendApplication::DataFinish, this));
-      m_socket->SetCloseCallbacks(MakeCallback(&BulkSendApplication::normalClose, this), 
-      MakeCallback(&BulkSendApplication::errorClose, this));
+      m_socket->SetFinCallback (
+        MakeCallback (&BulkSendApplication::DataFinish, this));
     }
   if (m_connected)
     {
-      start_time = Simulator::Now().GetNanoSeconds();
       SendData ();
     }
 }
@@ -269,8 +266,6 @@ void BulkSendApplication::ConnectionSucceeded (Ptr<Socket> socket)
   NS_LOG_FUNCTION (this << socket);
   NS_LOG_LOGIC ("BulkSendApplication Connection succeeded");
   m_connected = true;
-  (socket)->m_start_time = Simulator::Now().GetNanoSeconds();
-  (socket)->m_tot_bytes = m_maxBytes;
   SendData ();
 }
 
